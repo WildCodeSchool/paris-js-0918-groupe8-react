@@ -7,6 +7,7 @@ import BoBio from "./components/bobio/Bobio"
 import BoMedias from "./components/bomedias/BoMedias"
 import BoCommentaire from "./components/bocommentaire/BoCommentaire"
 import BoAdmin from "./components/boadmin/BoAdmin"
+import BofficeLogin from "./components/boLogin/BofficeLogin";
 
 class App extends Component {
   render() {
@@ -14,7 +15,7 @@ class App extends Component {
       <div>
 <Switch>
 
-          <Route exact path="/" component={BofficeMenu} />
+          <Route exact path="/" component={BofficeLogin} />
           
           <Route exact path="/BoArticle" component={BoArticle} />
           <Route exact path="/BoBio" component={BoBio} />
