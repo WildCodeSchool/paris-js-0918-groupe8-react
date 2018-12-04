@@ -1,15 +1,6 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 
-const handleSubmit = (e) => {
-  e.preventDefault()
-  console.log("poulet",e.target.name.value, e.target.password.value,)
-Axios.post("http://localhost:4242/auth/login",{
-name: e.target.name.value,
-password: e.target.password.value
-})
-.then(res => console.log(res))
-}
 
 const BofficeLogin= () => {
 
