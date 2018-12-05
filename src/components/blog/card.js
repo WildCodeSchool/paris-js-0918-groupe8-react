@@ -1,50 +1,49 @@
-import React, { Component } from "react";
-import "materialize-css/dist/css/materialize.min.css";
+import React, { Component } from 'react';
+import 'materialize-css/dist/css/materialize.min.css';
 import Portraitfemme from '../../assets/img/portraitcrop.jpg';
 import Imagecover1 from '../../assets/img/neonbrand-618322-unsplash.jpg';
 
 
+const Card = () => {
+  return (
+    <div className="cardglobal">
+      <div className="container">
+        <h3 className="center-align">BLOG</h3>
+        <div className="row">
+          <div className="col s12 m6 l4">
+            <div className="card">
+              <div className="card-image">
+                <img src={Imagecover1} alt="" />
+                <span className="card-title text-darken-5">PEUT-ON FAIRE DE LA RÉDACTION WEB ÉTHIQUE ?</span>
+              </div>
+              <div className="card-content">
+                <p className="left-align">I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
+                <br />
 
+                <div className="card-action">
+                  <div className="row valign-wrapper">
 
-class Card extends Component {
-
-
-    render() {
-        return (
-            <div className="cardglobal">
-
-            <div class="row">
-    <div class="col s12 m6 l4">
-      <div class="card">
-        <div class="card-image">
-          <img src={Imagecover1} alt=""></img>
-          <span class="card-title">Card Title</span>
-        </div>
-        <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-        <div class="row valign-wrapper">
-
-        <div class="col s2">
-              <img src={Portraitfemme} alt="" class="circle responsive-img"></img>
+                    <div className="col s4">
+                      <img src={Portraitfemme} alt="" className="circle responsive-img" />
+                    </div>
+                    <div className="col s8">
+                      <span className="black-text">
+                        Anais Jaunai
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col s10">
-              <span class="black-text">
-               Anais Jaunai
-              </span>
-            </div>
-            </div>
+
+          </div>
         </div>
       </div>
+
     </div>
-  </div>
-            
-                
-            </div>
-        );
-    }
-}
+  );
+
+};
 
 export default Card;
