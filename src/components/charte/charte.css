@@ -1,0 +1,24 @@
+.testimage{
+  background-image: url('../../assets/img/chartebgopacity.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5em;
+  
+}
+
+.phrasenumber1 {
+  padding-top: 10%;
+}
+
+.phrasenumber2 {
+  font-size: 2em;
+}
+
+.bouttonensavoirplus{
+  margin-bottom: 10%;
+
+}
