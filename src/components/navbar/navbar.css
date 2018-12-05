@@ -1,0 +1,9 @@
+.Navbarfuck{
+    background-color: #003f5f;
+    font-family: 'Oswald', sans-serif;
+    min-height: 5vh;
+}
+
+nav ul a{
+    font-size: 1.5em;
+}
