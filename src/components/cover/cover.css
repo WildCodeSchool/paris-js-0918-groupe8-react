@@ -1,0 +1,37 @@
+.global{
+    background-image: url("../../assets/img/coveropacity.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 95vh;
+    
+
+    -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+}
+
+.titrecovertest{
+    font-size: 4em;
+    color: white;
+    margin-top: 0%;
+    padding-block-start: 18%;
+}
+
+.enonce{
+    color: white;
+    font-style: italic;
+    text-align: center;
+
+}
+
+.coverbuttonname{
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    justify-content:space-around;
+
+}
+
+
+
