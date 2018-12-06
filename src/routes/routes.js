@@ -1,13 +1,19 @@
 import Home from '../screens/Home';
+import Charte from '../screens/Charte';
 import Bio from '../screens/Bio';
-import Blog from '../screens/BlogList';
-import Article from '../screens/BlogArticle';
+import BlogList from '../screens/BlogList';
+import BlogArticle from '../screens/BlogArticle';
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'Accueil',
     component: Home,
+  },
+  {
+    path: '/charte',
+    name: 'Charte',
+    component: Charte,
   },
   {
     path: '/about',
@@ -17,18 +23,12 @@ const routes = [
   {
     path: '/blog',
     name: 'Blog',
-    component: Blog,
+    component: BlogList,
   },
   {
     path: '/article',
     name: 'Article',
-    component: Article,
-  },
-  {
-    redirect: true,
-    path: '/',
-    pathTo: '/dashboard',
-    name: 'Dashboard',
+    component: BlogArticle,
   },
 ];
 export default routes;
