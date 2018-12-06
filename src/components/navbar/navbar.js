@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import M from "materialize-css/dist/js/materialize.min.js";
-import "materialize-css/dist/css/materialize.min.css";
 import "./navbar.css";
 import Logo from '../../assets/img/conteurDigitalcrop.png';
 
 class Navbar extends Component {
 
     componentDidMount() {
-        var elem = document.querySelector(".sidenav");
+        const elem = document.querySelector(".sidenav");
         M.Sidenav.init(elem, {
             edge: "left",
             inDuration: 250

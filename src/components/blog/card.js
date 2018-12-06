@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import 'materialize-css/dist/css/materialize.min.css';
 import Portraitfemme from '../../assets/img/portraitcrop.jpg';
 import Imagecover1 from '../../assets/img/neonbrand-618322-unsplash.jpg';
 import './card.css';
