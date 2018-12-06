@@ -1,3 +1,8 @@
+.cardglobal{
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
 .testimage{
   background-image: url('../../assets/img/chartebgopacity.jpg');
   background-repeat: no-repeat;
@@ -10,15 +15,25 @@
   
 }
 
+.titrecharte1{
+  padding-bottom: 5%;
+}
+
 .phrasenumber1 {
   padding-top: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
+  
 }
 
 .phrasenumber2 {
+  font-size: 1em;
+  padding-bottom: 2%;
+
+}
+
+.phrasenumber3 {
   font-size: 2em;
+  padding-bottom: 5%;
 }
 
-.bouttonensavoirplus{
-  margin-bottom: 10%;
-
-}

@@ -5,6 +5,7 @@ import Navbar from '../components/navbar/navbar';
 import Coverimage from '../components/cover/cover';
 import Card from '../components/blog/card';
 import Charte from '../components/charte/charte';
+import Newsletter from '../components/newsletter/newsletter';
 
 class Home extends Component {
   render() {
@@ -16,6 +17,7 @@ class Home extends Component {
         <Coverimage />
         <Charte />
         <Card />
+        <Newsletter />
 
      
       </div>
