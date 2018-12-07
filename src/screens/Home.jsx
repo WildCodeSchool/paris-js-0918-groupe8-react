@@ -17,8 +17,8 @@ class Home extends Component {
       
         <Navbar />
         <Coverimage />
-        <Charte />
         <Card />
+        <Charte />
         <Newsletter />
         <Service />
         <About />
