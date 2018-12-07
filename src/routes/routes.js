@@ -27,18 +27,18 @@ const routes = [
     component: BlogList,
   },
   {
-    path: '/about',
+    path: '/#about',
     name: 'A propos',
     component: Bio,
   },
   {
-    path: '/contact',
+    path: '/#contact',
     name: 'Contact',
     component: null,
   },
   {
     path: '/blog/article',
-    name: 'Article',
+    name: null,
     component: BlogArticle,
   },
   {

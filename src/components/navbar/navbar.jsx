@@ -1,6 +1,7 @@
 /* global document */
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
+import { NavHashLink as NavLink } from 'react-router-hash-link';
 import M from 'materialize-css/dist/js/materialize.min';
 import './navbar.css';
 import Logo from '../../assets/img/conteurDigitalcrop.png';
@@ -18,40 +19,50 @@ class Navbar extends Component {
   render() {
     return (
       <div>
-        <nav className="Navbarfuck navbar-fixed">
-          <div className="nav-wrapper">
-            <a href="#test">
-              <img className="left hide-on-med-and-down" src={Logo} width="60" height="60" alt="twitter" />
-            </a>
-            <a href="#test" data-target="mobile-demo" className="sidenav-trigger">
-              <i className="material-icons">menu</i>
-            </a>
-            <ul className="right hide-on-med-and-down">
-              {routes.filter(elem => !elem.path.includes('/admin')).map(prop => (
-                <li>
-                  <NavLink
-                    exact
-                    to={prop.path}
-                    key={prop.path}
-                    activeClassName="active"
-                    activeStyle={{ borderBottom: '3px solid white' }}
-                  >
-                    {prop.name}
-                  </NavLink>
-                </li>
-              ))}
-              <li><a href="sass.html"><i className="material-icons">search</i></a></li>
-            </ul>
-          </div>
-        </nav>
+        <div className="navbar-fixed">
+          <nav className="Navbarfuck">
+            <div className="nav-wrapper">
+              <a href="/#">
+                <img className="left hide-on-med-and-down" src={Logo} width="60" height="60" alt="twitter" />
+              </a>
+              <a href="#test" data-target="mobile-demo" className="sidenav-trigger">
+                <i className="material-icons">menu</i>
+              </a>
+              <ul className="right hide-on-med-and-down">
+                {routes.filter(elem => !elem.path.includes('/admin')).map(prop => (
+                  <li>
+                    <NavLink
+                      exact
+                      to={prop.path}
+                      key={prop.path}
+                      activeClassName="active"
+                      activeStyle={{ borderBottom: '3px solid white' }}
+                    >
+                      {prop.name}
+                    </NavLink>
+                  </li>
+                ))}
+                <li><a href="sass.html"><i className="material-icons">search</i></a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
 
-        <ul className="sidenav" id="mobile-demo">
-          <li><a href="#test">Accueil</a></li>
-          <li><a href="#test">Charte</a></li>
-          <li><a href="#test">Blog</a></li>
-          <li><a href="#test">A propos</a></li>
-          <li><a href="#test">Contact</a></li>
-        </ul>
+        <div>
+          <ul className="sidenav" id="mobile-demo">
+            {routes.filter(elem => !elem.path.includes('/admin')).map(prop => (
+              <li>
+                <NavLink
+                  exact
+                  to={prop.path}
+                  key={prop.path}
+                >
+                  {prop.name}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     );
   }
