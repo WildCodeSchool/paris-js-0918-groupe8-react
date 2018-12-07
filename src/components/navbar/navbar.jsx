@@ -1,8 +1,10 @@
 /* global document */
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 import M from 'materialize-css/dist/js/materialize.min';
 import './navbar.css';
 import Logo from '../../assets/img/conteurDigitalcrop.png';
+import routes from '../../routes/routes';
 
 class Navbar extends Component {
   componentDidMount() {
@@ -25,11 +27,19 @@ class Navbar extends Component {
               <i className="material-icons">menu</i>
             </a>
             <ul className="right hide-on-med-and-down">
-              <li className="texte1"><a href="#test">Accueil</a></li>
-              <li><a href="#test">Charte</a></li>
-              <li><a href="#test">Blog</a></li>
-              <li><a href="#test">A propos</a></li>
-              <li><a href="#test">Contact</a></li>
+              {routes.filter(elem => !elem.path.includes('/admin')).map(prop => (
+                <li>
+                  <NavLink
+                    exact
+                    to={prop.path}
+                    key={prop.path}
+                    activeClassName="active"
+                    activeStyle={{ borderBottom: '3px solid white' }}
+                  >
+                    {prop.name}
+                  </NavLink>
+                </li>
+              ))}
               <li><a href="sass.html"><i className="material-icons">search</i></a></li>
             </ul>
           </div>
