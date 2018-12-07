@@ -19,7 +19,7 @@ const About = () => (
           <div className="cardtitlebio">
             <img src={femaleavatar} alt="" className="circle responsive-img" width="150" height="150" />
             <h3>Anaïs Jaunay</h3>
-            <p className="titlefonctionanais">Conteur digital</p>
+            <p className="titlefonctionanais">Conteuse digital</p>
             <p>"Parler de ceux qui vivent leur métier comme un artisanat, redonnent de la valeur à tout ce que l’on consomme"</p>
             <a href="#test"><img src={maillogo} alt="" width="30" height="30" className="maillogoabout" /></a>
             <a href="#test"><img src={twitterlogo} alt="" width="30" height="30" className="maillogoabout" /></a>
