@@ -37,3 +37,8 @@
   padding-bottom: 5%;
 }
 
+.bouttonensavoirplus{
+  display: flex;
+  justify-content: center;
+}
+
