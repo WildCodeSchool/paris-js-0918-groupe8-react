@@ -1,0 +1,36 @@
+
+.cardtitlebio {
+  width: 100%;
+  text-align: center;
+}
+
+
+.titlefonctionanais {
+  color: grey;
+  font-size: 18px;
+}
+
+.contactbouttonanais {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  font-family: 'Oswald', sans-serif;
+
+}
+
+.maillogoabout:hover, .contactbouttonanais:hover {
+  opacity: 0.7;
+
+}
+
+.maillogoabout {
+  padding-right: 3%;
+  
+}

@@ -7,6 +7,7 @@ import Card from '../components/blog/card';
 import Charte from '../components/charte/charte';
 import Newsletter from '../components/newsletter/newsletter';
 import Service from '../components/Service/service';
+import About from '../components/about/about';
 
 class Home extends Component {
   render() {
@@ -20,6 +21,7 @@ class Home extends Component {
         <Card />
         <Newsletter />
         <Service />
+        <About />
 
      
       </div>

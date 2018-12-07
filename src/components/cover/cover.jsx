@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./cover.css";
 
 const Coverimage = () => {
@@ -6,7 +6,7 @@ const Coverimage = () => {
         <div className="global">
 
             <div class="container">
-                <p className="titrecovertest">Conteur Digital</p>
+                <p className="titrecovertest center-align">Conteur Digital</p>
 
                 <div class="row">
 

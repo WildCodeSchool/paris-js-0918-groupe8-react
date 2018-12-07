@@ -20,7 +20,7 @@ class Navbar extends Component {
     <div className="nav-wrapper">
     <a href="#test"> <img className="left hide-on-med-and-down" src={Logo} width="60" height="60" alt="twitter"></img></a>
       <a href="#test" data-target="mobile-demo" className="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
+      <ul class="right hide-on-med-and-down menunavbar">
         <li className="texte1"><a href="#test">Accueil</a></li>
         <li><a href="#test">Charte</a></li>
         <li><a href="#test">Blog</a></li>
