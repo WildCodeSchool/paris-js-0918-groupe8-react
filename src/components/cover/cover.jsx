@@ -3,7 +3,7 @@ import "./cover.css";
 
 const Coverimage = () => {
     return (
-        <div className="global">
+        <div className="global" id="home">
 
             <div class="container">
                 <p className="titrecovertest center-align">Conteur Digital</p>
