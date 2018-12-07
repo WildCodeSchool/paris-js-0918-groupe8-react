@@ -33,6 +33,7 @@ class Navbar extends Component {
                   <li>
                     <NavLink
                       exact
+                      smooth
                       to={prop.path}
                       key={prop.path}
                       activeClassName="active"

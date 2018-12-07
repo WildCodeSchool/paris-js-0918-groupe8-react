@@ -1,8 +1,10 @@
 import React from 'react';
+import BofficeMenu from '../components/boMenu/BofficeMenu';
 
 const BObio = () => (
   <div>
-    <p>Bios Back-Office</p>
+    <BofficeMenu />
+    <p style={{ fontSize: '50px' }}>Bios Back-Office</p>
   </div>
 );
 
