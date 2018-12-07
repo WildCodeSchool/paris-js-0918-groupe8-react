@@ -1,8 +1,10 @@
 import React from 'react';
+import BofficeMenu from '../components/boMenu/BofficeMenu';
 
 const BOmedias = () => (
   <div>
-    <p>Médias Back-Office</p>
+    <BofficeMenu />
+    <p style={{ fontSize: '50px' }}>Médias Back-Office</p>
   </div>
 );
 

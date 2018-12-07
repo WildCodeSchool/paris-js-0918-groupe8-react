@@ -1,8 +1,10 @@
 import React from 'react';
+import BofficeMenu from '../components/boMenu/BofficeMenu';
 
 const BOadmin = () => (
   <div>
-    <p>Administrateur Back-Office</p>
+    <BofficeMenu />
+    <p style={{ fontSize: '50px' }}>Administrateur Back-Office</p>
   </div>
 );
 
