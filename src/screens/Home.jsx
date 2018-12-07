@@ -9,6 +9,7 @@ import Newsletter from '../components/newsletter/newsletter';
 import Service from '../components/Service/service';
 import About from '../components/about/about';
 import Contact from '../components/contact/contact';
+import Footer from '../components/footer/footer';
 
 class Home extends Component {
   render() {
@@ -24,6 +25,7 @@ class Home extends Component {
         <Service />
         <About />
         <Contact />
+        <Footer />
 
 
       </div>
