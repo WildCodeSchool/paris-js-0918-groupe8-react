@@ -16,8 +16,8 @@ class Navbar extends Component {
     render() {
         return (
             <div>
-                <div class="navbar-fixed">
-                    <nav className="Navbarfuck">
+               
+                    <nav className="Navbarfuck navbar-fixed">
                         <div className="nav-wrapper">
                             <a href="#test"> <img className="left hide-on-med-and-down" src={Logo} width="60" height="60" alt="twitter"></img></a>
                             <a href="#test" data-target="mobile-demo" className="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -32,7 +32,7 @@ class Navbar extends Component {
                             </ul>
                         </div>
                     </nav>
-                </div>
+                
 
                 <ul class="sidenav" id="mobile-demo">
                     <li><a href="#test">Accueil</a></li>
