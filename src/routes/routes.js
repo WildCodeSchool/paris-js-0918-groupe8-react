@@ -22,18 +22,23 @@ const routes = [
     component: Charte,
   },
   {
-    path: '/about',
-    name: 'A propos',
-    component: Bio,
-  },
-  {
     path: '/blog',
     name: 'Blog',
     component: BlogList,
   },
   {
-    path: '/article',
-    name: 'Article',
+    path: '/#about',
+    name: 'A propos',
+    component: Bio,
+  },
+  {
+    path: '/#contact',
+    name: 'Contact',
+    component: null,
+  },
+  {
+    path: '/blog/article',
+    name: null,
     component: BlogArticle,
   },
   {
