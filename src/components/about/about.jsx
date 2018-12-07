@@ -8,7 +8,7 @@ import linkedinlogo from '../../assets/svg/linkedin-logo.svg';
 
 
 const About = () => (
-  <div className="newsletterglobal">
+  <div className="newsletterglobal" id="about">
     <div className="container">
       <h3 className="center-align titreblog1">A PROPOS</h3>
 
