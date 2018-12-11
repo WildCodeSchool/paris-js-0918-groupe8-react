@@ -9,16 +9,16 @@ const BofficeMenu = () => (
   <div className="pa4 lh-copy">
     <BoHeader />
 
-    <ul className="list pl0 ml0 left mw5 ba b--light-silver br3">
+    <ul className="list pl0 ml0 left mw5 ba ">
       {routes.filter(elem => elem.path.includes('/admin')).map(prop => (
-        <li className="ph3 pv2 bb b--light-silver">
+        <li className="ph3 pv2 bb">
           <NavLink
             exact
             to={prop.path}
             key={prop.path}
             activeClassName="active"
-            activeStyle={{ borderBottom: '3px solid red' }}
-            class="f2 lh-title fw9 mb3 mt0 pt3 bt bw2"
+            activeStyle={{ borderBottom: '3px solid blue' }}
+            class="f3 "
           >
             {prop.name}
           </NavLink>
