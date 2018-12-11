@@ -2,14 +2,12 @@ import React from 'react';
 // import { NavLink } from 'react-router-dom';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 import routes from '../../routes/routes';
+import BoHeader from '../boheader/BoHeader';
+
 
 const BofficeMenu = () => (
   <div className="pa4 lh-copy">
-    <h1 className="b f1 f-headline-ns tc db mb3 mb4-ns" title="Home">
-      Le conteur Digital
-    </h1>
-
-    <h1 className="f4 bold left mw5">Tableau de Bord</h1>
+    <BoHeader />
 
     <ul className="list pl0 ml0 left mw5 ba b--light-silver br3">
       {routes.filter(elem => elem.path.includes('/admin')).map(prop => (
@@ -27,6 +25,7 @@ const BofficeMenu = () => (
         </li>
       ))}
     </ul>
+
   </div>
 );
 
