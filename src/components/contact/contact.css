@@ -1,4 +1,8 @@
 .contactglobal{
   font-family: 'Oswald', sans-serif;
+  color: black;
 }
 
+.contact-input{
+  color: black;
+}
