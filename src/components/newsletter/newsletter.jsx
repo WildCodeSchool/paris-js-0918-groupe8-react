@@ -15,29 +15,30 @@ const Newsletter = () => (
           <p className="left-align">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
             ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehender
-            </p>
+          </p>
         </div>
 
         <form className="col s12 m4 offset-m2">
           <div className="row">
             <div className="input-field col s12">
-              <input id="first_name" type="text" className="validate" />
+              <input id="first_name" type="text" className="validate newsletter-input" />
               <label htmlFor="first_name">Prénom</label>
             </div>
           </div>
 
           <div className="row">
             <div className="input-field col s12">
-              <input id="email" type="email" className="validate" />
+              <input id="email" type="email" className="validate newsletter-input" />
               <label for="email">Email</label>
             </div>
           </div>
           <div className="row">
             <div className="input-field col s12 boutonenvoienewsletter">
-              <button className="btn waves-effect waves-light blue darken-1" type="submit" name="action">Envoyer
-                  <i className="material-icons right">
-                  send
-                  </i>
+              <button className="btn waves-effect waves-light blue darken-1" type="submit" name="action">
+              Envoyer
+                <i className="material-icons right">
+                send
+                </i>
               </button>
             </div>
           </div>
