@@ -1,10 +1,14 @@
 import React from 'react';
 import Navbar from '../components/navbar/navbar';
+import Footer from '../components/footer/footer';
+import Chartepage from '../components/chartepage/chartepage';
 
 const Charte = () => (
   <div>
     <Navbar />
-    <p>Section Charte</p>
+    <Chartepage />
+    <Footer />
+   
   </div>
 );
 

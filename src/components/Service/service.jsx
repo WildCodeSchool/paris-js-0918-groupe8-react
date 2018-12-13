@@ -19,7 +19,7 @@ const Service = () => (
             <div className="card-content">
               <h5 className="left-align"><b>Ecriture d'articles</b></h5>
               <hr />
-              <p className="left-align">Nous écrivons des articles de blog (thématisés, B2B, B2C), des articles actualités, et nous faisons aussi du blogging...</p>
+              <p className="left-align">Nous écrivons des articles de blog (thématisés, B2B, B2C), des articles actualités, et nous faisons aussi du </p>
               <br />
             </div>
           </div>
