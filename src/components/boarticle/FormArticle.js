@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class BoArticle extends Component {
+class FormArticle extends Component {
   render() {
     return (
       <div>
@@ -16,7 +16,7 @@ class BoArticle extends Component {
         <br />
         {' '}
         <br />
-        <textarea name="article" id="article" rows="30" cols="100" />
+        <textarea className="article" id="article" rows="30" cols="100" />
       </p>
       </form>
         </div>
@@ -33,4 +33,4 @@ class BoArticle extends Component {
   }
 }
 
-export default BoArticle;
+export default FormArticle;

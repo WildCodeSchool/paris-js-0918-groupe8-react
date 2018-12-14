@@ -21,7 +21,7 @@ const Contact = () => (
           </div>
           <div className="input-field col s12">
             <input id="mailcontact" type="email" className="validate contact-input" />
-            <label htmlfor="mailcontact">Email*</label>
+            <label htmlFor="mailcontact">Email*</label>
           </div>
           <div className="input-field col s12">
             <input id="entreprise" type="text" className="validate contact-input" />
@@ -30,7 +30,8 @@ const Contact = () => (
 
           <div className="input-field col s12">
             <textarea id="textarea2" className="materialize-textarea contact-input" data-length="120" />
-            <label for="textarea2">Message</label>
+            <label htmlFor="textarea2">Message</label>
+
           </div>
           <div className="row">
             <div className="col s4 offset-s1">

@@ -18,7 +18,7 @@ const BofficeMenu = () => (
             key={prop.path}
             activeClassName="active"
             activeStyle={{ borderBottom: '3px solid blue' }}
-            class="f3 "
+            className="f3 "
           >
             {prop.name}
           </NavLink>
