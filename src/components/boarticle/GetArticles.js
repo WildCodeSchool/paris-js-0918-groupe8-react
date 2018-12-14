@@ -1,22 +1,33 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-class BoArticle extends Component {
+import BocardListArticle from './BOcardListArticle';
 
+class BoArticle extends Component {
   state = {
-    articles: []
+    articles: [],
   }
 
-  getArticles = async () => {
+  componentDidMount() {
+    this.getData();
+  }
+
+  getData = async () => {
     const response = await axios.get('http://localhost:3001/api/articles/');
-    console.log(response);
+    this.setState({
+      articles: response.data,
+    });
   }
 
   render() {
+    const { articles } = this.state;
 
     return (
       <div>
         Affichage des articles
+        {articles.map(article => (
+          <BocardListArticle {...article} key={article.id_article} />
+        ))}
       </div>
     );
   }
