@@ -21,15 +21,17 @@ const Newsletter = () => (
         <form className="col s12 m4 offset-m2">
           <div className="row">
             <div className="input-field col s12">
-              <input id="first_name" type="text" className="validate newsletter-input" />
-              <label htmlFor="first_name">Prénom</label>
+              <label > 
+                Prénom
+                <input id="first_name" type="text" className="validate newsletter-input" />
+              </label>
             </div>
           </div>
 
           <div className="row">
             <div className="input-field col s12">
               <input id="email" type="email" className="validate newsletter-input" />
-              <label for="email">Email</label>
+              <label htmlFor="email">Email</label>
             </div>
           </div>
           <div className="row">
