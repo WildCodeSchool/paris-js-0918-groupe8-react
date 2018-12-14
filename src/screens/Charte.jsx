@@ -8,7 +8,6 @@ const Charte = () => (
     <Navbar />
     <Chartepage />
     <Footer />
-   
   </div>
 );
 
