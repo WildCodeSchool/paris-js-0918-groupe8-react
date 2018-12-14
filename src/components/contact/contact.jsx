@@ -30,7 +30,8 @@ const Contact = () => (
 
           <div className="input-field col s12">
             <textarea id="textarea2" className="materialize-textarea contact-input" data-length="120" />
-            <label htmlFor="textarea2">Textarea</label>
+            <label htmlFor="textarea2">Message</label>
+
           </div>
           <div className="row">
             <div className="col s4 offset-s1">

@@ -1,10 +1,12 @@
 import React from 'react';
+import { NavHashLink as NavLink } from 'react-router-hash-link';
 import './about.css';
 import maleavatar from '../../assets/img/MaleA.png';
 import femaleavatar from '../../assets/img/femaleA.png';
 import maillogo from '../../assets/svg/close-envelope.svg';
 import twitterlogo from '../../assets/svg/twitter.svg';
 import linkedinlogo from '../../assets/svg/linkedin-logo.svg';
+
 
 
 const About = () => (
@@ -24,9 +26,9 @@ const About = () => (
             <a href="#test"><img src={maillogo} alt="" width="30" height="30" className="maillogoabout" /></a>
             <a href="#test"><img src={twitterlogo} alt="" width="30" height="30" className="maillogoabout" /></a>
             <a href="#test"><img src={linkedinlogo} alt="" width="30" height="30" className="maillogoabout" /></a>
+            
 
-
-            <a href="#test"><p className="contactbouttonanais">Bio</p></a>
+            <NavLink exact to="/mathiassavary" className="contactbouttonanais">Bio</NavLink>
           </div>
         </div>
 
@@ -42,7 +44,7 @@ const About = () => (
               <a href="#test"><img src={twitterlogo} alt="" width="30" height="30" className="maillogoabout" /></a>
               <a href="#test"><img src={linkedinlogo} alt="" width="30" height="30" className="maillogoabout" /></a>
 
-              <a href="#test"><p className="contactbouttonanais">Bio</p></a>
+              <NavLink exact to="/mathiassavary" className="contactbouttonanais">Bio</NavLink>
             </div>
           </div>
         </div>
