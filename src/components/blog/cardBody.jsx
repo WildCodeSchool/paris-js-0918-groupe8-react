@@ -17,7 +17,7 @@ const CardBody = ({ title, content }) => (
         <hr />
         <p className="left-align">
           {`"
-          ${content.slice(1, 150)}
+          ${content.slice(0, 150)}
           ..."`}
         </p>
         <br />
