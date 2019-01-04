@@ -1,4 +1,4 @@
-.Navbarfuck{
+.Navbarconteurdigital{
     background-color: #003f5f;
     font-family: 'Oswald', sans-serif;
     min-height: 5vh;
@@ -6,4 +6,16 @@
 
 nav ul a{
     font-size: 1.5em;
+}
+
+.logoconteurdigital {
+    margin-top: 0.75%;
+    margin-left: 1%;
+}
+
+.titlelogoconteurdigital{
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5em;
+    text-indent: 10px; 
+
 }

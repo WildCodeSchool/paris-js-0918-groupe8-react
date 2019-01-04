@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 import M from 'materialize-css/dist/js/materialize.min';
 import './navbar.css';
-import Logo from '../../assets/img/conteurDigitalcrop.png';
+import Logo from '../../assets/img/iconConteursDuDigitalStorytelling.png';
 import routes from '../../routes/routes';
 
 class Navbar extends Component {
@@ -20,10 +20,13 @@ class Navbar extends Component {
     return (
       <div>
         <div className="navbar-fixed">
-          <nav className="Navbarfuck">
+          <nav className="Navbarconteurdigital">
             <div className="nav-wrapper">
-              <a href="/#">
-                <img className="left hide-on-med-and-down" src={Logo} width="60" height="60" alt="twitter" />
+              <a href="#/">
+                <img className="left hide-on-med-and-down logoconteurdigital" src={Logo} width="45" height="45" alt="logo conteur digital" />
+                <ul id="nav-mobile" className="left hide-on-med-and-down titlelogoconteurdigital">
+                  <li>Conteur Digital</li>
+                </ul>
               </a>
               <a href="#test" data-target="mobile-demo" className="sidenav-trigger">
                 <i className="material-icons">menu</i>
@@ -44,6 +47,7 @@ class Navbar extends Component {
                   </li>
                 ))}
                 <li><a href="sass.html"><i className="material-icons">search</i></a></li>
+                
               </ul>
             </div>
           </nav>

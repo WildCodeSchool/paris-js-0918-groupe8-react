@@ -9,7 +9,7 @@ const Newsletter = () => (
 
       <div className="row newsletterblock grey lighten-5">
         <div className="col s12 m6">
-          <p className="titledownloadlivretblanc">Télécharger le livre blanc</p>
+          <p className="titledownloadlivretblanc">Recevez le livre blanc</p>
           <hr />
           <p className="left-align">Pour recevoir le livre blanc, il suffit de vous inscrire à notre newsletter</p>
           <p className="left-align">
