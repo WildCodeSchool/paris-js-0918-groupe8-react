@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 // import maleavatar from '../../assets/img/MaleA.png';
 import femaleavatar from '../../assets/img/femaleA.png';
 import Imagecover1 from '../../assets/img/neonbrand-618322-unsplash.jpg';
@@ -14,12 +15,14 @@ const CardBody = ({ title, content }) => (
       <div className="card-content">
         <p className="left-align"><b>{title}</b></p>
         <hr />
-        <p className="left-align">{content}</p>
+        <p className="left-align">
+          {`"
+          ${content.slice(1, 150)}
+          ..."`}
+        </p>
         <br />
-
         <div className="card-action">
           <div className="row valign-wrapper">
-
             <div className="col s4">
               <img src={femaleavatar} alt="" className="circle responsive-img" />
             </div>
@@ -35,5 +38,10 @@ const CardBody = ({ title, content }) => (
   </div>
 
 );
+
+CardBody.propTypes = {
+  content: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+};
 
 export default CardBody;
