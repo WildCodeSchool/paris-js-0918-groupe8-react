@@ -16,7 +16,7 @@ class Card extends Component {
 
   // REQUETE DE LA LISTE ARTICLES
   getHomeArticles = async () => {
-    const response = await axios.get('http://localhost:3001/api/articles');
+    const response = await axios.get('http://localhost:3001/api/articles/blog/');
     this.setState({ homeArticles: response.data });
   }
 

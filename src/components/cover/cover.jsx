@@ -1,5 +1,6 @@
 import React from 'react';
 import './cover.css';
+import { NavHashLink as NavLink } from 'react-router-hash-link';
 
 const Coverimage = () => (
 
@@ -19,13 +20,10 @@ const Coverimage = () => (
       </div>
       <div className="row">
         <div className="coverbuttonname">
-          <a href="#test" className="waves-effect waves-light btn indigo darken-2">Mathias Savary</a>
-          <a href="#test" className="waves-effect waves-light btn red darken-1">Anais Jaunay</a>
-
+          <NavLink exact to="/mathiassavary" className="waves-effect waves-light btn indigo darken-2">Mathias Savary</NavLink>
+          <NavLink exact to="/anaisjaunay" className="waves-effect waves-light btn red darken-1">Anais Jaunay</NavLink>
         </div>
-
       </div>
-
     </div>
   </div>
 
