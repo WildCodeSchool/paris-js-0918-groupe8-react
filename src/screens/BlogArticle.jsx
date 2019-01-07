@@ -1,15 +1,12 @@
 import React from 'react';
 import Navbar from '../components/navbar/navbar';
 import Footer from '../components/footer/footer';
-
-import Blog from '../components/blog/card';
-import GetArticles from '../components/boarticle/GetArticles';
+import Article from '../components/article/article';
 
 const BlogArticle = () => (
   <div>
     <Navbar />
-    <GetArticles />
-    <Blog />
+    <Article />
     <Footer />
   </div>
 );

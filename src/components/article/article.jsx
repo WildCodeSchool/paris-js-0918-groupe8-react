@@ -8,7 +8,7 @@ const Article = () => (
 
       <div className="articlecoverimg">
         <div className="transbox">
-          <p className="black">Article 1 (date) - De Anais Jaunay</p>
+          <p className="black">Article 1 (date) - De Auteur</p>
 
 
         </div>
