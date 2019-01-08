@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import EditButton from '../buttons/EditButton';
 import TrashButton from '../buttons/TrashButton';
 
-import HomePageButton from '../buttons/HomePageButton';
+import StarButton from '../buttons/StarButton';
 import './BOcardListArticle.css';
 
 // il faudra rajouter les champs auteur et media quand les routes du back seront écrites...
@@ -14,6 +14,7 @@ const BOcardListeArticle = ({
   title,
   firstname,
   lastname,
+  front_page_favorite,
 }) => (
 
   <ul className="list pl0">
@@ -33,7 +34,7 @@ const BOcardListeArticle = ({
       <div>
         <EditButton />
         <TrashButton />
-        <HomePageButton />
+        <StarButton active={front_page_favorite}/>
       </div>
     </li>
   </ul>
