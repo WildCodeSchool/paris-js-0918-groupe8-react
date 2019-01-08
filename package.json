@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@tinymce/tinymce-react": "^2.4.0",
     "axios": "^0.18.0",
     "eslint-config-airbnb": "^17.1.0",
     "materialize-css": "^1.0.0-rc.2",

@@ -23,7 +23,7 @@ class Navbar extends Component {
           <nav className="Navbarconteurdigital">
             <div className="nav-wrapper">
               <a href="#/">
-                <img className="left hide-on-med-and-down logoconteurdigital" src={Logo} width="45" height="45" alt="logo conteur digital" />
+                <img className="left hide-on-med-and-down logoconteurdigital" src={Logo} width="50" height="50" alt="logo conteur digital" />
                 <ul id="nav-mobile" className="left hide-on-med-and-down titlelogoconteurdigital">
                   <li>Conteur Digital</li>
                 </ul>
