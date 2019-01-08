@@ -3,12 +3,10 @@
   color: black;
   font-size: 1.3em;
   text-align: justify;
+ }
 
-  }
-
-
-  .testsitecoverimg{
-    background-image: url("../../assets/img/biomathiascover.jpg");
+  .anaiscoverimg{
+    background-image: url("../../assets/img/bioanaiscover.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -53,3 +51,9 @@
     margin-top: 10%;
     margin-bottom: 10%;
   }
+
+.soustitrebio{
+    font-style: italic;
+    font-weight: bold;
+
+} ;

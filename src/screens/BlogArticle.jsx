@@ -1,9 +1,15 @@
 import React from 'react';
+import Navbar from '../components/navbar/navbar';
+import Footer from '../components/footer/footer';
+import Article from '../components/article/article';
 
 const BlogArticle = () => (
   <div>
-    <p>Section article</p>
+    <Navbar />
+    <Article />
+    <Footer />
   </div>
 );
+
 
 export default BlogArticle;

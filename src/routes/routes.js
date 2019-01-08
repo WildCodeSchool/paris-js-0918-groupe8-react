@@ -10,6 +10,7 @@ import BOmedias from '../screens/BOmedias';
 import BOcoms from '../screens/BOcoms';
 import BOadmin from '../screens/BOadmin';
 import Biomathias from '../components/biomathias/biomathias';
+import Bioanais from '../components/bioanais/bioanais';
 
 const routes = [
   {
@@ -41,6 +42,12 @@ const routes = [
     path: '/mathiassavary',
     name: null,
     component: Biomathias,
+  },
+
+  {
+    path: '/anaisjaunay',
+    name: null,
+    component: Bioanais,
   },
   {
     path: '/blog/article',

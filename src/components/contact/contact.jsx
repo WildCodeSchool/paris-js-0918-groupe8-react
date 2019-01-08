@@ -5,11 +5,13 @@ import './contact.css';
 const Contact = () => (
   <div className="contactglobal" id="contact">
     <div className="container">
+      <br />
+      <br />
       <h3 className="center-align titreblog1">CONTACT</h3>
 
       <div className="row grey lighten-5">
 
-        <form className="col s12 m6 offset-m6">
+        <form className="col s12 m6 offset-m3">
 
           <div className="input-field left-align col s12">
             <input id="first_namee" type="text" className="validate contact-input" />
@@ -33,17 +35,10 @@ const Contact = () => (
             <label htmlFor="textarea2">Message</label>
 
           </div>
+
+
           <div className="row">
-            <div className="col s4 offset-s1">
-
-              <p>
-                <label>
-                  <input type="checkbox" />
-                  <span>Newsletter</span>
-                </label>
-              </p>
-            </div>
-
+            <div className="col s3" />
             <div className="input-field col s5 offset-s1">
               <button className="btn waves-effect waves-light blue darken-1" type="submit" name="action">
               Envoyer
@@ -54,6 +49,7 @@ const Contact = () => (
             </div>
           </div>
         </form>
+        <br />
       </div>
     </div>
   </div>
