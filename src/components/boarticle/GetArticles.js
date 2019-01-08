@@ -13,7 +13,7 @@ class BoArticle extends Component {
   }
 
   getData = async () => {
-    const response = await axios.get('http://localhost:3001/api/articles/');
+    const response = await axios.get('http://localhost:3001/api/articles/blog');
     this.setState({
       articles: response.data,
     });
@@ -21,6 +21,7 @@ class BoArticle extends Component {
 
   render() {
     const { articles } = this.state;
+    console.log(articles)
 
     return (
       <div>
