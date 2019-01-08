@@ -23,7 +23,7 @@ class Navbar extends Component {
           <nav className="Navbarconteurdigital">
             <div className="nav-wrapper">
               <a href="#/">
-                <img className="left hide-on-med-and-down logoconteurdigital" src={Logo} width="45" height="45" alt="logo conteur digital" />
+                <img className="left hide-on-med-and-down logoconteurdigital" src={Logo} width="50" height="50" alt="logo conteur digital" />
                 <ul id="nav-mobile" className="left hide-on-med-and-down titlelogoconteurdigital">
                   <li>Conteur Digital</li>
                 </ul>
@@ -32,7 +32,7 @@ class Navbar extends Component {
                 <i className="material-icons">menu</i>
               </a>
               <ul className="right hide-on-med-and-down">
-                {routes.filter(elem => !elem.path.includes('/admin')).map(prop => (
+                {routes.filter(elem => !elem.path.includes('/admin') && elem.name != null).map(prop => (
                   <li>
                     <NavLink
                       exact
@@ -47,7 +47,6 @@ class Navbar extends Component {
                   </li>
                 ))}
                 <li><a href="sass.html"><i className="material-icons">search</i></a></li>
-                
               </ul>
             </div>
           </nav>

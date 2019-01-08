@@ -16,7 +16,7 @@ class Card extends Component {
 
   // REQUETE DE LA LISTE ARTICLES
   getHomeArticles = async () => {
-    const response = await axios.get('http://localhost:3001/api/articles/blog/');
+    const response = await axios.get('/api/articles/blog');
     this.setState({ homeArticles: response.data });
   }
 
@@ -33,6 +33,7 @@ class Card extends Component {
             ))}
           </div>
         </div>
+        {/* <Route exact path={prop.path} component=BlogArticle /> */}
       </div>
     );
   }
