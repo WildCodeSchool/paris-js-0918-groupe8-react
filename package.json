@@ -30,6 +30,7 @@
       ]
     }
   },
+  "proxy": "http://localhost:3001/",
   "browserslist": [
     ">0.2%",
     "not dead",

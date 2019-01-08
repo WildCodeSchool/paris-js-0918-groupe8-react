@@ -32,7 +32,7 @@ class Navbar extends Component {
                 <i className="material-icons">menu</i>
               </a>
               <ul className="right hide-on-med-and-down">
-                {routes.filter(elem => !elem.path.includes('/admin')).map(prop => (
+                {routes.filter(elem => !elem.path.includes('/admin') && elem.name != null).map(prop => (
                   <li>
                     <NavLink
                       exact
@@ -47,7 +47,6 @@ class Navbar extends Component {
                   </li>
                 ))}
                 <li><a href="sass.html"><i className="material-icons">search</i></a></li>
-                
               </ul>
             </div>
           </nav>

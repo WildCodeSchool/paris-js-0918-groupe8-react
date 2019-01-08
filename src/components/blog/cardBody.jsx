@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import maleavatar from '../../assets/img/MaleA.png';
 import femaleavatar from '../../assets/img/femaleA.png';
 import Imagecover1 from '../../assets/img/neonbrand-618322-unsplash.jpg';
 import './card.css';
 
 
-const CardBody = ({ title, content }) => (
+const CardBody = ({
+  title, content, firstname, lastname,
+}) => (
   <div className="col s12 m6 l4">
     <div className="card hoverable">
       <div className="card-image">
@@ -28,7 +29,7 @@ const CardBody = ({ title, content }) => (
             </div>
             <div className="col s8">
               <span className="black-text left-align">
-                <b>Anais Jaunai</b>
+                <b>{`${firstname} ${lastname}`}</b>
               </span>
             </div>
           </div>
@@ -42,6 +43,8 @@ const CardBody = ({ title, content }) => (
 CardBody.propTypes = {
   content: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  firstname: PropTypes.string.isRequired,
+  lastname: PropTypes.string.isRequired,
 };
 
 export default CardBody;
