@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 import BocardListArticle from './BOcardListArticle';
+import './GetArticles.css';
 
 class BoArticle extends Component {
   state = {
@@ -25,10 +26,13 @@ class BoArticle extends Component {
 
     return (
       <div>
-        Affichage des articles
-        {articles.map(article => (
-          <BocardListArticle {...article} key={article.id_article} />
-        ))}
+        <p className="f1 measure tc b ">Espace Article</p>
+        <br />
+        <div className="blocarticle">
+          {articles.map(article => (
+            <BocardListArticle {...article} key={article.id_article} />
+          ))}
+        </div>
       </div>
     );
   }

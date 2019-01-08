@@ -1,0 +1,17 @@
+.articlecoverimg{
+  background-image: url("../../assets/img/Imagechartefullresponsive.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 60vh;
+  margin-top: 5%;
+  position: relative;
+
+}
+
+
+.blocarticle{
+  text-align: justify;
+  font-size: 0.8em;
+
+}

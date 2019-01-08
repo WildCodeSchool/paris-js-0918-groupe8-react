@@ -37,7 +37,6 @@ const BOcardListeArticle = ({
       </div>
     </li>
   </ul>
-
 );
 
 BOcardListeArticle.propTypes = {
