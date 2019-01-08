@@ -37,7 +37,7 @@ const Biomathias = () => (
         Je pensais m’enfoncer dans une voie de garage. J’ai vraiment pensé que j’avais choisi&nbsp;
         la mauvaise orientation. Et un jour, j’ai réalisé que j’étais arrivé quelque part.
           <br />
-          <br /> 
+          <br />
         Parce que, les amis, la VRAIE disruption dans le marketing digital N’est PAS technologique.&nbsp;
         Elle vient de l’écrit.&nbsp;
           <b>Elle est poétique !</b>
@@ -55,7 +55,7 @@ const Biomathias = () => (
         j’ai écrit mes premières nouvelles sur un Mackintosh SE 1987.
           <br />
           <br />
-          <img src={Imgmac} alt="" width="200" height="200" />
+          <center><img src={Imgmac} alt="" width="200" height="200" /></center>
           <br />
           <br />
         Vous le trouvez moche ? En 1996, il trônait au milieu de mon bureau et c’était pour moi
@@ -73,7 +73,7 @@ const Biomathias = () => (
           <br />
           <br />
         En 2016, j’ai pu explorer la richesse de la rédaction web et du storytelling. J’ai fait :
-      
+
           <ul>
             <li>des emails</li>
             <li>des pages pour gagner la première page de Google (et j’ai souvent réussi à atteindre la première place !)</li>
@@ -82,7 +82,7 @@ const Biomathias = () => (
             <li>des communiqués de presse</li>
             <li>des scénarii pour des vidéos de promotion</li>
           </ul>
-     
+
           <b>Un conteur digital</b>
           <br />
           <br />
@@ -90,7 +90,7 @@ const Biomathias = () => (
         ça veut dire que le métier de conteur digital est de plus en plus technique.
           <br />
           <br />
-        Concrètement comment je bosse ? 
+        Concrètement comment je bosse ?
           <br />
           <br />
         1/au commencement était... le persona (le public cible)  !&nbsp;
@@ -123,7 +123,7 @@ const Biomathias = () => (
       <Footer />
     </div>
   </div>
-  
+
 );
 
 export default Biomathias;

@@ -55,8 +55,9 @@ const Chartepage = () => (
         <br />
         <br />
         <b>Le conteur digital</b>
-          , cette
+          , cette&nbsp;
         <b>espèce en voie d’apparition</b>
+&nbsp;
         est celui qui cimente la tribu digitale, qui rassemble autour d’une marque une&nbsp;
         communauté qui lui donnera tout son ciment.
         <br />
@@ -71,13 +72,13 @@ const Chartepage = () => (
         <b>Si le contenu est roi, l’écriture est reine.</b>
         <br />
         <br />
-        Et le storytelling est un domaine technique, tout comme la programmation informatique. 
+        Et le storytelling est un domaine technique, tout comme la programmation informatique.
         La terrible vérité, c’est qu’il n’y a pas beaucoup de bons scénaristes.
 
         Le conteur digital possède ce savoir-faire et le met à disposition de votre identité.
       </p>
       <div className="bouttondevischarte">
-        <NavLink exact smooth to='/#contact' className="waves-effect waves-light btn blue darken-1">Demander devis</NavLink>
+        <NavLink exact smooth to="/#contact" className="waves-effect waves-light btn blue darken-1">Demander devis</NavLink>
       </div>
 
     </div>
