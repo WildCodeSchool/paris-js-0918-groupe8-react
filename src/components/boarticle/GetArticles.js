@@ -25,10 +25,8 @@ class BoArticle extends Component {
 
     return (
       <div>
-        <div className="titrearticle">
-            Affichage des articles
-        </div>
-
+        <p className="f1 measure tc b ">Espace Article</p>
+        <br />
         <div className="blocarticle">
           {articles.map(article => (
             <BocardListArticle {...article} key={article.id_article} />
