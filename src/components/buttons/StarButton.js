@@ -24,17 +24,9 @@ class StarButton extends Component {
           {this.props.active ? <i className="material-icons md-yellow">star</i> : (<i className="material-icons">star</i>)}
         </button>
       </div>
-    )
+    );
   }
-
-// const StarButton = ({ active }) => (
-//   <div>
-//   <button type="submit">
-//     {active ? <i className="material-icons md-yellow">star</i> : (<i className="material-icons">star</i>)}
-//   </button>
-// </div>
-// );
-};
+}
 
 StarButton.propTypes = {
   active: PropTypes.number.isRequired,
