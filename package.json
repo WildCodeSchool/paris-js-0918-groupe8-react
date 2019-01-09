@@ -31,6 +31,7 @@
       "plugins": [
         "eslint-snake-case"
       ]
+    }
   },
   "proxy": "http://localhost:3001/",
   "browserslist": [
