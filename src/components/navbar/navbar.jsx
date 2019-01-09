@@ -54,7 +54,7 @@ class Navbar extends Component {
 
         <div>
           <ul className="sidenav" id="mobile-demo">
-            {routes.filter(elem => !elem.path.includes('/admin')).map(prop => (
+            {routes.filter(elem => !elem.path.includes('/admin') && elem.name != null).map(prop => (
               <li>
                 <NavLink
                   exact

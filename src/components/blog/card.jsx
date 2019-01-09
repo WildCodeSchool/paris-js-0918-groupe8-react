@@ -21,7 +21,7 @@ class Card extends Component {
   }
 
   render() {
-    // console.log(this.state.homeArticles)
+     console.log(this.state.homeArticles)
     const { homeArticles } = this.state;
     return (
       <div className="cardglobal">
@@ -33,7 +33,6 @@ class Card extends Component {
             ))}
           </div>
         </div>
-        {/* <Route exact path={prop.path} component=BlogArticle /> */}
       </div>
     );
   }
