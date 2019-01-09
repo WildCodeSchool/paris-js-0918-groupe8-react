@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { NavHashLink as NavLink } from 'react-router-hash-link';
 import femaleavatar from '../../assets/img/femaleA.png';
 import './card.css';
 
 
 const CardBody = ({
-  title, content, firstname, lastname, main_picture
+  title, content, firstname, lastname, main_picture, id_article,
 }) => (
   <div className="col s12 m6 l4">
     <div className="card hoverable">
@@ -24,7 +25,9 @@ const CardBody = ({
         <div className="card-action">
           <div className="row valign-wrapper">
             <div className="col s4">
-              <img src={femaleavatar} alt="" className="circle responsive-img" />
+              <NavLink exact to={{ pathname: `/blog/${title.toLowerCase()}`, state: { id: id_article } }}>
+                <img src={femaleavatar} alt="" className="circle responsive-img" />
+              </NavLink>
             </div>
             <div className="col s8">
               <span className="black-text left-align">
@@ -44,6 +47,7 @@ CardBody.propTypes = {
   title: PropTypes.string.isRequired,
   firstname: PropTypes.string.isRequired,
   lastname: PropTypes.string.isRequired,
+  id_article: PropTypes.number.isRequired,
   main_picture: PropTypes.string.isRequired,
 };
 

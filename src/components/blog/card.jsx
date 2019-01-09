@@ -33,7 +33,6 @@ class Card extends Component {
             ))}
           </div>
         </div>
-        {/* <Route exact path={prop.path} component=BlogArticle /> */}
       </div>
     );
   }
