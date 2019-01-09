@@ -10,7 +10,7 @@ import './BOcardListArticle.css';
 
 const BOcardListeArticle = ({
   create_date,
-  update_date, 
+  update_date,
   title,
   firstname,
   lastname,
