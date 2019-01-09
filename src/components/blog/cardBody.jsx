@@ -1,17 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import femaleavatar from '../../assets/img/femaleA.png';
-import Imagecover1 from '../../assets/img/neonbrand-618322-unsplash.jpg';
 import './card.css';
 
 
 const CardBody = ({
-  title, content, firstname, lastname,
+  title, content, firstname, lastname, main_picture
 }) => (
   <div className="col s12 m6 l4">
     <div className="card hoverable">
       <div className="card-image">
-        <img className="materialboxed" src={Imagecover1} alt="" />
+        <img className="materialboxed" src={main_picture} alt="" />
       </div>
       <div className="card-content">
         <p className="left-align"><b>{title}</b></p>
@@ -45,6 +44,7 @@ CardBody.propTypes = {
   title: PropTypes.string.isRequired,
   firstname: PropTypes.string.isRequired,
   lastname: PropTypes.string.isRequired,
+  main_picture: PropTypes.string.isRequired,
 };
 
 export default CardBody;
