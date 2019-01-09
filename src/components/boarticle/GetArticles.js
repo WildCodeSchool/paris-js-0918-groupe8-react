@@ -10,15 +10,16 @@ class BoArticle extends Component {
   }
 
   componentDidMount() {
-    this.getData();
+    this.loadData();
   }
 
-  getData = async () => {
+  loadData = async () => {
     const response = await axios.get('http://localhost:3001/api/articles/blog');
     this.setState({
       articles: response.data,
     });
   }
+
 
   render() {
     const { articles } = this.state;
@@ -29,7 +30,11 @@ class BoArticle extends Component {
         <br />
         <div className="blocarticle">
           {articles.map(article => (
-            <BocardListArticle {...article} key={article.id_article} />
+            <BocardListArticle
+              {...article}
+              key={article.id_article}
+              loadData={this.loadData}
+            />
           ))}
         </div>
       </div>
