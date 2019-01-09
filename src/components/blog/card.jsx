@@ -21,7 +21,7 @@ class Card extends Component {
   }
 
   render() {
-    // console.log(this.state.homeArticles)
+     console.log(this.state.homeArticles)
     const { homeArticles } = this.state;
     return (
       <div className="cardglobal">
