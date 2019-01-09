@@ -27,8 +27,10 @@
       "react/jsx-filename-extension": [
         "js",
         "jsx"
+      ],
+      "plugins": [
+        "eslint-snake-case"
       ]
-    }
   },
   "proxy": "http://localhost:3001/",
   "browserslist": [
