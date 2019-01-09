@@ -6,15 +6,15 @@ import TrashButton from '../buttons/TrashButton';
 import StarButton from '../buttons/StarButton';
 import './BOcardListArticle.css';
 
-// il faudra rajouter les champs auteur et media quand les routes du back seront écrites...
-
 const BOcardListeArticle = ({
+  id_article,
   create_date,
   update_date, 
   title,
   firstname,
   lastname,
   front_page_favorite,
+  loadData,
 }) => (
 
   <ul className="list pl0">
@@ -34,15 +34,19 @@ const BOcardListeArticle = ({
       <div>
         <EditButton />
         <TrashButton />
-        <StarButton active={front_page_favorite}/>
+        <StarButton
+          active={front_page_favorite}
+          id_article={id_article}
+          loadData={loadData}
+        />
       </div>
     </li>
   </ul>
 );
 
 BOcardListeArticle.propTypes = {
-  create_date: PropTypes.number.isRequired,
-  update_date: PropTypes.number.isRequired,
+  create_date: PropTypes.string.isRequired,
+  update_date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   firstname: PropTypes.string.isRequired,
   lastname: PropTypes.string.isRequired,
