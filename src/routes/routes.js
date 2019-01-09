@@ -43,14 +43,13 @@ const routes = [
     name: null,
     component: Biomathias,
   },
-
   {
     path: '/anaisjaunay',
     name: null,
     component: Bioanais,
   },
   {
-    path: '/blog/article',
+    path: '/blog/:article',
     name: null,
     component: BlogArticle,
   },
