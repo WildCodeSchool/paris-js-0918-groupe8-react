@@ -4,11 +4,11 @@ import Navbar from '../components/navbar/navbar';
 import Footer from '../components/footer/footer';
 import Article from '../components/article/article';
 
-const BlogArticle = ({ match: { params: { article } } }) => (
+const BlogArticle = ({ match: { params: { article } }, ...props }) => (
   <div>
     <Navbar />
-    <p>{ article }</p>
-    <Article />
+    <p>{ props.location.state.id_article }</p>
+    <Article {...props.location.state} />
     <Footer />
   </div>
 );
