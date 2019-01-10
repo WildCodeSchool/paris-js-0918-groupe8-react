@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './card.css';
+import femaleavatar from '../../assets/img/femaleA.png';
 
 
 const CardBody = ({

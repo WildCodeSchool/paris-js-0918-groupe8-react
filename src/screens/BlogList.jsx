@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../components/navbar/navbar';
-import Blog from '../components/blog/card';
+import Bloglist from '../components/bloglist/listblogelement'
 import Footer from '../components/footer/footer';
 
 
@@ -9,7 +9,7 @@ const BlogList = () => (
 
   <div>
     <Navbar />
-    <Blog />
+    <Bloglist />
     <Footer />
   </div>
 );
