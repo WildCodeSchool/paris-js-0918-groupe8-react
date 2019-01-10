@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import M from 'materialize-css/dist/js/materialize.min';
 import Tinymce from '../tinymce/tinymce';
-
+import EditButton from '../buttons/EditButton';
 
 class ArticleEdit extends Component {
   componentDidMount() {
@@ -18,12 +18,16 @@ class ArticleEdit extends Component {
           <div className="Editeurtinymceadmnistrateur col s9">
             <Tinymce />
           </div>
+          <button>
+            {' '}
+            {<EditButton />}
+          </button>
         </div>
-        <center>
-          <a href="#1" className="btn-floating btn-large tooltipped waves-effect waves-light green darken-3 bouttonbackoffice" data-position="bottom" data-tooltip="Publier"><i className="material-icons">check</i></a>
-          <a href="#2" className="btn-floating btn-large tooltipped waves-effect deep-orange accent-3 bouttonbackoffice" data-position="bottom" data-tooltip="Supprimer"><i className="material-icons">delete</i></a>
-          <a href="#1" className="btn-floating btn-large tooltipped waves-effect grey bouttonbackoffice" data-position="bottom" data-tooltip="Brouillon"><i className="material-icons">do_not_disturb_alt</i></a>
-        </center>
+
+        <a href="#1" className="btn-floating btn-large tooltipped waves-effect waves-light green darken-3 bouttonbackoffice" data-position="bottom" data-tooltip="Publier"><i className="material-icons">check</i></a>
+        <a href="#2" className="btn-floating btn-large tooltipped waves-effect deep-orange accent-3 bouttonbackoffice" data-position="bottom" data-tooltip="Supprimer"><i className="material-icons">delete</i></a>
+        <a href="#1" className="btn-floating btn-large tooltipped waves-effect grey bouttonbackoffice" data-position="bottom" data-tooltip="Brouillon"><i className="material-icons">do_not_disturb_alt</i></a>
+
       </div>
 
     );
