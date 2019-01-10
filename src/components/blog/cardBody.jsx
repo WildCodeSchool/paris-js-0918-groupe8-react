@@ -4,9 +4,10 @@ import { NavHashLink as NavLink } from 'react-router-hash-link';
 import femaleavatar from '../../assets/img/femaleA.png';
 import './card.css';
 
+const regex = /[\\.,?!\-_€$]/gi;
 
 const CardBody = ({
-  title, content, firstname, lastname, main_picture, id_article,
+  id_article, create_date, update_date, title, content, main_picture, firstname, lastname, avatar,
 }) => (
   <div className="col s12 m6 l4">
     <div className="card hoverable">
@@ -25,7 +26,15 @@ const CardBody = ({
         <div className="card-action">
           <div className="row valign-wrapper">
             <div className="col s4">
-              <NavLink exact to={{ pathname: `/blog/${title.toLowerCase()}`, state: { id: id_article } }}>
+              <NavLink
+                exact
+                to={{
+                  pathname: `/blog/${title.toLowerCase().replace(regex, '').split(' ').join('-')}`,
+                  state: {
+                    id_article, create_date, update_date, title, content, main_picture, firstname, lastname, avatar
+                  },
+                }}
+              >
                 <img src={femaleavatar} alt="" className="circle responsive-img" />
               </NavLink>
             </div>
@@ -49,6 +58,9 @@ CardBody.propTypes = {
   lastname: PropTypes.string.isRequired,
   id_article: PropTypes.number.isRequired,
   main_picture: PropTypes.string.isRequired,
+  create_date: PropTypes.string.isRequired,
+  update_date: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
 };
 
 export default CardBody;
