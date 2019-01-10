@@ -12,17 +12,18 @@ class StarButton extends Component {
       `/api/articles/blog/${this.props.id_article}`,
       { front_page_favorite : !this.props.active }
     )
+      .then(res => alert(`${res.data.flash}`))
       .then(this.props.loadData)
   }
 
-
   render() {
-    
+
     return (
       <div>
         <button type="submit" onClick={this.setFavorite}>
           {this.props.active ? <i className="material-icons md-yellow">star</i> : (<i className="material-icons">star</i>)}
         </button>
+
       </div>
     );
   }
