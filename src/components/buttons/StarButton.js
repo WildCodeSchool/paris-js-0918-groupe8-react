@@ -38,7 +38,7 @@ class StarButton extends Component {
 StarButton.propTypes = {
   active: PropTypes.number.isRequired,
   id_article: PropTypes.number.isRequired,
-  loadData: PropTypes.func,
+  loadData: PropTypes.func.isRequired,
 };
 
 export default StarButton;
