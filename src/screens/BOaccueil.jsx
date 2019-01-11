@@ -1,10 +1,18 @@
 import React from 'react';
-import BofficeMenu from '../components/boMenu/BofficeMenu';
+
+import BoNavbar from '../components/boNavbar/BoNavbar';
+
 
 const BOaccueil = () => (
-  <div>
-    <BofficeMenu />
-    <p style={{ fontSize: '50px' }}>Accueil Back-Office</p>
+  <div className="grid-container">
+    <aside className="grid-item BoNavbar">
+      <BoNavbar />
+    </aside>
+    <main className="grid-item">
+      <p style={{ fontSize: '50px' }}>
+      Accueil Back-Office
+      </p>
+    </main>
   </div>
 );
 
