@@ -9,6 +9,7 @@ const CardBody = ({
   id_article, create_date, update_date, title, content, main_picture, firstname, lastname, avatar,
 }) => (
   <div className="col s12 m6 l4">
+    {/* Envoi des props reçus de "card" dans BlogArticle via NavLink */}
     <NavLink
       exact
       to={{
