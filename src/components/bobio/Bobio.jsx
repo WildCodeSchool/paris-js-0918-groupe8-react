@@ -15,7 +15,8 @@ class BoBio extends Component {
       <div>
         <div className="row">
           <div className="input-field col s6">
-            <input value="Mathias Savary" id="first_name2" type="text" className="validate" />
+            <input value="Mathias Savary" id="first_name2" type="text" className="validate" /> 
+            {/* enlever la value en dur  */}
             <label className="active" htmlFor="first_name2" id="label_first_name2">Titre Biographie</label>
           </div>
 
@@ -26,9 +27,9 @@ class BoBio extends Component {
           </div>
         </div>
 
-        <a href="#1" className="btn-floating btn-large tooltipped waves-effect waves-light green darken-3 bouttonbackoffice" data-position="bottom" data-tooltip="Publier"><i class="material-icons">check</i></a>
-        <a href="#2" className="btn-floating btn-large tooltipped waves-effect deep-orange accent-3 bouttonbackoffice" data-position="bottom" data-tooltip="Supprimer"><i class="material-icons">delete</i></a>
-        <a href="#1" className="btn-floating btn-large tooltipped waves-effect grey bouttonbackoffice" data-position="bottom" data-tooltip="Brouillon"><i class="material-icons">do_not_disturb_alt</i></a>
+        <a href="#1" className="btn-floating btn-large tooltipped waves-effect waves-light green darken-3 bouttonbackoffice" data-position="bottom" data-tooltip="Publier"><i className="material-icons">check</i></a>
+        <a href="#2" className="btn-floating btn-large tooltipped waves-effect deep-orange accent-3 bouttonbackoffice" data-position="bottom" data-tooltip="Supprimer"><i className="material-icons">delete</i></a>
+        <a href="#1" className="btn-floating btn-large tooltipped waves-effect grey bouttonbackoffice" data-position="bottom" data-tooltip="Brouillon"><i className="material-icons">do_not_disturb_alt</i></a>
       </div>
 
     );

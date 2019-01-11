@@ -22,14 +22,13 @@ class BoNavbar extends Component {
         <div>
           <ul id="slide-out" className="sidenav sidenav-fixed">
             {routes.filter(elem => elem.path.includes('/admin')).map(prop => (
-              <li>
+              <li key={prop.path}>
                 <NavLink
                   exact
                   to={prop.path}
-                  key={prop.path}
                   activeClassName="active"
                   activeStyle={{ background: '#003F5F', color: '#FFFFFF' }}
-                >
+                > 
                   {prop.name}
                 </NavLink>
               </li>
