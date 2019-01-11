@@ -27,6 +27,8 @@ class BoNavbar extends Component {
                   exact
                   to={prop.path}
                   key={prop.path}
+                  activeClassName="active"
+                  activeStyle={{ background: '#003F5F', color: '#FFFFFF' }}
                 >
                   {prop.name}
                 </NavLink>
