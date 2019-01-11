@@ -17,9 +17,9 @@ const Service = () => (
               {/* <span className="card-title text-darken-5 badge white black-text badgereading">5min reading</span> */}
             </div>
             <div className="card-content">
-              <h5 className="left-align"><b>Ecriture d'articles</b></h5>
+              <h5 className="left-align"><b>Création de contenus</b></h5>
               <hr />
-              <p className="left-align">Nous écrivons des articles de blog (thématisés, B2B, B2C), des articles actualités, et nous faisons aussi du </p>
+              <p className="left-align">articles, pages à propos, newsletters, descriptifs, emails, publications pour les réseaux sociaux... Nous rédigeons pour vous des contenus à forte valeur ajoutée, chargés de l’ADN de votre entreprise.</p>
               <br />
             </div>
           </div>
@@ -34,9 +34,9 @@ const Service = () => (
               {/* <span className="card-title text-darken-5 badge white black-text badgereading">5min reading</span> */}
             </div>
             <div className="card-content">
-              <h5 className="left-align"><b>Ecriture de page About</b></h5>
+              <h5 className="left-align"><b>Stratégie éditoriale</b></h5>
               <hr />
-              <p className="left-align">Nous vous aidons à concevoir vos pages de présentation parfaite, à raonter l'histoire de votre marque</p>
+              <p className="left-align">diagnostic, charte éditoriale, analyse de performance, optimisation de vos contenus existants. Nous réalisons un audit et formulons des recommandations pour embellir votre communication.</p>
               <br />
             </div>
           </div>
@@ -51,9 +51,9 @@ const Service = () => (
               {/* <span className="card-title text-darken-5 badge white black-text badgereading">5min reading</span> */}
             </div>
             <div className="card-content">
-              <h5 className="left-align"><b>Consulting éditorial</b></h5>
+              <h5 className="left-align"><b>Accompagnement</b></h5>
               <hr />
-              <p className="left-align">Nous vous aidons à élaborer une stratégie de contenus textuels en adéquation avec votre clientèle</p>
+              <p className="left-align">C’est vous qui le faites, mais on vous guide. Créez votre storytelling pas à pas avec un expert.</p>
               <br />
             </div>
           </div>

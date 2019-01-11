@@ -9,12 +9,12 @@ const Newsletter = () => (
 
       <div className="row newsletterblock grey lighten-5">
         <div className="col s12 m6">
-          <p className="titledownloadlivretblanc">Recevez le livre blanc</p>
+          <p className="titledownloadlivretblanc">Devenez conteur digital :</p>
           <hr />
-          <p className="left-align">Pour recevoir le livre blanc, il suffit de vous inscrire à notre newsletter</p>
+          <p className="left-align">Chaque semaine pendant 3 prochains mois nous vous envoyons une technique de storytelling simple et applicable pour accroître l’impact de votre communication digitale.</p>
           <p className="left-align">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehender
+          En cadeau, recevez 10 conseils des plus grands storytellers et comment les utiliser pour votre entreprise.
+
           </p>
         </div>
 
