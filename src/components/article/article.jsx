@@ -23,7 +23,7 @@ const Article = ({
       <p className="blocarticle">{content}</p>
 
       <div className="bouttondevischarte">
-        <NavLink exact smooth to="/#home" className="waves-effect waves-light btn blue darken-1">Accueil</NavLink>
+        <NavLink exact smooth to="/" className="waves-effect waves-light btn blue darken-1">Accueil</NavLink>
       </div>
 
     </div>

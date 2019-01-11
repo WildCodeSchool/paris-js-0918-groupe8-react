@@ -22,7 +22,7 @@ const CardBody = ({
         <div className="card-image">
           <img className="materialboxed" src={main_picture} alt="" />
         </div>
-        <div className="card-content">
+        <div className="card-content black-text">
           <p className="left-align"><b>{title}</b></p>
           <hr />
           <p className="left-align">
