@@ -8,24 +8,18 @@ const Article = ({
 }) => (
   <div className="chartepageglobal">
     <div className="container">
-
       <div className="articlecoverimg">
         <div className="transbox">
           <p className="black">{`${title} ${create_date} - De ${firstname} ${lastname}`}</p>
-
-
         </div>
       </div>
       <br />
       <div className="titrearticle">{title}</div>
       <p className="blocarticle">{content}</p>
-
       <p className="blocarticle">{content}</p>
-
       <div className="bouttondevischarte">
         <NavLink exact smooth to="/" className="waves-effect waves-light btn blue darken-1">Accueil</NavLink>
       </div>
-
     </div>
   </div>
 

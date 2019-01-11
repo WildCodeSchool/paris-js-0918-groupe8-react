@@ -10,6 +10,7 @@ const BlogList = () => (
   <div>
     <Navbar />
     <Blog />
+    
     <Footer />
   </div>
 );
