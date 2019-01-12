@@ -26,8 +26,6 @@ class BoArticle extends Component {
 
     return (
       <div>
-        <p className="f1 measure tc b ">Espace Article</p>
-        <br />
         <div className="blocarticle">
           {articles.map(article => (
             <BocardListArticle
