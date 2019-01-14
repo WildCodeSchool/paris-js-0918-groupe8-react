@@ -18,13 +18,11 @@ const BOarticles = () => (
 import BofficeMenu from '../components/boMenu/BofficeMenu';
 import GetArticles from '../components/boarticle/GetArticles';
 import BoFooter from '../components/bofooter/BoFooter';
-import ArticleEdit from '../components/boarticle/Editarticle';
 
 const BOarticles = () => (
   <div>
     <BofficeMenu />
     <GetArticles />
-    <ArticleEdit />
     <BoFooter />
 >>>>>>> tinymce
   </div>

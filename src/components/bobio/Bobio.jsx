@@ -6,6 +6,7 @@ import './bobio.css';
 
 class BoBio extends Component {
   componentDidMount() {
+  //  tooltip sur materialize (popup des boutons)
     const elem = document.querySelectorAll('.tooltipped');
     M.Tooltip.init(elem);
   }

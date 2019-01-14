@@ -18,6 +18,7 @@ const BOcardListeArticle = ({
   loadData,
 }) => (
 
+<<<<<<< HEAD
   <ul className="collection">
     <li className="collection-item avatar">
       <img src={main_picture} alt="" className="circle" />
@@ -32,6 +33,35 @@ const BOcardListeArticle = ({
         <i className="material-icons"><TrashButton /></i>
         <i className="material-icons"><StarButton active={front_page_favorite} id_article={id_article} loadData={loadData}/></i>
       </a>
+=======
+  <ul className="list pl0">
+    <li className="flex justify-between pa4-ns bb b--black-10">
+      <div>
+        <b className="db f3 mb1">{title}</b>
+        <span className="f5 db lh-copy measure">
+          {`Par ${firstname} ${lastname}`}
+        </span>
+        <time className="f6 db gray">
+          {`Créé le ${create_date}`}
+        </time>
+        <time className="f6 db gray">
+          {`Mise à jour le ${update_date}`}
+        </time>
+      </div>
+      <div>
+        <EditButton
+          active={title}
+          id_article={id_article}
+          loadData={loadData}
+        />
+        <TrashButton />
+        <StarButton
+          active={front_page_favorite}
+          id_article={id_article}
+          loadData={loadData}
+        />
+      </div>
+>>>>>>> test
     </li>
   </ul>
 );
