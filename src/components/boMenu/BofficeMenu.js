@@ -2,12 +2,10 @@ import React from 'react';
 // import { NavLink } from 'react-router-dom';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 import routes from '../../routes/routes';
-import BoHeader from '../boheader/BoHeader';
 
 
 const BofficeMenu = () => (
   <div className="pa4 lh-copy">
-    <BoHeader />
 
     <ul className="list pl0 ml0 left mw5 ba ">
       {routes.filter(elem => elem.path.includes('/admin')).map(prop => (

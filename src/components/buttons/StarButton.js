@@ -1,3 +1,4 @@
+/* global alert */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
@@ -6,22 +7,28 @@ import Axios from 'axios';
 
 
 class StarButton extends Component {
-
   setFavorite = () => {
+    const { id_article, active, loadData } = this.props;
     Axios.put(
-      `/api/articles/blog/${this.props.id_article}`,
-      { front_page_favorite : !this.props.active }
+      `/api/articles/blog/${id_article}`,
+      { front_page_favorite: !active }
     )
-      .then(this.props.loadData)
+      .then((res) => {
+        if (res.data.flash !== undefined) {
+          (alert(`${res.data.flash}`));
+        }
+      })
+      .then(loadData);
   }
 
 
   render() {
-    
+    const { active } = this.props;
+
     return (
       <div>
         <button type="submit" onClick={this.setFavorite}>
-          {this.props.active ? <i className="material-icons md-yellow">star</i> : (<i className="material-icons">star</i>)}
+          {active ? <i className="material-icons md-yellow">star</i> : (<i className="material-icons">star</i>)}
         </button>
       </div>
     );
@@ -30,6 +37,8 @@ class StarButton extends Component {
 
 StarButton.propTypes = {
   active: PropTypes.number.isRequired,
+  id_article: PropTypes.number.isRequired,
+  loadData: PropTypes.func.isRequired,
 };
 
 export default StarButton;

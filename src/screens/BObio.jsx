@@ -1,12 +1,18 @@
 import React from 'react';
-import BofficeMenu from '../components/boMenu/BofficeMenu';
+
+import BoNavbar from '../components/boNavbar/BoNavbar';
 import Bobio from '../components/bobio/Bobio';
 
+import './BOgrids.css';
+
 const BObio = () => (
-  <div>
-    <BofficeMenu />
-    <Bobio />
-   
+  <div className="grid-container">
+    <aside className="grid-item BoNavbar">
+      <BoNavbar />
+    </aside>
+    <main className="grid-item">
+      <Bobio />
+    </main>
   </div>
 );
 

@@ -1,13 +1,20 @@
 import React from 'react';
-import BofficeMenu from '../components/boMenu/BofficeMenu';
+
+import BoNavbar from '../components/boNavbar/BoNavbar';
+import BOArticleNav from '../components/boarticle/BOArticleNav';
 import GetArticles from '../components/boarticle/GetArticles';
-import BoFooter from '../components/bofooter/BoFooter';
+
+import './BOgrids.css';
 
 const BOarticles = () => (
-  <div>
-    <BofficeMenu />
-    <GetArticles />
-    <BoFooter />
+  <div className="grid-container">
+    <aside className="grid-item BoNavbar">
+      <BoNavbar />
+    </aside>
+    <main className="grid-item">
+      <BOArticleNav />
+      <GetArticles />
+    </main>
   </div>
 );
 

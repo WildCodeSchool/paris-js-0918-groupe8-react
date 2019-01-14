@@ -12,10 +12,10 @@ const Coverimage = () => (
       <div className="row">
 
         <p className="enonce">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit
-        optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates
-        voluptas?
+        Conteur digital est une agence de création de contenus spécialisée dans le storytelling.&nbsp;
+        Elle s’adresse aux entrepreneurs, managers et acteurs du monde associatifs qui&nbsp;
+        souhaitent bousculer leur secteur d’activité.
+
         </p>
       </div>
       <div className="row">

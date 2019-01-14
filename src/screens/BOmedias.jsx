@@ -1,10 +1,19 @@
 import React from 'react';
-import BofficeMenu from '../components/boMenu/BofficeMenu';
+
+import BoNavbar from '../components/boNavbar/BoNavbar';
+import BoMedias from '../components/bomedias/BoMedias';
+
+import './BOgrids.css';
 
 const BOmedias = () => (
-  <div>
-    <BofficeMenu />
-    <p style={{ fontSize: '50px' }}>Médias Back-Office</p>
+  <div className="grid-container">
+    <aside className="grid-item BoNavbar">
+      <BoNavbar />
+    </aside>
+    <main className="grid-item">
+      <p style={{ fontSize: '50px' }}>Médias Back-Office</p>
+      <BoMedias />
+    </main>
   </div>
 );
 

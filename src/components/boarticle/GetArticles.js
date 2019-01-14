@@ -14,7 +14,7 @@ class BoArticle extends Component {
   }
 
   loadData = async () => {
-    const response = await axios.get('http://localhost:3001/api/articles/blog');
+    const response = await axios.get('/api/articles/blog');
     this.setState({
       articles: response.data,
     });
@@ -26,8 +26,6 @@ class BoArticle extends Component {
 
     return (
       <div>
-        <p className="f1 measure tc b ">Espace Article</p>
-        <br />
         <div className="blocarticle">
           {articles.map(article => (
             <BocardListArticle

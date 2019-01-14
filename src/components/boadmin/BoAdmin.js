@@ -5,7 +5,7 @@ class BoAdmin extends Component {
 	render() {
 		return (
 			<div>
-		page Admin
+				page Admin
 			</div>
 		);
 	}

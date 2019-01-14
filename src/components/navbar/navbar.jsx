@@ -1,6 +1,5 @@
 /* global document */
 import React, { Component } from 'react';
-// import { NavLink } from 'react-router-dom';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 import M from 'materialize-css/dist/js/materialize.min';
 import './navbar.css';
@@ -22,12 +21,12 @@ class Navbar extends Component {
         <div className="navbar-fixed">
           <nav className="Navbarconteurdigital">
             <div className="nav-wrapper">
-              <a href="#/">
+              <NavLink exact smooth to="/#">
                 <img className="left hide-on-med-and-down logoconteurdigital" src={Logo} width="50" height="50" alt="logo conteur digital" />
                 <ul id="nav-mobile" className="left hide-on-med-and-down titlelogoconteurdigital">
                   <li>Conteur Digital</li>
                 </ul>
-              </a>
+              </NavLink>
               <a href="#test" data-target="mobile-demo" className="sidenav-trigger">
                 <i className="material-icons">menu</i>
               </a>
