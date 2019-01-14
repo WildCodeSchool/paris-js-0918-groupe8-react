@@ -24,8 +24,8 @@ const About = () => (
             <p className="titlefonctionanais">Conteuse digital</p>
             <p>"Parler de ceux qui vivent leur métier comme un artisanat, redonnent de la valeur à tout ce que l’on consomme"</p>
             <a href="mailto:conteurdigital@gmail.com"><img src={maillogo} alt="" width="30" height="30" className="maillogoabout" /></a>
-            <a href="https://www.instagram.com/anaisjaunay/" target="_blank"><img src={Instagramlogo} alt="" width="30" height="30" className="maillogoabout" /></a>
-            <a href="https://www.linkedin.com/in/anaisjaunay/" target="_blank"><img src={linkedinlogo} alt="" width="30" height="30" className="maillogoabout" /></a>
+            <a href="https://www.instagram.com/anaisjaunay/" target="_blank" rel="noopener noreferrer"><img src={Instagramlogo} alt="" width="30" height="30" className="maillogoabout" /></a>
+            <a href="https://www.linkedin.com/in/anaisjaunay/" target="_blank" rel="noopener noreferrer"><img src={linkedinlogo} alt="" width="30" height="30" className="maillogoabout" /></a>
 
 
             <NavLink exact to="/anaisjaunay" className="contactbouttonanais">Bio</NavLink>
@@ -41,8 +41,8 @@ const About = () => (
               <p className="titlefonctionanais">Conteur digital</p>
               <p>la VRAIE disruption dans le marketing digital N’est PAS technologique. Elle vient de l’écrit. Elle est poétique !</p>
               <a href="mailto:conteurdigital@gmail.com"><img src={maillogo} alt="" width="30" height="30" className="maillogoabout" /></a>
-              <a href="https://twitter.com/MathiasSavary"><img src={twitterlogo} alt="" width="30" height="30" className="maillogoabout" /></a>
-              <a href="https://www.linkedin.com/in/mathias-savary-1a37a498/"><img src={linkedinlogo} alt="" width="30" height="30" className="maillogoabout" /></a>
+              <a href="https://twitter.com/MathiasSavary" target="_blank" rel="noopener noreferrer"><img src={twitterlogo} alt="" width="30" height="30" className="maillogoabout" /></a>
+              <a href="https://www.linkedin.com/in/mathias-savary-1a37a498/" target="_blank" rel="noopener noreferrer"><img src={linkedinlogo} alt="" width="30" height="30" className="maillogoabout" /></a>
 
               <NavLink exact to="/mathiassavary" className="contactbouttonanais">Bio</NavLink>
             </div>
