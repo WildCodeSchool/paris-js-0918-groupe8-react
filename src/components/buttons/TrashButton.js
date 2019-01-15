@@ -27,40 +27,26 @@ class TrashButton extends Component {
         `/api/articles/blog/${idArticle}`,
         { blog_status: 'published' },
       )
-      .then(console.log(loadData))
       .then(loadData);
   }
 
   render() {
     const { blog_status } = this.props;
-    { if (blog_status === 'archived') {
-        return (
-          <button
-            type="submit"
-            onClick={this.setPublished}
-            className="tooltipped"
-            data-position="bottom"
-            data-tooltip="Publier l'article"
-            exitdelay="2"
-          >
-              <i className="material-icons">restore_page</i>
-          </button>
-        );
-      }
-        return (
-          <button
-            type="submit"
-            onClick={this.setUnpublished}
-            className="tooltipped"
-            data-position="bottom"
-            data-tooltip="Archiver l'article"
-            exitdelay="2"
-          >
-            <i className="material-icons">delete</i>
-          </button>
-        );}
-    }
+
+    return (
+      <button
+        type="submit"
+        onClick={(blog_status === 'archived') ? this.setPublished : this.setUnpublished}
+        className="tooltipped"
+        data-position="bottom"
+        data-tooltip={(blog_status === 'archived') ? "Restorer l'article" : "Archiver l'article"}
+        exitdelay="2"
+      >
+        {(blog_status === 'archived') ? <i className="material-icons">restore_page</i> : <i className="material-icons">delete</i>}
+      </button>
+    );
   }
+}
 
 TrashButton.propTypes = {
   idArticle: PropTypes.number.isRequired,
