@@ -4,18 +4,13 @@
   grid-column-gap: 50px;
 }
 
-/* .grid-item {
+.grid-item {
   padding: 50px;
-} */
+}
 /* la class .sidenav se trouve dans le fichier BoNavbar.js */
 .sidenav{
   padding-top: 100px;
   width: 200px;
-  /* z-index: 6; */
-}
-header{
-  /* margin-left: 1rem;
-  margin-top: -15px; */
 }
 
 /* adaptation aux tailles d'écrans : SMARTPHONE*/
