@@ -7,11 +7,16 @@ import './article.css';
 const Article = ({
   id_article, create_date, update_date, title, content, main_picture, firstname, lastname, avatar,
 }) => {
-  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const options = {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  };
   const createDate = new Date(create_date).toLocaleDateString('fr-FR', options);
-  const createHour = new Date(create_date).toLocaleTimeString('fr-FR', {hour: '2-digit', minute:'2-digit'});
+  const createHour = new Date(create_date).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
   const updateDate = new Date(update_date).toLocaleDateString('fr-FR', options);
-  const updateHour = new Date(update_date).toLocaleTimeString('fr-FR', {hour: '2-digit', minute:'2-digit'});
+  const updateHour = new Date(update_date).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
   return (
     <div className="chartepageglobal">
       <div className="container">
@@ -22,7 +27,7 @@ const Article = ({
         {/* article */}
         <br />
         <div className="titre-article">{title}</div>
-        <div className="infos-article">{`De ${firstname} ${lastname} - Rédigé le ${createDate} à ${createHour} - Modifié le ${updateDate} à à ${updateHour}`}</div>
+        <div className="infos-article">{`De ${firstname} ${lastname} - Rédigé le ${createDate} à ${createHour} - Modifié le ${updateDate} à ${updateHour}`}</div>
         <p className="blog-article">{content}</p>
         <p className="blog-article">{content}</p>
         <div className="bouttondevischarte">
