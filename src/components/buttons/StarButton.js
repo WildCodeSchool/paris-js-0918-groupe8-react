@@ -10,7 +10,7 @@ class StarButton extends Component {
   setFavorite = () => {
     const { idArticle, active, loadData } = this.props;
     Axios.put(
-      `/api/articles/blog/${idArticle}`,
+      `/api/articles/blog/favoris/${idArticle}`,
       { front_page_favorite: !active },
     )
       .then((res) => {
