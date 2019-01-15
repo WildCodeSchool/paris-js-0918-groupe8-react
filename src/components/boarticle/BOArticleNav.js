@@ -112,7 +112,7 @@ class BOArticleNav extends Component {
                 activeclassname="active"
                 activestyle={{ fontWeight: 'Bold' }}
               >
-                Supprimés
+                Archivés
                 <span className="badge">{nbArchived}</span>
               </Link>
             </li>

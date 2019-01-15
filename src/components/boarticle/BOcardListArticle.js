@@ -16,6 +16,7 @@ const BOcardListeArticle = ({
   lastname,
   front_page_favorite,
   loadData,
+  blog_status,
 }) => (
 
   <ul className="collection">
@@ -29,8 +30,8 @@ const BOcardListeArticle = ({
       </p>
       <a href="#!" className="secondary-content">
         <i className="material-icons"><EditButton /></i>
-        <i className="material-icons"><TrashButton /></i>
-        <i className="material-icons"><StarButton active={front_page_favorite} id_article={id_article} loadData={loadData}/></i>
+        <i className="material-icons"><TrashButton blog_status={blog_status} idArticle={id_article} loadData={loadData} /></i>
+        <i className="material-icons"><StarButton active={front_page_favorite} idArticle={id_article} loadData={loadData} /></i>
       </a>
     </li>
   </ul>
