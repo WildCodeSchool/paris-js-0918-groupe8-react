@@ -10,9 +10,8 @@ class StarButton extends Component {
   setFavorite = () => {
     const { id_article, active, loadData } = this.props;
     Axios.put(
-<<<<<<< HEAD
       `/api/articles/blog/${id_article}`,
-      { front_page_favorite: !active }
+      { front_page_favorite: !active },
     )
       .then((res) => {
         if (res.data.flash !== undefined) {
@@ -20,21 +19,12 @@ class StarButton extends Component {
         }
       })
       .then(loadData);
-=======
-      `/api/articles/blog/${this.props.id_article}`,
-      { front_page_favorite: !this.props.active },
-    )
-      .then(this.props.loadData);
->>>>>>> tinymce axios content
   }
 
 
   render() {
-<<<<<<< HEAD
     const { active } = this.props;
 
-=======
->>>>>>> tinymce axios content
     return (
       <div>
         <button type="submit" onClick={this.setFavorite}>

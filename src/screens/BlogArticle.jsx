@@ -12,15 +12,4 @@ const BlogArticle = props => (
   </div>
 );
 
-<<<<<<< HEAD
-=======
-BlogArticle.propTypes = {
-  match: PropTypes.shape({
-    params: PropTypes.shape({
-      article: PropTypes.string.isRequired,
-    }),
-  }),
-};
-
->>>>>>> tinymce
 export default BlogArticle;

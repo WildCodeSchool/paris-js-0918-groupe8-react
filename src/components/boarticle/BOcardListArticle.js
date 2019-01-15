@@ -16,9 +16,9 @@ const BOcardListeArticle = ({
   lastname,
   front_page_favorite,
   loadData,
+  content,
 }) => (
 
-<<<<<<< HEAD
   <ul className="collection">
     <li className="collection-item avatar">
       <img src={main_picture} alt="" className="circle" />
@@ -29,39 +29,13 @@ const BOcardListeArticle = ({
         {`Créé le ${create_date} et mise à jour le ${update_date}`}
       </p>
       <a href="#!" className="secondary-content">
-        <i className="material-icons"><EditButton /></i>
+        <i className="material-icons">
+          <a href={`/admin/articles/${id_article}`}><EditButton content={content} id_article={id_article} /></a>
+          {' '}
+        </i>
         <i className="material-icons"><TrashButton /></i>
-        <i className="material-icons"><StarButton active={front_page_favorite} id_article={id_article} loadData={loadData}/></i>
+        <i className="material-icons"><StarButton active={front_page_favorite} id_article={id_article} loadData={loadData} /></i>
       </a>
-=======
-  <ul className="list pl0">
-    <li className="flex justify-between pa4-ns bb b--black-10">
-      <div>
-        <b className="db f3 mb1">{title}</b>
-        <span className="f5 db lh-copy measure">
-          {`Par ${firstname} ${lastname}`}
-        </span>
-        <time className="f6 db gray">
-          {`Créé le ${create_date}`}
-        </time>
-        <time className="f6 db gray">
-          {`Mise à jour le ${update_date}`}
-        </time>
-      </div>
-      <div>
-        <EditButton
-          active={title}
-          id_article={id_article}
-          loadData={loadData}
-        />
-        <TrashButton />
-        <StarButton
-          active={front_page_favorite}
-          id_article={id_article}
-          loadData={loadData}
-        />
-      </div>
->>>>>>> test
     </li>
   </ul>
 );

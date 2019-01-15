@@ -1,35 +1,31 @@
 import React, { Component } from 'react';
 import { Editor } from '@tinymce/tinymce-react';
-import axios from 'axios';
+
 
 class Tinymce extends Component {
-  state = {
-    articletitle: '',
-    articlecontent: '',
+  /* state = {
+    articleContent: '',
 
 
-  }
+  } */
 
-  componentDidMount() {
-    axios.get('http://localhost:3001/api/articles/blog')
+  /*  componentDidMount() {
+    axios.get(`/api/articles/blog/${this.props.match.params.id_article}`)
       .then(res => this.setState({
-        articletitle: res.data[1].title,
-        articlecontent: res.data[1].content,
-
-
+        articleContent: res.data[0].content,
       }));
-    console.log(this.state.articletitle);
-  }
+  } */
 
-  handleEditorChange = (e) => {
+  /*   handleEditorChange = (e) => {
     console.log('Content was updated:', e.target.getContent());
   }
-
+ */
   render() {
+    // console.log(this.props.article_content.content);
     return (
       <Editor
         apiKey="hmhb0q3jflv1kbo7mw4bqbaem0hbltrpxpk1xmeo7f45i9mf"
-        initialValue={this.state.articletitle}
+        initialValue={(this.props.article_content || '').content}
         init={{
           selector: 'textarea',
           height: 300,
@@ -45,7 +41,7 @@ class Tinymce extends Component {
             '//www.tiny.cloud/css/codepen.min.css',
           ],
         }}
-        onChange={this.handleEditorChange}
+        onChange={this.props.handle}
       />
     );
   }
