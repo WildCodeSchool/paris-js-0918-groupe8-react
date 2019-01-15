@@ -1,32 +1,51 @@
-import React from 'react';
-import './cover.css';
+import React, { Component } from 'react';
+import axios from 'axios';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 
-const Coverimage = () => (
+import './cover.css';
 
-  <div className="global" id="home">
+class Coverimage extends Component {
+  state = {
+    coverTable: {},
+  }
 
-    <div className="container">
-      <p className="titrecovertest center-align">Conteur Digital</p>
+  // APPEL DE LA REQUETE
+  componentDidMount() {
+    this.getCoverTable();
+  }
 
-      <div className="row">
+  // REQUETE DE L'ARTICLE 1 = ACCROCHE
+  getCoverTable = async () => {
+    const response = await axios.get('/api/articles/accroche');
+    this.setState({ coverTable: response.data[0] });
+  }
 
-        <p className="enonce">
-        Conteur digital est une agence de création de contenus spécialisée dans le storytelling.&nbsp;
-        Elle s’adresse aux entrepreneurs, managers et acteurs du monde associatifs qui&nbsp;
-        souhaitent bousculer leur secteur d’activité.
+  render() {
+    // déconstruction du state et alias du this.state
+    const { coverTable } = this.state;
 
-        </p>
-      </div>
-      <div className="row">
-        <div className="coverbuttonname">
-          <NavLink exact to="/mathiassavary" className="waves-effect waves-light btn indigo darken-2">Mathias Savary</NavLink>
-          <NavLink exact to="/anaisjaunay" className="waves-effect waves-light btn red darken-1">Anais Jaunay</NavLink>
+    return (
+      <div className="global" id="home">
+        <div className="container">
+          <p className="titrecovertest center-align">
+            {coverTable.title}
+          </p>
+
+          <div className="row">
+            <p className="enonce">
+              {coverTable.content}
+            </p>
+          </div>
+          <div className="row">
+            <div className="coverbuttonname">
+              <NavLink exact to="/mathiassavary" className="waves-effect waves-light btn indigo darken-2">Mathias Savary</NavLink>
+              <NavLink exact to="/anaisjaunay" className="waves-effect waves-light btn red darken-1">Anais Jaunay</NavLink>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-
-);
+    );
+  }
+}
 
 export default Coverimage;
