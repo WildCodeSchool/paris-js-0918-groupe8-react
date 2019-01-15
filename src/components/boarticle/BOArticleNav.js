@@ -6,7 +6,7 @@ import BOFilterArticle from './BoFilterArticle';
 class BOArticleNav extends Component {
   state = {
     articles: [],
-    status: ['published', 'writting_progress', 'archived'],
+    status: ['published'],
     nbAll: 0,
     nbPublished: 0,
     nbWritting_progress: 0,
@@ -70,18 +70,6 @@ class BOArticleNav extends Component {
           <ul className="tabs tabs-transparent">
             <li className="tab waves-effect waves-light">
               <Link
-                to="#tous"
-                onClick={this.setStatus}
-                id="#tous"
-                activeclassname="active"
-                activestyle={{ fontWeight: 'Bold' }}
-              >
-                Tous
-                <span className="badge">{nbAll}</span>
-              </Link>
-            </li>
-            <li className="tab waves-effect waves-light">
-              <Link
                 to="#publies"
                 onClick={this.setStatus}
                 id="#publies"
@@ -114,6 +102,18 @@ class BOArticleNav extends Component {
               >
                 Archivés
                 <span className="badge">{nbArchived}</span>
+              </Link>
+            </li>
+            <li className="tab waves-effect waves-light">
+              <Link
+                to="#tous"
+                onClick={this.setStatus}
+                id="#tous"
+                activeclassname="active"
+                activestyle={{ fontWeight: 'Bold' }}
+              >
+                Tous
+                <span className="badge">{nbAll}</span>
               </Link>
             </li>
           </ul>
