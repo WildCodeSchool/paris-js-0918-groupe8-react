@@ -24,12 +24,14 @@ header{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 150px 1fr;
     grid-template-areas:
-      "header aside" 
+      "aside header" 
       "main main"
   }
   /* définition (nommage) des areas */
   header{
     grid-area: header;
+    justify-self: end;
+    align-items: center;
   }
   aside{
     grid-area: aside;
@@ -51,6 +53,8 @@ header{
   /* définition (nommage) des areas */
   header{
     grid-area: header;
+    justify-self: end;
+    align-items: center;
   }
   aside{
     grid-area: aside;

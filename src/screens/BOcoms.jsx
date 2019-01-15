@@ -1,5 +1,6 @@
 import React from 'react';
 
+import GoToSite from '../components/buttons/GoToSite';
 import BoNavbar from '../components/boNavbar/BoNavbar';
 import BoMedias from '../components/bomedias/BoMedias';
 
@@ -7,6 +8,9 @@ import './BOgrids.css';
 
 const BOcoms = () => (
   <div className="grid-container">
+    <header className="grid-item">
+      <GoToSite />
+    </header>
     <aside className="grid-item BoNavbar">
       <BoNavbar />
     </aside>
