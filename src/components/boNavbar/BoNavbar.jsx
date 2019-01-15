@@ -28,7 +28,7 @@ class BoNavbar extends Component {
                   to={prop.path}
                   activeClassName="active"
                   activeStyle={{ background: '#003F5F', color: '#FFFFFF' }}
-                > 
+                >
                   {prop.name}
                 </NavLink>
               </li>
