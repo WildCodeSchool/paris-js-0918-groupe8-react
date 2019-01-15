@@ -6,7 +6,7 @@ import './charte.css';
 
 class Charte extends Component {
   state = {
-    charteTable: {}
+    charteTable: {},
   }
 
   // APPEL DE LA REQUETE
