@@ -16,29 +16,43 @@ const BOcardListeArticle = ({
   lastname,
   front_page_favorite,
   loadData,
+  blog_status,
   content,
-}) => (
+}) => {
+  const options = {
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric',
+  };
+  const createDate = new Date(create_date).toLocaleDateString('fr-FR', options);
+  const createHour = new Date(create_date).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+  const updateDate = new Date(update_date).toLocaleDateString('fr-FR', options);
+  const updateHour = new Date(update_date).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
 
-  <ul className="collection">
-    <li className="collection-item avatar">
-      <img src={main_picture} alt="" className="circle" />
-      <span className="title">{title}</span>
-      <p>
-        {`Par ${firstname} ${lastname}`}
-        <br />
-        {`Créé le ${create_date} et mise à jour le ${update_date}`}
-      </p>
-      <a href="#!" className="secondary-content">
-        <i className="material-icons">
-          <a href={`/admin/articles/${id_article}`}><EditButton content={content} id_article={id_article} /></a>
-          {' '}
-        </i>
-        <i className="material-icons"><TrashButton /></i>
-        <i className="material-icons"><StarButton active={front_page_favorite} id_article={id_article} loadData={loadData} /></i>
-      </a>
-    </li>
-  </ul>
-);
+  return (
+    <div>
+      <ul className="collection">
+        <li className="collection-item avatar">
+          <img src={main_picture} alt="" className="circle" />
+          <span className="title">{title}</span>
+          <p>
+            {`Par ${firstname} ${lastname}`}
+            <br />
+            {`Créé le ${createDate} à ${createHour}  et mise à jour le ${updateDate} à ${updateHour}`}
+          </p>
+          <a href="#!" className="secondary-content">
+            <i className="material-icons">
+              <a href={`/admin/articles/${id_article}`}><EditButton content={content} id_article={id_article} /></a>
+                {' '}
+            </i>
+            <i className="material-icons"><TrashButton blog_status={blog_status} idArticle={id_article} loadData={loadData} /></i>
+            <i className="material-icons"><StarButton active={front_page_favorite} idArticle={id_article} loadData={loadData} /></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  )
+};
 
 BOcardListeArticle.propTypes = {
   id_article: PropTypes.number.isRequired,

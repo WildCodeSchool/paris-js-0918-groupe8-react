@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '../components/navbar/navbar';
-import Blog from '../components/blog/card';
 import Footer from '../components/footer/footer';
+import Affichagebloglist from '../components/bloglist/affichagebloglist'
 
 
 const BlogList = () => (
@@ -9,8 +9,7 @@ const BlogList = () => (
 
   <div>
     <Navbar />
-    <Blog />
-    
+    <Affichagebloglist />
     <Footer />
   </div>
 );
