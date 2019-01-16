@@ -5,8 +5,6 @@ import { Editor } from '@tinymce/tinymce-react';
 class Tinymce extends Component {
   /* state = {
     articleContent: '',
-
-
   } */
 
   /*  componentDidMount() {

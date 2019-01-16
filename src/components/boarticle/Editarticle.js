@@ -28,15 +28,6 @@ class Editarticle extends Component {
     });
   }
 
-  // setModif =() => {
-  //   const { id_article, content } = this.props;
-  //   Axios.put(
-  //     `/api/articles/blog/${id_article}`,
-  //     { content },
-  //   )
-  //     .then(res => this.setState({ article: res.data[0] }));
-  // }
-
   setCreate = async (e) => {
     e.preventDefault();
     const { article } = this.state;
@@ -47,13 +38,12 @@ class Editarticle extends Component {
         if (response.status === 200) {
           alert('Modification prise en compte');
         } else if (response.status !== 200) {
-          alert('Echec');
+          alert('Mise à jour echouée');
         }
       });
   }
 
   handleEditorChange = (e) => {
-    // this.setState({ article: { ...this.state.article, content: e.target.value } });
     const article = { ...this.state.article };
     article.content = e.target.getContent();
     this.setState({ article });
