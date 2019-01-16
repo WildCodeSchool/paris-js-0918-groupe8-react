@@ -1,3 +1,4 @@
+/* global window */
 import React, { Component } from 'react';
 import axios from 'axios';
 import Cardbloglist from './bloglist';
