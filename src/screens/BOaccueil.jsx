@@ -2,8 +2,7 @@ import React from 'react';
 
 import GoToSite from '../components/buttons/GoToSite';
 import BoNavbar from '../components/boNavbar/BoNavbar';
-
-import Card from '../components/blog/card';
+import BoAdmin from '../components/boadmin/BoAdmin';
 
 import './BOgrids.css';
 
@@ -16,10 +15,7 @@ const BOaccueil = () => (
       <BoNavbar />
     </aside>
     <main className="grid-item">
-      <p style={{ fontSize: '50px' }}>
-      Accueil Back-Office
-        <Card />
-      </p>
+      <BoAdmin />
     </main>
   </div>
 );
