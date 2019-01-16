@@ -2,11 +2,11 @@ import React from 'react';
 
 import GoToSite from '../components/buttons/GoToSite';
 import BoNavbar from '../components/boNavbar/BoNavbar';
-import BoMedias from '../components/bomedias/BoMedias';
+
 
 import './BOgrids.css';
 
-const BOmedias = () => (
+const BOEditionAccueil = () => (
   <div className="grid-container">
     <header className="grid-item">
       <GoToSite />
@@ -15,10 +15,16 @@ const BOmedias = () => (
       <BoNavbar />
     </aside>
     <main className="grid-item">
-      <p style={{ fontSize: '50px' }}>Médias Back-Office</p>
-      <BoMedias />
+      {' '}
+      <p style={{
+        fontSize: '50px',
+      }}
+      >
+Edition Accueil
+
+      </p>
     </main>
   </div>
 );
 
-export default BOmedias;
+export default BOEditionAccueil;
