@@ -6,7 +6,7 @@ import M from 'materialize-css/dist/js/materialize.min';
 import axios from 'axios';
 import Tinymce from '../tinymce/tinymce';
 
-class Editarticle extends Component {
+class SetArticle extends Component {
   state = {
     article: undefined,
   }
@@ -102,4 +102,4 @@ render() {
 }
 }
 
-export default Editarticle;
+export default SetArticle;
