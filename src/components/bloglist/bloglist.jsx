@@ -4,7 +4,7 @@ import { NavHashLink as NavLink } from 'react-router-hash-link';
 
 const regex = /[\\.,:?!\-_€$]/gi;
 
-const Cardbloglist = ({
+const Bloglist = ({
   id_article, create_date, update_date, title, content, main_picture, firstname, lastname, avatar,
 }) => (
   <div className="col s12 m6 l4">
@@ -53,7 +53,7 @@ const Cardbloglist = ({
 
 );
 
-Cardbloglist.propTypes = {
+Bloglist.propTypes = {
   content: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   firstname: PropTypes.string.isRequired,
@@ -65,4 +65,4 @@ Cardbloglist.propTypes = {
   avatar: PropTypes.string.isRequired,
 };
 
-export default Cardbloglist;
+export default Bloglist;

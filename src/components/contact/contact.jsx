@@ -44,7 +44,7 @@ class Contact extends Component {
       if (response.status === 200) {
         alert('Message Sent.');
         this.resetForm();
-      } else if (response.data.msg === 'fail') {
+      } else if (response.status !== 200) {
         alert('Message failed to send.');
       }
     });
