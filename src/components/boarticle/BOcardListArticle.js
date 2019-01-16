@@ -10,13 +10,14 @@ const BOcardListeArticle = ({
   id_article,
   main_picture,
   create_date,
-  update_date, 
+  update_date,
   title,
   firstname,
   lastname,
   front_page_favorite,
   loadData,
   blog_status,
+  content,
 }) => {
   const options = {
     year: 'numeric',
@@ -40,7 +41,10 @@ const BOcardListeArticle = ({
             {`Créé le ${createDate} à ${createHour}  et mise à jour le ${updateDate} à ${updateHour}`}
           </p>
           <a href="#!" className="secondary-content">
-            <i className="material-icons"><EditButton /></i>
+            <i className="material-icons">
+              <a href={`/admin/articles/${id_article}`}><EditButton content={content} id_article={id_article} /></a>
+                {' '}
+            </i>
             <i className="material-icons"><TrashButton blog_status={blog_status} idArticle={id_article} loadData={loadData} /></i>
             <i className="material-icons"><StarButton active={front_page_favorite} idArticle={id_article} loadData={loadData} /></i>
           </a>
