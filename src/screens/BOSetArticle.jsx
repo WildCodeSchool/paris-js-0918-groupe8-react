@@ -1,5 +1,5 @@
 import React from 'react';
-import Editarticle from '../components/boarticle/Editarticle';
+import SetArticle from '../components/boarticle/SetArticle';
 import BoNavbar from '../components/boNavbar/BoNavbar';
 
 
@@ -11,7 +11,7 @@ const BOeditarticle = props => (
     <main className="grid-item">
 
 
-      <Editarticle id_article={props.match.params.id_article} />
+      <SetArticle id_article={props.match.params.id_article} />
     </main>
   </div>
 );
