@@ -16,7 +16,6 @@ const BOcoms = () => (
     </aside>
     <main className="grid-item">
       <p style={{ fontSize: '50px' }}>Commentaires Back-Office</p>
-      <BoMedias />
     </main>
   </div>
 );

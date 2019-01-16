@@ -14,10 +14,7 @@ const BOadmin = () => (
     <aside className="grid-item BoNavbar">
       <BoNavbar />
     </aside>
-    <main className="grid-item">
-      <p style={{ fontSize: '50px' }}>Administrateur Back-Office</p>
-      <BoAdmin />
-    </main>
+    <BoAdmin />
   </div>
 );
 

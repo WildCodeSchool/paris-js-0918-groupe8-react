@@ -5,8 +5,6 @@ import './contact.css';
 
 
 class Contact extends Component {
-
-
   state = {
     first_namee: '',
     last_name: '',
@@ -28,8 +26,6 @@ class Contact extends Component {
       entreprise: '',
       textarea2: '',
     });
-
-
   }
 
   submitForm = (event) => {
@@ -46,10 +42,10 @@ class Contact extends Component {
       },
     }).then((response) => {
       if (response.status === 200) {
-        alert("Message Sent.");
+        alert('Message Sent.');
         this.resetForm();
-      } else if (response.data.msg === 'fail') {
-        alert("Message failed to send.")
+      } else if (response.status !== 200) {
+        alert('Message failed to send.');
       }
     });
   }
@@ -96,7 +92,7 @@ class Contact extends Component {
                 <div className="input-field col s5 offset-s1">
                   <button className="btn waves-effect waves-light blue darken-1" type="submit" name="action">
                     Envoyer
-                <i className="material-icons right">
+                    <i className="material-icons right">
                       send
                 </i>
                   </button>

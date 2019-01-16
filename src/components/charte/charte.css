@@ -32,13 +32,9 @@
 
 }
 
-.phrasenumber3 {
-  font-size: 2em;
-  padding-bottom: 5%;
-}
-
 .bouttonensavoirplus{
   display: flex;
   justify-content: center;
+  padding-bottom: 5%;
 }
 
