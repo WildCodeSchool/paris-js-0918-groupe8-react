@@ -1,5 +1,4 @@
 .chartepageglobal{
-font-family: 'Oswald', sans-serif;
 color: black;
 font-size: 1.3em;
 }
@@ -22,11 +21,6 @@ font-size: 1.3em;
   text-align: justify;
   font-size: 0.8em;
 }
-
-/* .infos-article {
-  color: grey;
-  font-size: calc(5px + 1vh);
-} */
 
 .bouttondevischarte{
   display: flex;
