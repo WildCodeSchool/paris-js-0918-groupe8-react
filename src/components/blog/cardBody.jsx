@@ -18,16 +18,11 @@ const CardBody = ({
     <div className="col s12 m6 l4">
       <NavLink
         exact
-        to={{
-          pathname: `/blog/${title.toLowerCase().replace(regex, '').split(' ').join('-')}`,
-          state: {
-            id_article, create_date, update_date, title, content, main_picture, firstname, lastname, avatar,
-          },
-        }}
+        to={`/blog/${title.toLowerCase().replace(regex, '').split(' ').join('-')}-${id_article}`}
       >
         <div className="card hoverable">
           <div className="card-image">
-            <img className="materialboxed" src={main_picture} alt="" />
+            <img className="materialboxed" src={main_picture} alt="Article" />
           </div>
           <div className="card-content black-text">
             <p className="left-align"><b>{title}</b></p>
