@@ -1,38 +1,26 @@
 .chartepageglobal{
-/* font-family: 'Oswald', sans-serif; */
 color: black;
 font-size: 1.3em;
-
 }
 
-
-.testsitecoverimg{
-  background-image: url("../../assets/img/Imagechartefullresponsive.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 60vh;
-  margin-top: 5%;
-  position: relative;
-
-}
-
-.transbox {
- 
-  opacity: 0.9;
-  position: absolute;
+.fitimage-article2 {
+  height: 100%;
   width: 100%;
-  top: 80%;
-  transform: translateY(-50%);
+  object-fit: cover;
+  object-position: 50% 50%;
+  margin-top: 2%;
 }
 
-.transbox p {
-  color: #ffffff;
+.titre-article {
+  color: grey;
+  text-align: left;
   font-size: 2em;
-  text-indent:2em;
-  font-family: 'Oswald', sans-serif;
+}
 
-} 
+.blog-article {
+  text-align: justify;
+  font-size: 0.8em;
+}
 
 .bouttondevischarte{
   display: flex;
