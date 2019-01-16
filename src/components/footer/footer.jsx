@@ -16,7 +16,7 @@ const Footer = () => (
     </div>
     <div className="black center-align footerbackcopyright">
       <p className="white-text">
-        Copyright © 2019 Conteur digital
+        Copyright © 2019 Conteur digital - site réalisé par Guillaume Ferry, Delphine Brunet, Mathieu Thiry, Julie Ly Minh et Monica Tarabusi
         <a href="#test"> Mentions Légales</a>
       </p>
     </div>
