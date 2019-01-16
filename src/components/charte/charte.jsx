@@ -24,15 +24,20 @@ class Charte extends Component {
     const { charteTable } = this.state;
 
     return (
-      <div className="cardglobal testimage textecharte container">
-        <h3 className="center-align titrecharte1 white-text">{charteTable.title}</h3>
-        <p className="center-align white-text phrasenumber1">{charteTable.short_content}</p>
-        <div className="bouttonensavoirplus">
-          <NavLink exact smooth to="/charte" className="center-align waves-effect waves-light btn deep-purple accent-3"> En savoir plus</NavLink>
+      <div className="cardglobal   ">
+        <div className="testimage">
+          <div className="textecharte">
+            <div className="container">
+              <h3 className="center-align titrecharte1 white-text">{charteTable.title}</h3>
+              <p className="center-align white-text phrasenumber1">{charteTable.short_content}</p>
+              <div className="bouttonensavoirplus">
+                <NavLink exact smooth to="/charte" className="center-align waves-effect waves-light btn deep-purple accent-3"> 
+                  En savoir plus
+                </NavLink>
+              </div>
+            </div>
+          </div>
         </div>
-
-        {/* il faut laisser le <p> suivant, vide, tant que la mise en page n'est pas modifiée */}
-        <p className="center-align white-text phrasenumber3"> </p>
       </div>
     );
   }
