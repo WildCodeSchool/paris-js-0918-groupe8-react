@@ -1,13 +1,10 @@
+/* global document */
+/* global alert */
+
 import React, { Component } from 'react';
 import M from 'materialize-css/dist/js/materialize.min';
 import axios from 'axios';
 import Tinymce from '../tinymce/tinymce';
-
-
-// import M from 'materialize-css/dist/js/materialize.min';
-// import PropTypes from 'prop-types';
-// import EditButton from '../buttons/EditButton';
-
 
 class Editarticle extends Component {
   state = {
@@ -63,10 +60,16 @@ render() {
     <div>
       <div className="row">
         <form>
-          <label>Titre</label>
-          <input name="title" value={(article || '').title} onChange={this.handleChange} />
-          <label>Image</label>
-          <input name="main_picture" value={(article || '').main_picture} onChange={this.handleChange} />
+          <label htmlFor="title">
+              Titre
+            <input name="title" id="title" value={(article || '').title} onChange={this.handleChange} />
+
+          </label>
+          <label htmlFor="image">
+              Image
+            <input name="main_picture" id="image" value={(article || '').main_picture} onChange={this.handleChange} />
+
+          </label>
         </form>
         <div className="Editeurtinymceadmnistrateur col s9">
           <Tinymce article_content={article} handle={this.handleEditorChange} />
