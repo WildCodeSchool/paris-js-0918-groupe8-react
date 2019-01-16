@@ -3,6 +3,8 @@ import React from 'react';
 import GoToSite from '../components/buttons/GoToSite';
 import BoNavbar from '../components/boNavbar/BoNavbar';
 
+import Card from '../components/blog/card';
+
 import './BOgrids.css';
 
 const BOaccueil = () => (
@@ -16,6 +18,7 @@ const BOaccueil = () => (
     <main className="grid-item">
       <p style={{ fontSize: '50px' }}>
       Accueil Back-Office
+        <Card />
       </p>
     </main>
   </div>

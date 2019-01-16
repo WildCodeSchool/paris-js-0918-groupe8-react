@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import BOFilterArticle from './BoFilterArticle';
+import AddNewArticleButton from '../buttons/AddNewArticleButton';
 
 class BOArticleNav extends Component {
   state = {
@@ -66,8 +67,8 @@ class BOArticleNav extends Component {
 
     return (
       <div>
-        <nav className="nav" style={{ background: '#003F5F', color: '#FFFFFF' }}>
-          <ul className="tabs tabs-transparent">
+        <nav className="nav-wrapper" style={{ background: '#003F5F', color: '#FFFFFF' }}>
+          <ul className="tab tabs-transparent">
             <li className="tab waves-effect waves-light">
               <Link
                 to="#publies"
@@ -116,6 +117,7 @@ class BOArticleNav extends Component {
                 <span className="badge">{nbAll}</span>
               </Link>
             </li>
+            <AddNewArticleButton />
           </ul>
         </nav>
         <BOFilterArticle articles={articles} status={status} loadData={this.loadData} />

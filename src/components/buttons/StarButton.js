@@ -27,7 +27,14 @@ class StarButton extends Component {
 
     return (
       <div>
-        <button type="submit" onClick={this.setFavorite}>
+        <button
+          type="submit"
+          onClick={this.setFavorite}
+          className="btn-floating btn-medium blue-grey tooltipped"
+          data-position="top"
+          data-tooltip="Mettre en favoris"
+          exitdelay="2"
+        >
           {active ? <i className="material-icons md-yellow">star</i> : (<i className="material-icons">star</i>)}
         </button>
       </div>

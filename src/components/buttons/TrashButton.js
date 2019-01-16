@@ -37,9 +37,9 @@ class TrashButton extends Component {
       <button
         type="submit"
         onClick={(blog_status === 'archived') ? this.setPublished : this.setUnpublished}
-        className="tooltipped"
+        className="btn-floating btn-medium blue-grey tooltipped"
         data-position="bottom"
-        data-tooltip={(blog_status === 'archived') ? "Restorer l'article" : "Archiver l'article"}
+        data-tooltip={(blog_status === 'archived') ? "Restaurer l'article" : "Archiver l'article"}
         exitdelay="2"
       >
         {(blog_status === 'archived') ? <i className="material-icons">restore_page</i> : <i className="material-icons">delete</i>}
