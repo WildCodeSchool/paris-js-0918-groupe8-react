@@ -4,24 +4,30 @@
   grid-column-gap: 50px;
 }
 
-.grid-item{
+.grid-item {
   padding: 50px;
 }
-
+/* la class .sidenav se trouve dans le fichier BoNavbar.js */
 .sidenav{
-  padding-top: 50px;
+  padding-top: 100px;
   width: 200px;
 }
 
 /* adaptation aux tailles d'écrans : SMARTPHONE*/
 @media screen and (max-width: 991px){
   .grid-container{
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 150px 1fr;
     grid-template-areas:
-      "aside"
-      "main"
+      "aside header" 
+      "main main"
   }
   /* définition (nommage) des areas */
+  header{
+    grid-area: header;
+    justify-self: end;
+    align-items: center;
+  }
   aside{
     grid-area: aside;
   }
@@ -30,14 +36,21 @@
   }
 }
 
-/* adaptation aux tailles d'écrans : TABLETTE*/
+/* adaptation aux tailles d'écrans : ORDINATEUR*/
 @media screen and (min-width: 992px){
   .grid-container{
     grid-template-columns: 200px 1fr;
+    grid-template-rows: 50px 1fr;
     grid-template-areas:
-      "aside main"
+    "aside header" 
+    "aside main"
   }
   /* définition (nommage) des areas */
+  header{
+    grid-area: header;
+    justify-self: end;
+    align-items: center;
+  }
   aside{
     grid-area: aside;
   }

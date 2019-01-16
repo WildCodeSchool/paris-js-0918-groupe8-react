@@ -8,10 +8,10 @@ import Axios from 'axios';
 
 class StarButton extends Component {
   setFavorite = () => {
-    const { id_article, active, loadData } = this.props;
+    const { idArticle, active, loadData } = this.props;
     Axios.put(
-      `/api/articles/blog/${id_article}`,
-      { front_page_favorite: !active }
+      `/api/articles/blog/favoris/${idArticle}`,
+      { front_page_favorite: !active },
     )
       .then((res) => {
         if (res.data.flash !== undefined) {
@@ -27,7 +27,14 @@ class StarButton extends Component {
 
     return (
       <div>
-        <button type="submit" onClick={this.setFavorite}>
+        <button
+          type="submit"
+          onClick={this.setFavorite}
+          className="btn-floating btn-medium blue-grey tooltipped"
+          data-position="top"
+          data-tooltip="Mettre en favoris"
+          exitdelay="2"
+        >
           {active ? <i className="material-icons md-yellow">star</i> : (<i className="material-icons">star</i>)}
         </button>
       </div>
@@ -37,7 +44,7 @@ class StarButton extends Component {
 
 StarButton.propTypes = {
   active: PropTypes.number.isRequired,
-  id_article: PropTypes.number.isRequired,
+  idArticle: PropTypes.number.isRequired,
   loadData: PropTypes.func.isRequired,
 };
 

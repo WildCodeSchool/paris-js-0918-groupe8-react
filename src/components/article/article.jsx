@@ -1,29 +1,42 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './article.css';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
+import './article.css';
+
 
 const Article = ({
   id_article, create_date, update_date, title, content, main_picture, firstname, lastname, avatar,
-}) => (
-  <div className="chartepageglobal">
-    <div className="container">
-      <div className="articlecoverimg">
-        <div className="transbox">
-          <p className="black">{`${title} ${create_date} - De ${firstname} ${lastname}`}</p>
+}) => {
+  const options = {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  };
+  const createDate = new Date(create_date).toLocaleDateString('fr-FR', options);
+  const createHour = new Date(create_date).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+  const updateDate = new Date(update_date).toLocaleDateString('fr-FR', options);
+  const updateHour = new Date(update_date).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+  return (
+    <div className="chartepageglobal">
+      <div className="container">
+        {/* image */}
+        <div>
+          <img src={main_picture} alt={title} className="fitimage-article" />
+        </div>
+        {/* article */}
+        <br />
+        <div className="titre-article">{title}</div>
+        <div className="infos-article">{`De ${firstname} ${lastname} - Rédigé le ${createDate} à ${createHour} - Modifié le ${updateDate} à ${updateHour}`}</div>
+        <p className="blog-article">{content}</p>
+        <p className="blog-article">{content}</p>
+        <div className="bouttondevischarte">
+          <NavLink exact smooth to="/" className="waves-effect waves-light btn blue darken-1">Accueil</NavLink>
         </div>
       </div>
-      <br />
-      <div className="titrearticle">{title}</div>
-      <p className="blocarticle">{content}</p>
-      <p className="blocarticle">{content}</p>
-      <div className="bouttondevischarte">
-        <NavLink exact smooth to="/" className="waves-effect waves-light btn blue darken-1">Accueil</NavLink>
-      </div>
     </div>
-  </div>
-
-);
+  );
+};
 
 Article.propTypes = {
   content: PropTypes.string.isRequired,

@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import BOFilterArticle from './BoFilterArticle';
+import AddNewArticleButton from '../buttons/AddNewArticleButton';
 
 class BOArticleNav extends Component {
   state = {
     articles: [],
-    status: ['published', 'writting_progress', 'archived'],
+    status: ['published'],
     nbAll: 0,
     nbPublished: 0,
     nbWritting_progress: 0,
@@ -66,20 +67,8 @@ class BOArticleNav extends Component {
 
     return (
       <div>
-        <nav className="nav" style={{ background: '#003F5F', color: '#FFFFFF' }}>
-          <ul className="tabs tabs-transparent">
-            <li className="tab waves-effect waves-light">
-              <Link
-                to="#tous"
-                onClick={this.setStatus}
-                id="#tous"
-                activeclassname="active"
-                activestyle={{ fontWeight: 'Bold' }}
-              >
-                Tous
-                <span className="badge">{nbAll}</span>
-              </Link>
-            </li>
+        <nav className="nav-wrapper" style={{ background: '#003F5F', color: '#FFFFFF' }}>
+          <ul className="tab tabs-transparent">
             <li className="tab waves-effect waves-light">
               <Link
                 to="#publies"
@@ -112,10 +101,23 @@ class BOArticleNav extends Component {
                 activeclassname="active"
                 activestyle={{ fontWeight: 'Bold' }}
               >
-                Supprimés
+                Archivés
                 <span className="badge">{nbArchived}</span>
               </Link>
             </li>
+            <li className="tab waves-effect waves-light">
+              <Link
+                to="#tous"
+                onClick={this.setStatus}
+                id="#tous"
+                activeclassname="active"
+                activestyle={{ fontWeight: 'Bold' }}
+              >
+                Tous
+                <span className="badge">{nbAll}</span>
+              </Link>
+            </li>
+            <AddNewArticleButton />
           </ul>
         </nav>
         <BOFilterArticle articles={articles} status={status} loadData={this.loadData} />
