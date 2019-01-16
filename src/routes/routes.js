@@ -5,9 +5,9 @@ import BlogList from '../screens/BlogList';
 import BlogArticle from '../screens/BlogArticle';
 import BOaccueil from '../screens/BOaccueil';
 import BOarticles from '../screens/BOarticles';
-import BOeditarticle from '../screens/BOeditarticle';
+import BOeditarticle from '../screens/BOEditarticle';
 import BObio from '../screens/BObio';
-import BOmedias from '../screens/BOmedias';
+import BOEditionAccueil from '../screens/BOEditionAccueil';
 import BOcoms from '../screens/BOcoms';
 import BOadmin from '../screens/BOadmin';
 import Biomathias from '../components/biomathias/biomathias';
@@ -75,9 +75,9 @@ const routes = [
     component: BObio,
   },
   {
-    path: '/admin/medias',
-    name: 'Médias',
-    component: BOmedias,
+    path: '/admin/editionaccueil',
+    name: 'Edition Accueil',
+    component: BOEditionAccueil,
   },
   {
     path: '/admin/commentaries',
