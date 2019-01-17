@@ -2,11 +2,12 @@ import React from 'react';
 import { Editor } from '@tinymce/tinymce-react';
 
 const Tinymce = props => (
+  
   <div>
-    {' '}
+  
     <Editor
       apiKey="hmhb0q3jflv1kbo7mw4bqbaem0hbltrpxpk1xmeo7f45i9mf"
-      initialValue={(props.article_content || '').content}
+      selector={(props.article_content || '')}
       init={{
         selector: 'textarea',
         height: 300,

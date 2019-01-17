@@ -57,7 +57,7 @@ class Article extends Component {
           <br />
           <div className="titre-article">{title}</div>
           <div className="infos-article">{`De ${firstname} ${lastname} - Rédigé le ${createDate} à ${createHour} - Modifié le ${updateDate} à ${updateHour}`}</div>
-          <p className="blog-article">{content}</p>
+         
           <p className="blog-article">{content}</p>
           <div className="bouttondevischarte">
             <NavLink exact smooth to="/" className="waves-effect waves-light btn blue darken-1">Accueil</NavLink>
