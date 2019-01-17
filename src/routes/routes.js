@@ -75,8 +75,18 @@ const routes = [
     component: BOSetArticle,
   },
   {
-    path: '/admin/bio',
-    name: 'Bio',
+    path: '/admin/bio/:id',
+    name: null,
+    component: BObio,
+  },
+  {
+    path: '/admin/bio/1',
+    name: 'Bio Anaïs',
+    component: BObio,
+  },
+  {
+    path: '/admin/bio/2',
+    name: 'Bio Mathias',
     component: BObio,
   },
   {
