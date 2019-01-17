@@ -4,17 +4,23 @@
 import React, { Component } from 'react';
 import M from 'materialize-css/dist/js/materialize.min';
 import axios from 'axios';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import Tinymce from '../tinymce/tinymce';
 
-// import TrashButton from '../buttons/TrashButton';
-import BrouillonButton from '../buttons/BrouillonButton';
-// import StarButton from '../buttons/StarButton';
+import TrashButton from '../buttons/TrashButton';
+// import BrouillonButton from '../buttons/BrouillonButton';
+import StarButton from '../buttons/StarButton';
 
 
 class SetArticle extends Component {
   state = {
-    article: {},
+    article: {
+      title: '',
+      main_picture: '',
+      content: '',
+    },
+    blog_status: 'writting_progress',
+    front_page_favorite: 0,
   }
 
   componentDidMount() {
@@ -27,8 +33,12 @@ class SetArticle extends Component {
     const { id_article } = this.props;
     if (id_article !== undefined) {
       const response = await axios.get(`/api/articles/blog/${id_article}`);
+      // console.log(`setEdit = ${Object.entries(responseject.entries(response)}`);
+      // console.log(`setEdit = ${response.data[0].blog_status}`);
       this.setState({
         article: response.data[0],
+        blog_status: response.data[0].blog_status,
+        front_page_favorite: response.data[0].front_page_favorite,
       });
     }
   }
@@ -69,7 +79,7 @@ class SetArticle extends Component {
     const title = article.title;
     const content = article.content;
     const main_picture = article.main_picture;
-    const blog_status = 'published'; // à finir de paramétrer
+    const blog_status = this.state.blog_status;
     const front_page_favorite = 0;
     // intégrer l'admin user ici quand autentification effective.
     const admin_id_user = 1;
@@ -91,6 +101,16 @@ class SetArticle extends Component {
       });
   }
 
+  setWrittingProgress = () => {
+    const { idArticle} = this.props;
+    axios
+      .put(
+        `/api/articles/blog/${idArticle}`,
+        { blog_status: 'writting_progress' },
+      )
+      .then(this.setEdit);
+  }
+
   handleSubmit = (event) => {
     const { url } = this.props;
     if (url === '/admin/articles/add') {
@@ -101,7 +121,8 @@ class SetArticle extends Component {
   }
 
   render() {
-    const { article } = this.state;
+    const { article, blog_status, front_page_favorite } = this.state;
+    const { id_article, url } = this.props;
 
     return (
       <div>
@@ -134,30 +155,32 @@ class SetArticle extends Component {
               />
             </div>
 
-            <div>
-              <button
-                type="submit"
-                className="btn-floating btn-meddium tooltipped waves-effect waves-light"
-                data-position="bottom"
-                data-tooltip="Publier dans le form"
-              >
-                <i className="material-icons">
-                    check
-                </i>
-              </button>
-              <BrouillonButton />
-              {/* <StarButton /> */}
-              {/* <TrashButton /> */}   
-            </div>
+            <button
+              type="submit"
+              className="btn-floating btn-meddium tooltipped waves-effect waves-light"
+              data-position="bottom"
+              data-tooltip="Enregistrer en tant que brouillon"
+            >
+              <i className="material-icons">
+                  description
+              </i>
+            </button>
+
           </form>
+          
+          <StarButton idArticle={id_article} loadData={this.setEdit} blog_status={blog_status} front_page_favorite={front_page_favorite} />
+          { (url !== '/admin/articles/add')
+            ? <TrashButton idArticle={id_article} blog_status={blog_status} loadData={this.setEdit} />
+            : ''
+          }
         </div>
       </div>
     );
   }
 }
 
-// SetArticle.PropTypes = {
-//   url: PropTypes.string.isRequired,
-// };
+SetArticle.propTypes = {
+  url: PropTypes.string.isRequired,
+};
 
 export default SetArticle;

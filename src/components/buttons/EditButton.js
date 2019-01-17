@@ -8,9 +8,9 @@ const EditButton = () => (
     data-tooltip="Editer l'article"
     exitdelay="2"
   >
-      <i className="material-icons">
-        create
-      </i>
+    <i className="material-icons">
+      create
+    </i>
   </button>
 );
 

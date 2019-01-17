@@ -31,7 +31,7 @@ class StarButton extends Component {
           type="submit"
           onClick={this.setFavorite}
           className="btn-floating btn-medium blue-grey tooltipped"
-          data-position="top"
+          data-position="rigth"
           data-tooltip="Mettre en favoris"
           exitdelay="2"
         >
@@ -43,8 +43,8 @@ class StarButton extends Component {
 }
 
 StarButton.propTypes = {
-  active: PropTypes.number.isRequired,
-  idArticle: PropTypes.number.isRequired,
+  active: PropTypes.number,
+  // idArticle: PropTypes.number.isRequired,
   loadData: PropTypes.func.isRequired,
 };
 
