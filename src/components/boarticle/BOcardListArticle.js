@@ -43,7 +43,7 @@ const BOcardListeArticle = ({
           <a href="#!" className="secondary-content">
             <i className="material-icons">
               <a href={`/admin/articles/${id_article}`}><EditButton content={content} id_article={id_article} /></a>
-                {' '}
+              {' '}
             </i>
             <i className="material-icons"><TrashButton blog_status={blog_status} idArticle={id_article} loadData={loadData} /></i>
             <i className="material-icons"><StarButton active={front_page_favorite} idArticle={id_article} loadData={loadData} /></i>
@@ -51,7 +51,7 @@ const BOcardListeArticle = ({
         </li>
       </ul>
     </div>
-  )
+  );
 };
 
 BOcardListeArticle.propTypes = {

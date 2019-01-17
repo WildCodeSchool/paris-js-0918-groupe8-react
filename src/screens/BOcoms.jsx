@@ -2,7 +2,6 @@ import React from 'react';
 
 import GoToSite from '../components/buttons/GoToSite';
 import BoNavbar from '../components/boNavbar/BoNavbar';
-import BoMedias from '../components/bomedias/BoMedias';
 
 import './BOgrids.css';
 

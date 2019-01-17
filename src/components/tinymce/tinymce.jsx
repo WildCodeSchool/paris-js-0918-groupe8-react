@@ -6,7 +6,7 @@ const Tinymce = props => (
     {' '}
     <Editor
       apiKey="hmhb0q3jflv1kbo7mw4bqbaem0hbltrpxpk1xmeo7f45i9mf"
-      initialValue={(props.article_content || '').content}
+      initialValue={(props.article_content || '').content, (props.bio_content || '').content}
       init={{
         selector: 'textarea',
         height: 300,
