@@ -60,7 +60,7 @@ class Article extends Component {
           <p className="blog-article">{content}</p>
           <p className="blog-article">{content}</p>
           <div className="bouttondevischarte">
-            <NavLink exact smooth to="/" className="waves-effect waves-light btn blue darken-1">Accueil</NavLink>
+            <NavLink exact smooth to="/blog" className="waves-effect waves-light btn blue darken-1">Retour au blog</NavLink>
           </div>
         </div>
       </div>

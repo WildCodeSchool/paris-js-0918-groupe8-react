@@ -45,7 +45,7 @@ class Newsletter extends Component {
             <form className="col s12 m4 offset-m2">
               <div className="row">
                 <div className="input-field col s12">
-                  <input value="" id="first_name2" type="text" className="validate" />
+                  <input id="first_name2" type="text" className="validate" />
                   <label className="active" htmlFor="first_name2">Prénom</label>
                 </div>
               </div>

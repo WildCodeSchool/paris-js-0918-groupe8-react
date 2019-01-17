@@ -31,7 +31,7 @@ const routes = [
   },
   {
     path: '/#about',
-    name: 'A propos',
+    name: 'À propos',
     component: Bio,
   },
   {
