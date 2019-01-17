@@ -42,7 +42,7 @@ const BOcardListeArticle = ({
             {`Créé le ${createDate} à ${createHour}  et mise à jour le ${updateDate} à ${updateHour}`}
           </p>
           <div className="secondary-content BocardListArticleblockButtons">
-            
+
             <a href={`/admin/articles/edition/${id_article}`}>
               <EditButton content={content} id_article={id_article} blog_status={blog_status} loadData={loadData}/>
             </a>

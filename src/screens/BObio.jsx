@@ -6,7 +6,7 @@ import Bobio from '../components/bobio/Bobio';
 
 import './BOgrids.css';
 
-const BObio = () => (
+const BObio = props => (
   <div className="grid-container">
     <header className="grid-item">
       <GoToSite />
@@ -15,7 +15,7 @@ const BObio = () => (
       <BoNavbar />
     </aside>
     <main className="grid-item">
-      <Bobio />
+      <Bobio id_user={props.match.params.id_user} />
     </main>
   </div>
 );
