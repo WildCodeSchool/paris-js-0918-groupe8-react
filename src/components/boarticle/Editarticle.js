@@ -40,21 +40,6 @@ class Editarticle extends Component {
       });
   }
 
-  // setAjout= async (e) => {
-  //   e.preventDefault();
-  //   await axios.post(
-  //     `/api/articles/blog/${this.props.id_article}`,
-  //   )
-  //     .then((response) => {
-  //       if (response.status === 200) {
-  //         alert('Modification prise en compte');
-  //       } else if (response.status !== 200) {
-  //         alert('Mise à jour echouée');
-  //       }
-  //     });
-  // }
-
-
   handleEditorChange = (e) => {
     const article = { ...this.state.article };
     article.content = e.target.getContent();
@@ -86,7 +71,6 @@ render() {
 
           </label>
         </form>
-
         <div className="Editeurtinymceadmnistrateur col s9">
           <Tinymce article_content={article} handle={this.handleEditorChange} />
         </div>

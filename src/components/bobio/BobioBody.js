@@ -1,36 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
+import TinymceAdmin from '../tinymce/tinymceAdmin';
 
-const BobioBody = (
-  {
-    id_user,
-    firstname,
-    lastname,
-    mail,
-    linkedin,
-    twitter,
-    instagram,
-    create_date,
-    update_date,
-    password,
-    avatar,
-    user_right,
-    title,
-    bio_title,
-    bio_content_short,
-    bio_content,
-    main_picture,
-  },
-) => (
-  <div>
-    <p><b>{bio_title}</b></p>
-    <p>{bio_content}</p>
-    <p><b>{main_picture}</b></p>
-    <br />
-
-  </div>
+class BobioBody extends Component {
+  render() {
+    const {
+      admin, id_user, bio_title, bio_content,
+    } = this.props;
+    return (
 
 
-);
+      <div>
+        <TinymceAdmin bio_content={bio_content} handleBio={this.handleBioChange} />
+        <p><b>{id_user}</b></p>
+        <p><b>{bio_title}</b></p>
 
-
+        <br />
+      </div>
+    );
+  }
+}
 export default BobioBody;
