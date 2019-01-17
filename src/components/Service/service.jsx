@@ -25,7 +25,6 @@ class Service extends Component {
   render() {
     // déconstruction du state et alias du this.state
     const { serviceTable, isLoading } = this.state;
-    console.log(serviceTable);
 
     if (isLoading) {
       return <div>Loading...</div>;
@@ -33,55 +32,64 @@ class Service extends Component {
     return (
       <div className="cardglobal">
         <div className="container">
+
           <h3 className="center-align titreblog1">SERVICES</h3>
           <div className="row">
+
 
             {/* Service1 */}
             <div className="col s12 m6 l4">
               <div className="card hoverable">
+
                 <div className="card-image">
-                  <img src={serviceTable[0].main_picture} alt="" width="100" height="300" />
-                  {/* <span className="card-title text-darken-5 badge white black-text badgereading">5min reading</span> */}
+                  <img src={serviceTable[0].main_picture} alt="" width="100" height="100" />
                 </div>
+
                 <div className="card-content">
                   <h5 className="left-align"><b>{serviceTable[0].title}</b></h5>
                   <hr />
                   <p className="left-align">{serviceTable[0].short_content}</p>
                   <br />
                 </div>
+
               </div>
             </div>
+
 
             {/* Service2 */}
             <div className="col s12 m6 l4">
               <div className="card hoverable">
+
                 <div className="card-image">
                   <img src={serviceTable[1].main_picture} alt="" width="100" height="100" />
-                  {/* <span className="card-title text-darken-5 badge white black-text badgereading">5min reading</span> */}
                 </div>
+
                 <div className="card-content">
                   <h5 className="left-align"><b>{serviceTable[1].title}</b></h5>
                   <hr />
                   <p className="left-align">{serviceTable[1].short_content}</p>
                   <br />
                 </div>
-              </div>
 
+              </div>
             </div>
-            {/* fin service 2 */}
+
+
             {/* Service3 */}
             <div className="col s12 m6 l4">
               <div className="card hoverable">
+
                 <div className="card-image">
                   <img src={serviceTable[2].main_picture} alt="" width="100" height="100" />
-                  {/* <span className="card-title text-darken-5 badge white black-text badgereading">5min reading</span> */}
                 </div>
+
                 <div className="card-content">
                   <h5 className="left-align"><b>{serviceTable[2].title}</b></h5>
                   <hr />
                   <p className="left-align">{serviceTable[2].short_content}</p>
                   <br />
                 </div>
+
               </div>
             </div>
 
