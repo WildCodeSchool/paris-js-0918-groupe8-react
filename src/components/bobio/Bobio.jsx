@@ -4,7 +4,7 @@
 import React, { Component } from 'react';
 import M from 'materialize-css/dist/js/materialize.min';
 import axios from 'axios';
-import Tinymce from '../tinymce/tinymce';
+
 import './bobio.css';
 import BobioBody from './BobioBody';
 
@@ -40,17 +40,15 @@ class BoBio extends Component {
 
   render() {
     const { admin } = this.state;
-
+    console.log(admin);
     return (
       <div>
         <h5 className="col s6"> Edition Biographie</h5>
 
-        <div className="Editeurtinymceadmnistrateur col s9">
-          {/* <Tinymce bio_content={admin} handle={this.handleBioChange} /> */}
-        </div>
-        {admin.map(elem => (
-          <BobioBody {...elem} key={elem.id_user} />
-        ))}
+
+        { admin && admin.map(elem => (
+          <BobioBody id_user={elem.id_user} bio_content={elem.bio_content} bio_title={elem.bio_title} key={elem.id_user} />))}
+
 
         <a href="#1" className="btn-floating btn-large tooltipped waves-effect waves-light green darken-3 bouttonbackoffice" onClick={this.getAdminData} data-position="bottom" data-tooltip="Publier">
           <i className="material-icons">

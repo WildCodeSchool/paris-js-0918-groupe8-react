@@ -1,16 +1,16 @@
 import React from 'react';
 import { Editor } from '@tinymce/tinymce-react';
 
-const Tinymce = props => (
+const TinymceAdmin = props => (
   <div>
     {' '}
     <Editor
       apiKey="hmhb0q3jflv1kbo7mw4bqbaem0hbltrpxpk1xmeo7f45i9mf"
-      initialValue={(props.article_content || '').content}
+      initialValue={(props.bio_content || '')}
       init={{
         selector: 'textarea',
         height: 300,
-        width: 600,
+        width: 900,
         menubar: true,
         plugins: [
           'advlist autolink lists link image charmap print preview anchor textcolor searchreplace visualblocks code fullscreen',
@@ -22,8 +22,8 @@ const Tinymce = props => (
           '//www.tiny.cloud/css/codepen.min.css',
         ],
       }}
-      onChange={props.handle}
+      onChange={props.handleBioChange}
     />
   </div>
 );
-export default Tinymce;
+export default TinymceAdmin;
