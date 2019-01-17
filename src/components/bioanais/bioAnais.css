@@ -5,7 +5,7 @@
   text-align: justify;
  }
 
-  .anaiscoverimg{
+  .coverimg{
     background-image: url("../../assets/img/bioanaiscover.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -56,4 +56,14 @@
     font-style: italic;
     font-weight: bold;
 
-} ;
+}
+
+.maillogoabout:hover, .contactbouttonanais:hover {
+  opacity: 0.7;
+
+}
+
+.maillogoabout {
+  padding-right: 3%;
+  
+}
