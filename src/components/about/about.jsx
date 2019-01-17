@@ -66,11 +66,11 @@ class About extends Component {
                   <img src={maillogo} alt="" width="30" height="30" className="maillogoabout" />
                 </a>
 
-                <a href="{aboutTable[0].instagram}" target="_blank" rel="noopener noreferrer">
+                <a href={aboutTable[0].instagram} target="_blank" rel="noopener noreferrer">
                   <img src={Instagramlogo} alt="" width="30" height="30" className="maillogoabout" />
                 </a>
 
-                <a href="{aboutTable[0].linkedin}" target="_blank" rel="noopener noreferrer">
+                <a href={aboutTable[0].linkedin} target="_blank" rel="noopener noreferrer">
                   <img src={linkedinlogo} alt="" width="30" height="30" className="maillogoabout" />
                 </a>
 
@@ -103,11 +103,11 @@ class About extends Component {
                   <img src={maillogo} alt="" width="30" height="30" className="maillogoabout" />
                 </a>
 
-                <a href="{aboutTable[1].twitter}" target="_blank" rel="noopener noreferrer">
+                <a href={aboutTable[1].twitter} target="_blank" rel="noopener noreferrer">
                   <img src={twitterlogo} alt="" width="30" height="30" className="maillogoabout" />
                 </a>
 
-                <a href="{aboutTable[1].linkedin}" target="_blank" rel="noopener noreferrer">
+                <a href={aboutTable[1].linkedin} target="_blank" rel="noopener noreferrer">
                   <img src={linkedinlogo} alt="" width="30" height="30" className="maillogoabout" />
                 </a>
 
