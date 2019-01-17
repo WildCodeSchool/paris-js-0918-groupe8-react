@@ -31,7 +31,6 @@ class About extends Component {
   render() {
     // déconstruction du state et alias du this.state
     const { aboutTable, isLoading } = this.state;
-    console.log(aboutTable);
 
     if (isLoading) {
       return <div>Loading...</div>;
