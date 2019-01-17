@@ -1,19 +1,21 @@
 import React from 'react';
-import SetArticle from '../components/boarticle/SetArticle';
+import GoToSite from '../components/buttons/GoToSite';
 import BoNavbar from '../components/boNavbar/BoNavbar';
+import SetArticle from '../components/boarticle/SetArticle';
 
 
-const BOeditarticle = props => (
+const BOSetArticle = props => (
   <div className="grid-container">
+    <header className="grid-item">
+      <GoToSite />
+    </header>
     <aside className="grid-item BoNavbar">
       <BoNavbar />
     </aside>
     <main className="grid-item">
-
-
-      <SetArticle id_article={props.match.params.id_article} />
+      <SetArticle id_article={props.match.params.id_article} url={props.match.url} />
     </main>
   </div>
 );
 
-export default BOeditarticle;
+export default BOSetArticle;

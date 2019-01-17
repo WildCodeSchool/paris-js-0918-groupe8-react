@@ -4,11 +4,17 @@
 import React, { Component } from 'react';
 import M from 'materialize-css/dist/js/materialize.min';
 import axios from 'axios';
+// import PropTypes from 'prop-types';
 import Tinymce from '../tinymce/tinymce';
+
+// import TrashButton from '../buttons/TrashButton';
+import BrouillonButton from '../buttons/BrouillonButton';
+// import StarButton from '../buttons/StarButton';
+
 
 class SetArticle extends Component {
   state = {
-    article: undefined,
+    article: {},
   }
 
   componentDidMount() {
@@ -18,18 +24,25 @@ class SetArticle extends Component {
   }
 
   setEdit = async () => {
-    const response = await axios.get(`/api/articles/blog/${this.props.id_article}`);
-    this.setState({
-      article: response.data[0],
-
-    });
+    const { id_article } = this.props;
+    if (id_article !== undefined) {
+      const response = await axios.get(`/api/articles/blog/${id_article}`);
+      this.setState({
+        article: response.data[0],
+      });
+    }
   }
 
-  setCreate = async (e) => {
+  updateArticle = async (e) => {
     e.preventDefault();
+    const { id_article } = this.props;
     const { article } = this.state;
     await axios.put(
-      `/api/articles/blog/${this.props.id_article}`, { content: article.content, title: article.title, main_picture: article.main_picture },
+      `/api/articles/blog/${id_article}`, {
+        content: article.content,
+        title: article.title,
+        main_picture: article.main_picture,
+      },
     )
       .then((response) => {
         if (response.status === 200) {
@@ -46,60 +59,105 @@ class SetArticle extends Component {
     this.setState({ article });
   }
 
-handleChange = (e) => {
-  this.setState({ article: { ...this.state.article, [e.target.name]: e.target.value } });
-}
+  handleChange = (e) => {
+    this.setState({ article: { ...this.state.article, [e.target.name]: e.target.value } });
+  }
 
+  postArticle = (event) => {
+    event.preventDefault();
+    const { article } = this.state;
+    const title = article.title;
+    const content = article.content;
+    const main_picture = article.main_picture;
+    const blog_status = 'published'; // à finir de paramétrer
+    const front_page_favorite = 0;
+    // intégrer l'admin user ici quand autentification effective.
+    const admin_id_user = 1;
+    axios
+      .post('/api/articles/', {
+        title,
+        content,
+        main_picture,
+        blog_status,
+        front_page_favorite,
+        admin_id_user,
+      })
+      .then((response) => {
+        if (response.status === 200) {
+          alert('L\'article est bien enregistré')
+        } else {
+          alert('Un problème est survenu lors de l\'enregistrement')
+        }
+      });
+  }
 
-render() {
-  const {
-    article,
-  } = this.state;
+  handleSubmit = (event) => {
+    const { url } = this.props;
+    if (url === '/admin/articles/add') {
+      this.postArticle(event);
+    } else {
+      this.updateArticle(event);
+    }
+  }
 
-  return (
-    <div>
-      <div className="row">
-        <form>
-          <label htmlFor="title">
+  render() {
+    const { article } = this.state;
+
+    return (
+      <div>
+        <div className="row">
+          <form onSubmit={this.handleSubmit}>
+            <label htmlFor="title">
               Titre
-            <input name="title" id="title" value={(article || '').title} onChange={this.handleChange} />
+              <input
+                name="title"
+                id="title"
+                value={(article || '').title}
+                onChange={this.handleChange}
+              />
+            </label>
 
-          </label>
-          <label htmlFor="image">
+            <label htmlFor="image">
               Image
-            <input name="main_picture" id="image" value={(article || '').main_picture} onChange={this.handleChange} />
+              <input
+                name="main_picture"
+                id="image"
+                value={(article || '').main_picture}
+                onChange={this.handleChange}
+              />
+            </label>
 
-          </label>
-        </form>
-        <div className="Editeurtinymceadmnistrateur col s9">
-          <Tinymce article_content={article} handle={this.handleEditorChange} />
+            <div className="Editeurtinymceadmnistrateur">
+              <Tinymce
+                article_content={article}
+                handle={this.handleEditorChange}
+              />
+            </div>
+
+            <div>
+              <button
+                type="submit"
+                className="btn-floating btn-meddium tooltipped waves-effect waves-light"
+                data-position="bottom"
+                data-tooltip="Publier dans le form"
+              >
+                <i className="material-icons">
+                    check
+                </i>
+              </button>
+              <BrouillonButton />
+              {/* <StarButton /> */}
+              {/* <TrashButton /> */}   
+            </div>
+          </form>
         </div>
       </div>
-      <center>
-        <a href="#1" className="btn-floating btn-large tooltipped waves-effect waves-light green darken-3 bouttonbackoffice" onClick={this.setCreate} data-position="bottom" data-tooltip="Publier">
-          <i className="material-icons">
-              check
-          </i>
-        </a>
-        <a href="#2" className="btn-floating btn-large tooltipped waves-effect deep-orange accent-3 bouttonbackoffice" data-position="bottom" data-tooltip="Supprimer">
-          <i className="material-icons">
-            {' '}
-            <li className="tab waves-effect waves-light">
-                delete
-            </li>
-          </i>
-        </a>
-        <a href="#1" className="btn-floating btn-large tooltipped waves-effect grey bouttonbackoffice" data-position="bottom" data-tooltip="Brouillon">
-          <i className="material-icons">
-              do_not_disturb_alt
-
-          </i>
-        </a>
-      </center>
-    </div>
-
-  );
+    );
+  }
 }
-}
+
+// SetArticle.PropTypes = {
+//   url: PropTypes.string.isRequired,
+// };
 
 export default SetArticle;

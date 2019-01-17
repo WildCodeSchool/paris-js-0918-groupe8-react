@@ -7,7 +7,8 @@ import Article from '../components/article/article';
 const BlogArticle = props => (
   <div>
     <Navbar />
-    <Article {...props.location.state} />
+    {/* <Article {...props.location.state} /> */}
+    <Article {...props} />
     <Footer />
   </div>
 );
