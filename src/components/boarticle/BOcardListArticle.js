@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import EditButton from '../buttons/EditButton';
 import TrashButton from '../buttons/TrashButton';
+import BrouillonButton from '../buttons/BrouillonButton';
 
 import StarButton from '../buttons/StarButton';
 import './BOcardListArticle.css';
@@ -40,15 +41,15 @@ const BOcardListeArticle = ({
             <br />
             {`Créé le ${createDate} à ${createHour}  et mise à jour le ${updateDate} à ${updateHour}`}
           </p>
-          <div className="secondary-content">
-            <i className="material-icons">
-              <a href={`/admin/articles/edition/${id_article}`}>
-                <EditButton content={content} id_article={id_article} />
-              </a>
-              {' '}
-            </i>
-            <i className="material-icons"><TrashButton blog_status={blog_status} idArticle={id_article} loadData={loadData} /></i>
-            <i className="material-icons"><StarButton active={front_page_favorite} idArticle={id_article} loadData={loadData} /></i>
+          <div className="secondary-content BocardListArticleblockButtons">
+            
+            <a href={`/admin/articles/edition/${id_article}`}>
+              <EditButton content={content} id_article={id_article} blog_status={blog_status} loadData={loadData}/>
+            </a>
+
+            <BrouillonButton blog_status={blog_status} idArticle={id_article} loadData={loadData} />
+            <TrashButton blog_status={blog_status} idArticle={id_article} loadData={loadData} />
+            <StarButton active={front_page_favorite} idArticle={id_article} loadData={loadData} />
           </div>
         </li>
       </ul>

@@ -49,7 +49,7 @@ class TrashButton extends Component {
 }
 
 TrashButton.propTypes = {
-  idArticle: PropTypes.number.isRequired,
+  idArticle: PropTypes.string.isRequired,
   blog_status: PropTypes.string.isRequired,
   loadData: PropTypes.func.isRequired,
 };
