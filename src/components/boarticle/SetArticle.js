@@ -25,7 +25,7 @@ class SetArticle extends Component {
 
   setEdit = async () => {
     const { id_article } = this.props;
-    if (id_article !== undefined && typeof id_article === Number) {
+    if (id_article !== undefined) {
       const response = await axios.get(`/api/articles/blog/${id_article}`);
       this.setState({
         article: response.data[0],
