@@ -40,8 +40,7 @@ const BOcardListeArticle = ({
             <br />
             {`Créé le ${createDate} à ${createHour}  et mise à jour le ${updateDate} à ${updateHour}`}
           </p>
-          <a href="#!" className="secondary-content">
-          
+          <div className="secondary-content">
             <i className="material-icons">
               <a href={`/admin/articles/edition/${id_article}`}>
                 <EditButton content={content} id_article={id_article} />
@@ -50,11 +49,11 @@ const BOcardListeArticle = ({
             </i>
             <i className="material-icons"><TrashButton blog_status={blog_status} idArticle={id_article} loadData={loadData} /></i>
             <i className="material-icons"><StarButton active={front_page_favorite} idArticle={id_article} loadData={loadData} /></i>
-          </a>
+          </div>
         </li>
       </ul>
     </div>
-  )
+  );
 };
 
 BOcardListeArticle.propTypes = {

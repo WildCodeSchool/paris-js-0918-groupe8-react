@@ -10,7 +10,7 @@ const Tinymce = props => (
       init={{
         selector: 'textarea',
         height: 300,
-        width: 900,
+        width: 600,
         menubar: true,
         plugins: [
           'advlist autolink lists link image charmap print preview anchor textcolor searchreplace visualblocks code fullscreen',
