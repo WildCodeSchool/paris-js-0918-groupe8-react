@@ -3,67 +3,44 @@
   color: black;
   font-size: 1.3em;
   text-align: justify;
- }
-
-  .coverimg{
-    background-image: url("../../assets/img/bioanaiscover.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 60vh;
-    margin-top: 5%;
-    position: relative;
-
-  }
-
-  .transbox {
-
-    opacity: 0.9;
-    position: absolute;
-    width: 100%;
-    top: 80%;
-    transform: translateY(-50%);
-  }
-
-  .transbox p {
-    color: #ffffff;
-    font-size: 2em;
-    text-indent:2em;
-    font-family: 'Oswald', sans-serif;
-
-  }
-
-  /* .pucelistul {
-    list-style: none
-  }
-
-  .puc::before {content: "•"; color: red;
-    display: inline-block; width: 1em;
-    margin-left: -1em}
-    */
-.listdetrucunpeuchelouquetumodifiraparlasuite ul li {
-    list-style: disc;
 }
 
-  .bouttondevischarte{
-    display: flex;
-    justify-content: center;
-    margin-top: 10%;
-    margin-bottom: 10%;
-  }
+.coverimg{
+  background-image: url("../../assets/img/bioanaiscover.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 60vh;
+  margin-top: 5%;
+  position: relative;
+
+}
+
+.transbox {
+
+  opacity: 0.9;
+  position: absolute;
+  width: 100%;
+  top: 80%;
+  transform: translateY(-50%);
+}
+
+.transbox p {
+  color: #ffffff;
+  font-size: 2em;
+  text-indent:2em;
+  font-family: 'Oswald', sans-serif;
+
+}
+
+.bouttondevischarte{
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
 
 .soustitrebio{
-    font-style: italic;
-    font-weight: bold;
-
-}
-
-.maillogoabout:hover, .contactbouttonanais:hover {
-  opacity: 0.7;
-
-}
-
-.maillogoabout {
-  padding-right: 3%;
-  
+  font-style: italic;
+  font-weight: bold;
 }
