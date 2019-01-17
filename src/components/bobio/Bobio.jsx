@@ -24,13 +24,37 @@ class BoBio extends Component {
     M.Tooltip.init(elem);
   }
 
+  componentWillReceiveProps = (nextPros) => {
+    if (nextPros.location.key !== this.props.location.key) {
+      window.location.reload();
+    }
+  }
 
   // REQUETE DE LA LISTE ADMIN
   getAdminData = async () => {
-    const response = await axios.get('/api/admin/');
+    const response = await axios.get(`/api/admin/${this.props.match.params.id}`);
     this.setState({ admin: response.data });
   }
 
+  setAdmin = (e) => {
+    e.preventDefault();
+    const { admin } = this.state;
+    axios.put(
+      `/api/admin/bio/${this.props.match.params.id}`,
+      {
+        bio_content: admin.bio_content,
+        bio_title: admin.bio_title,
+      },
+    )
+
+      .then((response) => {
+        if (response.status === 200) {
+          alert('Modification prise en compte');
+        } else if (response.status !== 200) {
+          alert('Mise à jour echouée');
+        }
+      });
+  }
 
   handleBioChange = (e) => {
     const admin = { ...this.state.admin };
@@ -40,17 +64,26 @@ class BoBio extends Component {
 
   render() {
     const { admin } = this.state;
-    console.log(admin);
+
     return (
       <div>
-        <h5 className="col s6"> Edition Biographie</h5>
+        <h2 className="col s6"> Edition Biographie</h2>
 
 
-        { admin && admin.map(elem => (
-          <BobioBody id_user={elem.id_user} bio_content={elem.bio_content} bio_title={elem.bio_title} key={elem.id_user} />))}
+        { admin && admin
+          .filter(id => id.id_user <= 2)
+          .map(elem => (
+            <BobioBody
+              id_user={elem.id_user}
+              bio_content={elem.bio_content}
+              bio_title={elem.bio_title}
+              firstname={elem.firstname}
+              lastname={elem.lastname}
+              key={elem.id_user}
+            />))}
 
 
-        <a href="#1" className="btn-floating btn-large tooltipped waves-effect waves-light green darken-3 bouttonbackoffice" onClick={this.getAdminData} data-position="bottom" data-tooltip="Publier">
+        <a href="#1" className="btn-floating btn-large tooltipped waves-effect waves-light green darken-3 bouttonbackoffice" onClick={this.setAdmin} data-position="bottom" data-tooltip="Publier">
           <i className="material-icons">
               check
           </i>

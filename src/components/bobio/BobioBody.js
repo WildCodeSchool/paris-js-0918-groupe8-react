@@ -4,15 +4,26 @@ import TinymceAdmin from '../tinymce/tinymceAdmin';
 class BobioBody extends Component {
   render() {
     const {
-      admin, id_user, bio_title, bio_content,
+      id_user, firstname, lastname, bio_title, bio_content,
     } = this.props;
+    console.log(id_user);
     return (
 
 
       <div>
+
+        <h3>
+          {firstname}
+          {' '}
+          {lastname}
+        </h3>
+        <h5>
+          {' '}
+          {bio_title}
+        </h5>
+        <br />
         <TinymceAdmin bio_content={bio_content} handleBio={this.handleBioChange} />
-        <p><b>{id_user}</b></p>
-        <p><b>{bio_title}</b></p>
+
 
         <br />
       </div>

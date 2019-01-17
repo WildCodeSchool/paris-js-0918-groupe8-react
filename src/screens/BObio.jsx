@@ -15,7 +15,7 @@ const BObio = props => (
       <BoNavbar />
     </aside>
     <main className="grid-item">
-      <Bobio id_user={props.match.params.id_user} />
+      <Bobio {...props} />
     </main>
   </div>
 );
