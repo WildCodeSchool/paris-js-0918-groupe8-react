@@ -5,7 +5,7 @@ import BlogList from '../screens/BlogList';
 import BlogArticle from '../screens/BlogArticle';
 import BOaccueil from '../screens/BOaccueil';
 import BOarticles from '../screens/BOarticles';
-import BOeditarticle from '../screens/BOSetArticle';
+import BOSetArticle from '../screens/BOSetArticle';
 import BObio from '../screens/BObio';
 import BOEditionAccueil from '../screens/BOEditionAccueil';
 import BOcoms from '../screens/BOcoms';
@@ -67,12 +67,12 @@ const routes = [
   {
     path: '/admin/articles/edition/:id_article',
     name: null,
-    component: BOeditarticle,
+    component: BOSetArticle,
   },
   {
     path: '/admin/articles/add',
     name: null,
-    component: BOeditarticle,
+    component: BOSetArticle,
   },
   {
     path: '/admin/bio',

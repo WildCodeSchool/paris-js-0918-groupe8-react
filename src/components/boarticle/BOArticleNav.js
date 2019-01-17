@@ -64,7 +64,6 @@ class BOArticleNav extends Component {
 
   render() {
     const { articles, status, nbAll, nbPublished, nbWritting_progress, nbArchived } = this.state;
-    console.log(articles)
     return (
       <div>
         <nav className="nav-wrapper" style={{ background: '#003F5F', color: '#FFFFFF' }}>
