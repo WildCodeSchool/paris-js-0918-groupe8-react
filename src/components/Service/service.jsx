@@ -40,7 +40,7 @@ class Service extends Component {
             <div className="col s12 m6 l4">
               <div className="card hoverable">
                 <div className="card-image">
-                  <img src={serviceTable[0].main_picture} alt="" width="100" height="100" />
+                  <img src={serviceTable[0].main_picture} alt="" width="100" height="300" />
                   {/* <span className="card-title text-darken-5 badge white black-text badgereading">5min reading</span> */}
                 </div>
                 <div className="card-content">

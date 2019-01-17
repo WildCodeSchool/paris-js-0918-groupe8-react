@@ -22,7 +22,7 @@ const CardBody = ({
       >
         <div className="card hoverable">
           <div className="card-image">
-            <img className="materialboxed" src={main_picture} alt="Article" />
+            <img className="materialboxed" src={main_picture} alt="Article" height="300" />
           </div>
           <div className="card-content black-text">
             <p className="left-align"><b>{title}</b></p>
