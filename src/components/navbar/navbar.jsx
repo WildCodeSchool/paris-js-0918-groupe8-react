@@ -45,7 +45,7 @@ class Navbar extends Component {
                     </NavLink>
                   </li>
                 ))}
-                <li><a href="sass.html"><i className="material-icons">search</i></a></li>
+                {/* <li><a href="sass.html"><i className="material-icons">search</i></a></li> */}
               </ul>
             </div>
           </nav>
