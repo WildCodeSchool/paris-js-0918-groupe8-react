@@ -11,7 +11,9 @@ import BobioBody from './BobioBody';
 
 class BoBio extends Component {
   state = {
-    admin: [],
+    admin: {
+      id_user: '', firstname: '', lastname: '', bio_title: '', bio_content: '',
+    },
   }
 ;
 
@@ -33,20 +35,19 @@ class BoBio extends Component {
   // REQUETE DE LA LISTE ADMIN
   getAdminData = async () => {
     const response = await axios.get(`/api/admin/${this.props.match.params.id}`);
-    this.setState({ admin: response.data });
+    this.setState({ admin: response.data[0] });
   }
 
-  setAdmin = (e) => {
+  setAdmin = async (e) => {
     e.preventDefault();
     const { admin } = this.state;
-    axios.put(
+    await axios.put(
       `/api/admin/bio/${this.props.match.params.id}`,
       {
-        bio_content: admin.bio_content,
         bio_title: admin.bio_title,
+        bio_content: admin.bio_content,
       },
     )
-
       .then((response) => {
         if (response.status === 200) {
           alert('Modification prise en compte');
@@ -58,38 +59,39 @@ class BoBio extends Component {
 
   handleBioChange = (e) => {
     const admin = { ...this.state.admin };
-    admin.content = e.target.getContent();
+    admin.bio_content = e.target.getContent();
     this.setState({ admin });
   }
 
   render() {
     const { admin } = this.state;
-
     return (
       <div>
         <h2 className="col s6"> Edition Biographie</h2>
 
+        <BobioBody
+          id_user={admin.id_user}
+          bio_content={admin.bio_content}
+          bio_title={admin.bio_title}
+          firstname={admin.firstname}
+          handleBio={this.handleBioChange}
+          lastname={admin.lastname}
+          key={admin.id_user}
+        />
 
-        { admin && admin
-          .filter(id => id.id_user <= 2)
-          .map(elem => (
-            <BobioBody
-              id_user={elem.id_user}
-              bio_content={elem.bio_content}
-              bio_title={elem.bio_title}
-              firstname={elem.firstname}
-              lastname={elem.lastname}
-              key={elem.id_user}
-            />))}
+        <a
+          href="#1"
+          className="btn-floating btn-medium waves-effect waves-light blue-grey tooltipped"
+          onClick={this.setAdmin}
+          data-position="bottom"
+          data-tooltip="Publier"
+        >
 
-
-        <a href="#1" className="btn-floating btn-large tooltipped waves-effect waves-light green darken-3 bouttonbackoffice" onClick={this.setAdmin} data-position="bottom" data-tooltip="Publier">
           <i className="material-icons">
               check
           </i>
         </a>
-
-
+ 
       </div>
     );
   }
