@@ -1,59 +1,127 @@
-import React from 'react';
+import React, { Component } from 'react';
+import axios from 'axios';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
+
 import './about.css';
-import maleavatar from '../../assets/img/mathiaspic.jpeg';
-import femaleavatar from '../../assets/img/anaispic.jpeg';
+
 import maillogo from '../../assets/svg/close-envelope.svg';
 import twitterlogo from '../../assets/svg/twitter.svg';
 import linkedinlogo from '../../assets/svg/linkedin-logo.svg';
 import Instagramlogo from '../../assets/img/instagram.svg';
 
 
-const About = () => (
-  <div className="newsletterglobal" id="about">
-    <div className="container">
-      <h3 className="center-align titreblog1">Qui sommes-nous ?</h3>
+class About extends Component {
+  state = {
+    aboutTable: [],
+    isLoading: true,
+  }
 
-      <div className="row newsletterblock grey lighten-5">
+  // APPEL REQUETE
+  componentDidMount() {
+    this.getAboutTable();
+  }
 
-        <div className="col s12 m6">
+  // REQUETE DES ADMIN
+  getAboutTable = async () => {
+    const res = await axios.get('/api/admin');
+    this.setState({ aboutTable: res.data });
+    this.setState({ isLoading: false });
+  }
 
-          <div className="cardtitlebio">
-            <img src={femaleavatar} alt="" className="circle responsive-img" width="150" height="150" />
-            <h3>Anaïs Jaunay</h3>
-            <p className="titlefonctionanais">Conteuse digital</p>
-            <p>"Parler de ceux qui vivent leur métier comme un artisanat, redonnent de la valeur à tout ce que l’on consomme"</p>
-            <a href="mailto:conteurdigital@gmail.com"><img src={maillogo} alt="" width="30" height="30" className="maillogoabout" /></a>
-            <a href="https://www.instagram.com/anaisjaunay/" target="_blank" rel="noopener noreferrer"><img src={Instagramlogo} alt="" width="30" height="30" className="maillogoabout" /></a>
-            <a href="https://www.linkedin.com/in/anaisjaunay/" target="_blank" rel="noopener noreferrer"><img src={linkedinlogo} alt="" width="30" height="30" className="maillogoabout" /></a>
+  render() {
+    // déconstruction du state et alias du this.state
+    const { aboutTable, isLoading } = this.state;
 
+    if (isLoading) {
+      return <div>Loading...</div>;
+    }
+    return (
+      <div className="newsletterglobal" id="about">
+        <div className="container">
 
-            <NavLink exact to="/anaisjaunay" className="contactbouttonanais">Bio</NavLink>
-          </div>
-        </div>
+          <h3 className="center-align titreblog1">
+            Qui sommes-nous ?
+          </h3>
 
-        <div className="col s12 m6">
+          <div className="row newsletterblock grey lighten-5">
 
-          <div className="cardtitlebio">
-            <div className="cardtitlemathias">
-              <img src={maleavatar} alt="" className="circle responsive-img" width="150" height="150" />
-              <h3>Mathias Savary</h3>
-              <p className="titlefonctionanais">Conteur digital</p>
-              <p>la VRAIE disruption dans le marketing digital N’est PAS technologique. Elle vient de l’écrit. Elle est poétique !</p>
-              <a href="mailto:conteurdigital@gmail.com"><img src={maillogo} alt="" width="30" height="30" className="maillogoabout" /></a>
-              <a href="https://twitter.com/MathiasSavary" target="_blank" rel="noopener noreferrer"><img src={twitterlogo} alt="" width="30" height="30" className="maillogoabout" /></a>
-              <a href="https://www.linkedin.com/in/mathias-savary-1a37a498/" target="_blank" rel="noopener noreferrer"><img src={linkedinlogo} alt="" width="30" height="30" className="maillogoabout" /></a>
+            <div className="col s12 m6">
+              <div className="cardtitlebio">
 
-              <NavLink exact to="/mathiassavary" className="contactbouttonanais">Bio</NavLink>
+                <img src={aboutTable[0].avatar} alt="Anaïs Jaunay" className="circle responsive-img" width="150" height="150" />
+
+                <h3>
+                  {`${aboutTable[0].firstname} ${aboutTable[0].lastname}`}
+                </h3>
+
+                <p className="titlefonctionanais">
+                  {aboutTable[0].bio_title}
+                </p>
+
+                <p>
+                  {aboutTable[0].bio_content_short}
+                </p>
+
+                <a href={`mailto:${aboutTable[2].mail}`}>
+                  <img src={maillogo} alt="" width="30" height="30" className="maillogoabout" />
+                </a>
+
+                <a href={aboutTable[0].instagram} target="_blank" rel="noopener noreferrer">
+                  <img src={Instagramlogo} alt="" width="30" height="30" className="maillogoabout" />
+                </a>
+
+                <a href={aboutTable[0].linkedin} target="_blank" rel="noopener noreferrer">
+                  <img src={linkedinlogo} alt="" width="30" height="30" className="maillogoabout" />
+                </a>
+
+                <NavLink exact to="/anaisjaunay" className="contactbouttonanais">
+                  Bio
+                </NavLink>
+
+              </div>
             </div>
+
+
+            <div className="col s12 m6">
+              <div className="cardtitlebio">
+
+                <img src={aboutTable[1].avatar} alt="Mathias Savary" className="circle responsive-img" width="150" height="150" />
+
+                <h3>
+                  {`${aboutTable[1].firstname} ${aboutTable[1].lastname}`}
+                </h3>
+
+                <p className="titlefonctionanais">
+                  {aboutTable[1].bio_title}
+                </p>
+
+                <p>
+                  {aboutTable[1].bio_content_short}
+                </p>
+
+                <a href={`mailto:${aboutTable[2].mail}`}>
+                  <img src={maillogo} alt="" width="30" height="30" className="maillogoabout" />
+                </a>
+
+                <a href={aboutTable[1].twitter} target="_blank" rel="noopener noreferrer">
+                  <img src={twitterlogo} alt="" width="30" height="30" className="maillogoabout" />
+                </a>
+
+                <a href={aboutTable[1].linkedin} target="_blank" rel="noopener noreferrer">
+                  <img src={linkedinlogo} alt="" width="30" height="30" className="maillogoabout" />
+                </a>
+
+                <NavLink exact to="/mathiassavary" className="contactbouttonanais">
+                  Bio
+                </NavLink>
+              </div>
+            </div>
+
           </div>
         </div>
-
-
       </div>
-    </div>
-  </div>
-
-);
+    );
+  }
+}
 
 export default About;

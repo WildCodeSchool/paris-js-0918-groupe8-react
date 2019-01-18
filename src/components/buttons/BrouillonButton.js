@@ -4,18 +4,18 @@ import PropTypes from 'prop-types';
 import Axios from 'axios';
 import M from 'materialize-css/dist/js/materialize.min';
 
-class TrashButton extends Component {
+class BrouillonButton extends Component {
   componentDidMount() {
     const elems = document.querySelectorAll('.tooltipped');
     M.Tooltip.init(elems);
   }
 
-  setUnpublished = () => {
+  setWrittingProgress = () => {
     const { idArticle, loadData } = this.props;
     Axios
       .put(
         `/api/articles/blog/${idArticle}`,
-        { blog_status: 'archived' },
+        { blog_status: 'writting_progress' },
       )
       .then(loadData);
   }
@@ -36,22 +36,22 @@ class TrashButton extends Component {
     return (
       <button
         type="submit"
-        onClick={(blog_status === 'archived') ? this.setPublished : this.setUnpublished}
+        onClick={(blog_status === 'writting_progress') ? this.setPublished : this.setWrittingProgress}
         className="btn-floating btn-medium blue-grey tooltipped"
-        data-position="bottom"
-        data-tooltip={(blog_status === 'archived') ? "Restaurer l'article" : "Archiver l'article"}
+        data-position="top"
+        data-tooltip={(blog_status === 'writting_progress') ? 'Publier l\'article' : 'Mettre en brouillon'}
         exitdelay="2"
       >
-        {(blog_status === 'archived') ? <i className="material-icons">restore_page</i> : <i className="material-icons">delete</i>}
+        {(blog_status === 'writting_progress') ? <i className="material-icons">check</i> : <i className="material-icons">description</i>}
       </button>
     );
   }
 }
 
-TrashButton.propTypes = {
+BrouillonButton.propTypes = {
   idArticle: PropTypes.string.isRequired,
   blog_status: PropTypes.string.isRequired,
   loadData: PropTypes.func.isRequired,
 };
 
-export default TrashButton;
+export default BrouillonButton;

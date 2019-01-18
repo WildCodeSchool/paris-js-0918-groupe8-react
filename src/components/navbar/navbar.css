@@ -9,13 +9,7 @@ nav ul a{
 }
 
 .logoconteurdigital {
-    margin-top: 0.75%;
-    margin-left: 1%;
-}
-
-.titlelogoconteurdigital{
-    font-family: 'Dancing Script', cursive;
-    font-size: 1.5em;
-    text-indent: 10px; 
-
+  top: 50%;
+  transform: translateY(30%);
+  margin-left: 20px;
 }

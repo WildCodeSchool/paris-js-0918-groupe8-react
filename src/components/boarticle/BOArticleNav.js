@@ -64,7 +64,6 @@ class BOArticleNav extends Component {
 
   render() {
     const { articles, status, nbAll, nbPublished, nbWritting_progress, nbArchived } = this.state;
-
     return (
       <div>
         <nav className="nav-wrapper" style={{ background: '#003F5F', color: '#FFFFFF' }}>
@@ -117,7 +116,7 @@ class BOArticleNav extends Component {
                 <span className="badge">{nbAll}</span>
               </Link>
             </li>
-            <AddNewArticleButton />
+            <AddNewArticleButton articles={articles} />
           </ul>
         </nav>
         <BOFilterArticle articles={articles} status={status} loadData={this.loadData} />
