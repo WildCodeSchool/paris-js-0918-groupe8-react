@@ -1,13 +1,17 @@
 import React from 'react';
+
 import { Editor } from '@tinymce/tinymce-react';
 
+require('dotenv').config();
+
 const Tinymce = props => (
-  
+
   <div>
-  
     <Editor
       apiKey="hmhb0q3jflv1kbo7mw4bqbaem0hbltrpxpk1xmeo7f45i9mf"
-      selector={(props.article_content || '')}
+      // apiKey={(process.env.TINYMCE_API_KEY)}
+
+      initialValue={(props.article_content || '').content}
       init={{
         selector: 'textarea',
         height: 300,
