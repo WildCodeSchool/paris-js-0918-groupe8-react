@@ -1,38 +1,96 @@
+/* global document */
+/* global alert */
+
 import React, { Component } from 'react';
 import M from 'materialize-css/dist/js/materialize.min';
-import Tinymce from '../tinymce/tinymce';
+import axios from 'axios';
+
 import './bobio.css';
+import BobioBody from './BobioBody';
 
 
 class BoBio extends Component {
+  state = {
+    admin: [],
+  }
+;
+
+
+  // APPEL DE LA REQUETE
   componentDidMount() {
-  //  tooltip sur materialize (popup des boutons)
+    this.getAdminData();
+    //  tooltip sur materialize (popup des boutons)
     const elem = document.querySelectorAll('.tooltipped');
     M.Tooltip.init(elem);
   }
 
+  componentWillReceiveProps = (nextPros) => {
+    if (nextPros.location.key !== this.props.location.key) {
+      window.location.reload();
+    }
+  }
+
+  // REQUETE DE LA LISTE ADMIN
+  getAdminData = async () => {
+    const response = await axios.get(`/api/admin/${this.props.match.params.id}`);
+    this.setState({ admin: response.data });
+  }
+
+  setAdmin = (e) => {
+    e.preventDefault();
+    const { admin } = this.state;
+    axios.put(
+      `/api/admin/bio/${this.props.match.params.id}`,
+      {
+        bio_content: admin.bio_content,
+        bio_title: admin.bio_title,
+      },
+    )
+
+      .then((response) => {
+        if (response.status === 200) {
+          alert('Modification prise en compte');
+        } else if (response.status !== 200) {
+          alert('Mise à jour echouée');
+        }
+      });
+  }
+
+  handleBioChange = (e) => {
+    const admin = { ...this.state.admin };
+    admin.content = e.target.getContent();
+    this.setState({ admin });
+  }
+
   render() {
+    const { admin } = this.state;
+
     return (
       <div>
-        <div className="row">
-          <div className="input-field col s6">
-            <input value="Mathias Savary" id="first_name2" type="text" className="validate" /> 
-            {/* enlever la value en dur  */}
-            <label className="active" htmlFor="first_name2" id="label_first_name2">Titre Biographie</label>
-          </div>
+        <h2 className="col s6"> Edition Biographie</h2>
 
-          <h5 className="col s6">Contenu</h5>
 
-          <div className="Editeurtinymceadmnistrateur col s9">
-            <Tinymce />
-          </div>
-        </div>
+        { admin && admin
+          .filter(id => id.id_user <= 2)
+          .map(elem => (
+            <BobioBody
+              id_user={elem.id_user}
+              bio_content={elem.bio_content}
+              bio_title={elem.bio_title}
+              firstname={elem.firstname}
+              lastname={elem.lastname}
+              key={elem.id_user}
+            />))}
 
-        <a href="#1" className="btn-floating btn-large tooltipped waves-effect waves-light green darken-3 bouttonbackoffice" data-position="bottom" data-tooltip="Publier"><i className="material-icons">check</i></a>
-        <a href="#2" className="btn-floating btn-large tooltipped waves-effect deep-orange accent-3 bouttonbackoffice" data-position="bottom" data-tooltip="Supprimer"><i className="material-icons">delete</i></a>
-        <a href="#1" className="btn-floating btn-large tooltipped waves-effect grey bouttonbackoffice" data-position="bottom" data-tooltip="Brouillon"><i className="material-icons">do_not_disturb_alt</i></a>
+
+        <a href="#1" className="btn-floating btn-large tooltipped waves-effect waves-light green darken-3 bouttonbackoffice" onClick={this.setAdmin} data-position="bottom" data-tooltip="Publier">
+          <i className="material-icons">
+              check
+          </i>
+        </a>
+
+
       </div>
-
     );
   }
 }

@@ -1,7 +1,7 @@
 /* global document */
 import React, { Component } from 'react';
-// import { NavLink } from 'react-router-dom';
-import { NavHashLink as NavLink } from 'react-router-hash-link';
+import { NavLink } from 'react-router-dom';
+// import { NavHashLink as NavLink } from 'react-router-hash-link';
 import M from 'materialize-css/dist/js/materialize.min';
 
 import routes from '../../routes/routes';

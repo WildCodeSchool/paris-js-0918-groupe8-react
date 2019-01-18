@@ -44,7 +44,7 @@ const BOcardListeArticle = ({
           <div className="secondary-content BocardListArticleblockButtons">
             
             <a href={`/admin/articles/edition/${id_article}`}>
-              <EditButton content={content} id_article={id_article} blog_status={blog_status} loadData={loadData}/>
+              <EditButton content={content} id_article={id_article} blog_status={blog_status} loadData={loadData} />
             </a>
 
             <BrouillonButton blog_status={blog_status} idArticle={id_article} loadData={loadData} />
