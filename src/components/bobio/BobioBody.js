@@ -4,7 +4,7 @@ import TinymceAdmin from '../tinymce/tinymceAdmin';
 class BobioBody extends Component {
   render() {
     const {
-      id_user, firstname, lastname, bio_title, bio_content,
+      id_user, firstname, lastname, bio_title, bio_content, handleBio,
     } = this.props;
     console.log(id_user);
     return (
@@ -22,7 +22,7 @@ class BobioBody extends Component {
           {bio_title}
         </h5>
         <br />
-        <TinymceAdmin bio_content={bio_content} handleBio={this.handleBioChange} />
+        <TinymceAdmin bio_content={bio_content} handleBioChange={handleBio} />
 
 
         <br />
