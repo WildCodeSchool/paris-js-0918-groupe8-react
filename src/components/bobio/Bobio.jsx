@@ -42,11 +42,10 @@ class BoBio extends Component {
     axios.put(
       `/api/admin/bio/${this.props.match.params.id}`,
       {
-        bio_content: admin.bio_content,
         bio_title: admin.bio_title,
+        bio_content: admin.bio_content,
       },
     )
-
       .then((response) => {
         if (response.status === 200) {
           alert('Modification prise en compte');
