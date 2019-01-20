@@ -28,6 +28,7 @@ const Bloglist = ({
           <div className="card-content black-text">
             <p className="left-align"><b>{title}</b></p>
             <hr />
+
             <p className="left-align">
               {renderHTML(`"
             ${content.slice(0, 150)}

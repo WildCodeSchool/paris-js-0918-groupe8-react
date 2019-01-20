@@ -23,8 +23,6 @@ class BobioBody extends Component {
         </h5>
         <br />
         <TinymceAdmin bio_content={bio_content} handleBioChange={handleBio} />
-
-
         <br />
       </div>
     );

@@ -29,11 +29,9 @@ const CardBody = ({
           <div className="card-content black-text">
             <p className="left-align"><b>{title}</b></p>
             <hr />
-            <p className="left-align">
-              {renderHTML(`"
-            ${content.slice(0, 150)}
-            ..."`)}
-            </p>
+            <p className="left-align" {renderHTML(`"${content.slice(0, 150)}..."`)}
+            </>
+
             <br />
             <div className="card-action">
               <div className="row valign-wrapper">

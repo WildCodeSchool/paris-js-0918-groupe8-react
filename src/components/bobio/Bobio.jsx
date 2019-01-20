@@ -69,7 +69,6 @@ class BoBio extends Component {
       <div>
         <h2 className="col s6"> Edition Biographie</h2>
 
-
         <BobioBody
           id_user={admin.id_user}
           bio_content={admin.bio_content}
@@ -80,7 +79,6 @@ class BoBio extends Component {
           key={admin.id_user}
         />
 
-
         <a
           href="#1"
           className="btn-floating btn-medium waves-effect waves-light blue-grey tooltipped"
@@ -88,10 +86,12 @@ class BoBio extends Component {
           data-position="bottom"
           data-tooltip="Publier"
         >
+
           <i className="material-icons">
               check
           </i>
         </a>
+ 
       </div>
     );
   }

@@ -28,16 +28,16 @@ class Newsletter extends Component {
       <div className="newsletterglobal">
 
         <div className="container">
-          <h3 className="center-align titreblog1">NEWSLETTER</h3>
+          <h3 className="center-align titreblog1">{newsletterTable.title}</h3>
 
           <div className="row newsletterblock grey lighten-5">
             <div className="col s12 m6">
               <p className="titledownloadlivretblanc">
-                {newsletterTable.title}
+                {newsletterTable.short_content}
               </p>
               <hr />
               <p className="left-align">
-                {newsletterTable.short_content}
+                {newsletterTable.content}
               </p>
               <br />
             </div>
