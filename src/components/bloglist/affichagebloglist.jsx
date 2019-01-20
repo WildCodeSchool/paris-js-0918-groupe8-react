@@ -8,8 +8,8 @@ import './bloglist.css';
 class Affichagebloglist extends Component {
   state = {
     homeArticles: [],
-    page: 1,
     numPerPage: 10,
+    page: 1,
   }
 
   // APPEL DE LA REQUETE
@@ -70,7 +70,14 @@ class Affichagebloglist extends Component {
             {page}
             <button type="button" onClick={this.handleButtonNext}>Next</button>
             <br />
-          </div>
+            {' '}
+            <p>
+              Page
+              {' '}
+              {page}
+            </p>
+          </center>
+          <br />
         </div>
       </div>
     );
