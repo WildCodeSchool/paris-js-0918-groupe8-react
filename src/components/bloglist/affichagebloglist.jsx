@@ -66,11 +66,18 @@ class Affichagebloglist extends Component {
             {homeArticles && homeArticles.slice(numPerPage * (page - 1), numPerPage * (page)).filter(e => e.blog_status === 'published').map(elem => (
               <Cardbloglist {...elem} key={elem.id_article} />
             ))}
-            <button type="button" onClick={this.handleButtonPrevious}>Prev</button>
-            {page}
-            <button type="button" onClick={this.handleButtonNext}>Next</button>
-            <br />
+            {' '}
+
           </div>
+          <center>
+            <button type="button" onClick={this.handleButtonPrevious}>Prev</button>
+            {' '}
+            <button type="button" onClick={this.handleButtonNext}>Next</button>
+
+          </center>
+
+          <br />
+
         </div>
       </div>
     );

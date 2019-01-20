@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 
+import renderHTML from 'react-render-html';
 import Navbar from '../navbar/navbar';
 import Footer from '../footer/footer';
+
 
 import './bioAnais.css';
 
@@ -60,7 +62,7 @@ class Bioanais extends Component {
             </p>
 
             <p>
-              {bioAnaisTable[0].bio_content}
+              {renderHTML(bioAnaisTable[0].bio_content)}
             </p>
 
             <br />

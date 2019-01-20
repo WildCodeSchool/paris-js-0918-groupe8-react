@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 
+import renderHTML from 'react-render-html';
+
 import Navbar from '../navbar/navbar';
 import Footer from '../footer/footer';
 
@@ -57,7 +59,8 @@ class Biomathias extends Component {
             </p>
 
             <p>
-              {bioMathiasTable[1].bio_content}
+              {' '}
+              {renderHTML(bioMathiasTable[1].bio_content)}
             </p>
 
             <br />
