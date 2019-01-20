@@ -11,7 +11,7 @@ class BoAboutAnaisEdit extends Component {
     lastname: '',
     mail: '',
     linkedin: '',
-    twitter: '',
+    // twitter: '',
     instagram: '',
     avatar: '',
     bio_title: '',
@@ -32,7 +32,7 @@ class BoAboutAnaisEdit extends Component {
       lastname: response.data[0].lastname,
       mail: response.data[0].mail,
       linkedin: response.data[0].linkedin,
-      twitter: response.data[0].twitter,
+      // twitter: response.data[0].twitter,
       instagram: response.data[0].instagram,
       avatar: response.data[0].avatar,
       bio_title: response.data[0].bio_title,
@@ -51,7 +51,7 @@ class BoAboutAnaisEdit extends Component {
     const lastname = formData.get('lastname');
     const mail = formData.get('mail');
     const linkedin = formData.get('linkedin');
-    const twitter = formData.get('twitter');
+    // const twitter = formData.get('twitter');
     const instagram = formData.get('instagram');
     const avatar = formData.get('avatar');
     const bio_title = formData.get('bio_title');
@@ -62,7 +62,7 @@ class BoAboutAnaisEdit extends Component {
         lastname,
         mail,
         linkedin,
-        twitter,
+        // twitter,
         instagram,
         avatar,
         bio_title,
@@ -84,7 +84,7 @@ class BoAboutAnaisEdit extends Component {
       lastname,
       mail,
       linkedin,
-      twitter,
+      // twitter,
       instagram,
       avatar,
       bio_title,

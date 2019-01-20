@@ -12,7 +12,7 @@ class BoAboutMathiasEdit extends Component {
     mail: '',
     linkedin: '',
     twitter: '',
-    instagram: '',
+    // instagram: '',
     avatar: '',
     bio_title: '',
     bio_content_short: '',
@@ -33,7 +33,7 @@ class BoAboutMathiasEdit extends Component {
       mail: response.data[0].mail,
       linkedin: response.data[0].linkedin,
       twitter: response.data[0].twitter,
-      instagram: response.data[0].instagram,
+      // instagram: response.data[0].instagram,
       avatar: response.data[0].avatar,
       bio_title: response.data[0].bio_title,
       bio_content_short: response.data[0].bio_content_short,
@@ -52,7 +52,7 @@ class BoAboutMathiasEdit extends Component {
     const mail = formData.get('mail');
     const linkedin = formData.get('linkedin');
     const twitter = formData.get('twitter');
-    const instagram = formData.get('instagram');
+    // const instagram = formData.get('instagram');
     const avatar = formData.get('avatar');
     const bio_title = formData.get('bio_title');
     const bio_content_short = formData.get('bio_content_short');
@@ -63,7 +63,7 @@ class BoAboutMathiasEdit extends Component {
         mail,
         linkedin,
         twitter,
-        instagram,
+        // instagram,
         avatar,
         bio_title,
         bio_content_short,
@@ -85,7 +85,7 @@ class BoAboutMathiasEdit extends Component {
       mail,
       linkedin,
       twitter,
-      instagram,
+      // instagram,
       avatar,
       bio_title,
       bio_content_short,
