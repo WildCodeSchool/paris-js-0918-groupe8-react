@@ -4,17 +4,22 @@ import React, { Component } from 'react';
 
 
 class BoAdmin extends Component {
-	render() {
-		return (
-			<div>
-				<p style={{ fontSize: '50px' }}>
-      		Accueil Back-Office
-      	</p>
-				{/* <CardBody />
+  render() {
+    return (
+      <div>
+        <header className="tc ph4">
+          <h1 className="f3 f2-m f1-l fw2 black-90 mv3">
+    Le Conteur Digital
+      </h1>
+          <h2 className="f5 f4-m f3-l fw2 black-50 mt0 lh-copy">
+Tableau de Bord
+      </h2>
+        </header>
+        {/* <CardBody />
 				<Card /> */}
-			</div>
-		);
-	}
+      </div>
+    );
+  }
 }
 
 export default BoAdmin;
