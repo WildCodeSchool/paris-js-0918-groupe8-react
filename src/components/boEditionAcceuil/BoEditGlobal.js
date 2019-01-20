@@ -13,6 +13,8 @@ import BoService1Edit from './BoService1Edit';
 import BoService2Edit from './BoService2Edit';
 import BoService3Edit from './BoService3Edit';
 
+import BoAboutAnaisEdit from './BoAboutAnaisEdit';
+import BoAboutMathiasEdit from './BoAboutMathiasEdit';
 
 const BoEditGlobal = () => (
   <div>
@@ -79,6 +81,22 @@ const BoEditGlobal = () => (
 				</div>
 			</div>
 		</div>
+    <div className="divider" />
+    <div className="section">
+      <h3 className="center-align titreblog1">ABOUT</h3>
+      <div className="row">
+			<div className="col s6">
+					<div className="card-panel teal lighten-5">
+						<BoAboutAnaisEdit />
+					</div>
+				</div>
+				<div className="col s6">
+					<div className="card-panel teal lighten-5">
+            <BoAboutMathiasEdit />
+					</div>
+				</div>
+      </div>
+    </div>
 	</div>
 );
 
