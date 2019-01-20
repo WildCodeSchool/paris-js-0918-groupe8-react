@@ -23,8 +23,8 @@ class BoCoverEdit extends Component {
     this.setState({
       title: response.data[0].title,
       content: response.data[0].content,
-    })
-      .then(('#textarea').trigger('autoresize'));
+    });
+      // .then(('#textarea').trigger('autoresize'));
   }
 
   handleChange = (e) => {
