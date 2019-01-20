@@ -20,9 +20,9 @@ const CardBody = ({
         exact
         to={`/blog/${title.toLowerCase().replace(regex, '').split(' ').join('-')}-${id_article}`}
       >
-        <div className="card hoverable">
+        <div className="card hoverable card-size">
           <div className="card-image">
-            <img className="materialboxed" src={main_picture} alt="Article" height="300" />
+            <img className="materialboxed" src={main_picture} alt="Article" />
           </div>
           <div className="card-content black-text">
             <p className="left-align"><b>{title}</b></p>
