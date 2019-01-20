@@ -15,6 +15,7 @@ import BoService3Edit from './BoService3Edit';
 
 import BoAboutAnaisEdit from './BoAboutAnaisEdit';
 import BoAboutMathiasEdit from './BoAboutMathiasEdit';
+import BoAboutConteurDigitalEdit from './BoAboutConteurDigitalEdit';
 
 const BoEditGlobal = () => (
   <div>
@@ -93,6 +94,17 @@ const BoEditGlobal = () => (
 				<div className="col s6">
 					<div className="card-panel teal lighten-5">
             <BoAboutMathiasEdit />
+					</div>
+				</div>
+      </div>
+    </div>
+    <div className="divider" />
+    <div className="section">
+      <h3 className="center-align titreblog1">SUIVEZ-NOUS</h3>
+      <div className="row">
+        <div className="col s12 ">
+					<div className="card-panel teal lighten-5">
+						<BoAboutConteurDigitalEdit />
 					</div>
 				</div>
       </div>
