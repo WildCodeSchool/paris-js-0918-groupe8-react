@@ -100,7 +100,7 @@ const routes = [
     component: BOcoms,
   },
   {
-    path: '/admin/administrateur',
+    path: '/admin/admin',
     name: 'Administrateurs',
     component: BOadmin,
   },

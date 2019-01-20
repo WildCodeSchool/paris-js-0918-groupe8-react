@@ -3,15 +3,13 @@ import React from 'react';
 // import CardBody from '../../components/blog/cardBody';
 
 
-const BoAdmin = () => (
+const BoAccueil = () => (
   <div>
     <h1>
-   En construction
+   Tableau de Bord du Conteur Digital
     </h1>
-
-
   </div>
 );
 
 
-export default BoAdmin;
+export default BoAccueil;

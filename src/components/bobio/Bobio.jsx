@@ -91,7 +91,6 @@ class BoBio extends Component {
               check
           </i>
         </a>
- 
       </div>
     );
   }

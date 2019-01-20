@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 import './bloglist.css';
+import renderHTML from 'react-render-html';
 
 const regex = /[\\.,:?!\-_€$]/gi;
 
@@ -27,8 +28,11 @@ const Bloglist = ({
           <div className="card-content black-text">
             <p className="left-align"><b>{title}</b></p>
             <hr />
-            <p className="left-align" dangerouslySetInnerHTML={{__html : `${content.slice(0, 150)}...`}} />
-      
+            <p className="left-align">
+              {renderHTML(`"
+            ${content.slice(0, 150)}
+            ..."`)}
+            </p>
             <br />
             <div className="card-action">
               <div className="row valign-wrapper">
@@ -38,7 +42,7 @@ const Bloglist = ({
                 <div className="col s8">
                   <span className="black-text left-align">
                     <b>
-                      {`${firstname} 
+                      {`${firstname}
                     ${lastname}`}
                     </b>
                     <br />
