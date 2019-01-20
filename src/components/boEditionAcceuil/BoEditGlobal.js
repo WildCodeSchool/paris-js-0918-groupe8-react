@@ -8,8 +8,11 @@ import Charte from '../charte/charte';
 
 import BoNewsletterEdit from './BoNewsletterEdit';
 import Newsletter from '../newsletter/newsletter';
-import Service from '../Service/service';
-import About from '../about/about';
+
+import BoService1Edit from './BoService1Edit';
+import BoService2Edit from './BoService2Edit';
+import BoService3Edit from './BoService3Edit';
+
 
 const BoEditGlobal = () => (
   <div>
@@ -57,33 +60,26 @@ const BoEditGlobal = () => (
 
     <div className="divider" />
     <div className="section">
+      <h3 className="center-align titreblog1">SERVICES</h3>
       <div className="row">
-        <div className="col s5">
+			<div className="col s4">
 					<div className="card-panel teal lighten-5">
-						{/* Inseré le composant ici */}
+						<BoService1Edit />
 					</div>
 				</div>
-        <div className="col s7">
-          <Service />
-        </div>
-      </div>
-    </div>
-
-    <div className="divider" />
-    <div className="section">
-      <div className="row">
-        <div className="col s5">
+				<div className="col s4">
 					<div className="card-panel teal lighten-5">
-						{/* Inseré le composant ici */}
+						<BoService2Edit />
 					</div>
 				</div>
-        <div className="col s7">
-          <About />
-        </div>
-      </div>
-    </div>
-  </div>
-  // );
+				<div className="col s4">
+					<div className="card-panel teal lighten-5">
+						<BoService3Edit />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 );
 
 export default BoEditGlobal;

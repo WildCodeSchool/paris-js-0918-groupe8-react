@@ -5,11 +5,11 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import M from 'materialize-css/dist/js/materialize.min';
 
-class BoNewsletterEdit extends Component {
+class BoService1Edit extends Component {
   state = {
     title: '',
     short_content: '',
-    content: '',
+    main_picture: '',
   };
 
   componentDidMount() {
@@ -20,13 +20,12 @@ class BoNewsletterEdit extends Component {
   }
 
   getData = async () => {
-    const response = await axios.get('/api/articles/newsletter');
+    const response = await axios.get('/api/articles/services');
     this.setState({
       title: response.data[0].title,
       short_content: response.data[0].short_content,
-      content: response.data[0].content,
+      main_picture: response.data[0].main_picture,
     });
-    // .then(('textarea').trigger('autoresize'));
   }
 
   handleChange = (e) => {
@@ -38,12 +37,12 @@ class BoNewsletterEdit extends Component {
     const formData = new FormData(event.target);
     const title = formData.get('title');
     const short_content = formData.get('short_content');
-    const content = formData.get('content');
+    const main_picture = formData.get('main_picture');
     await axios
-      .put('/api/articles/newsletter', {
+      .put('/api/articles/service1', {
         title,
         short_content,
-        content,
+        main_picture,
       })
       .then((response) => {
         if (response.status === 200) {
@@ -56,16 +55,34 @@ class BoNewsletterEdit extends Component {
 
   render() {
     // déconstruction du state et alias du this.state
-    const { title, short_content, content } = this.state;
+    const { title, short_content, main_picture } = this.state;
 
     return (
       <div>
 
         <form onSubmit={this.editCover}>
+        <div className="center-align">
+          <img src={main_picture} alt="" width="100" height="100" />
+        </div>
+          <div className="row">
+            <div className="input col s12">
+              <label htmlFor="main_picture">
+                Lien du pictogramme
+                <input
+                  name="main_picture"
+                  id="main_picture"
+                  value={main_picture}
+                  onChange={this.handleChange}
+                  placeholder=""
+                />
+              </label>
+            </div>
+          </div>
+
           <div className="row">
             <div className="input col s12">
               <label htmlFor="title">
-                Titre de la section
+                Service
                 <input
                   name="title"
                   id="title"
@@ -76,30 +93,15 @@ class BoNewsletterEdit extends Component {
               </label>
             </div>
           </div>
-
           <div className="row">
-            <div className="input col s12">
+            <div className="input-field col s12">
               <label htmlFor="short_content">
-                Sous-titre
-                <input
+                Description du service
+                <textarea
+                  rows="10"
                   name="short_content"
                   id="short_content"
                   value={short_content}
-                  onChange={this.handleChange}
-                  placeholder=""
-                />
-              </label>
-            </div>
-          </div>
-          <div className="row">
-            <div className="input-field col s12">
-              <label htmlFor="content">
-                Texte
-                <textarea
-                  rows="10"
-                  name="content"
-                  id="content"
-                  value={content}
                   onChange={this.handleChange}
                   className="materialize-textarea"
                   placeholder=""
@@ -132,4 +134,4 @@ class BoNewsletterEdit extends Component {
   }
 }
 
-export default BoNewsletterEdit;
+export default BoService1Edit;
