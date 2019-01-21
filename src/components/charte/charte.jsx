@@ -30,7 +30,7 @@ class Charte extends Component {
             <div className="container">
               <h3 className="center-align titrecharte1 white-text">{charteTable.title}</h3>
               <p className="center-align white-text phrasenumber1">{charteTable.content}</p>
-              <p className="center-align white-text phrasenumber1">{charteTable.short_content}</p>
+              <p className="center-align white-text phrasenumber2">{charteTable.short_content}</p>
               <div className="bouttonensavoirplus">
                 <NavLink exact smooth to="/charte" className="center-align waves-effect waves-light btn deep-purple accent-3"> 
                   En savoir plus

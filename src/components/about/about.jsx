@@ -7,7 +7,8 @@ import './about.css';
 import maillogo from '../../assets/svg/close-envelope.svg';
 import twitterlogo from '../../assets/svg/twitter.svg';
 import linkedinlogo from '../../assets/svg/linkedin-logo.svg';
-import Instagramlogo from '../../assets/img/instagram.svg';
+import Sitelogo from '../../assets/img/global.svg';
+
 
 
 class About extends Component {
@@ -67,7 +68,7 @@ class About extends Component {
                 </a>
 
                 <a href={aboutTable[0].instagram} target="_blank" rel="noopener noreferrer">
-                  <img src={Instagramlogo} alt="" width="30" height="30" className="maillogoabout" />
+                  <img src={Sitelogo} alt="" width="30" height="30" className="maillogoabout" />
                 </a>
 
                 <a href={aboutTable[0].linkedin} target="_blank" rel="noopener noreferrer">
