@@ -33,7 +33,7 @@ class BoNewsletterEdit extends Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-  editCover = async (event) => {
+  editData = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
     const title = formData.get('title');
@@ -52,6 +52,7 @@ class BoNewsletterEdit extends Component {
           alert('Un problème est survenu lors de la modification')
         }
       })
+      .then(window.location.reload());
   };
 
   render() {
@@ -61,7 +62,7 @@ class BoNewsletterEdit extends Component {
     return (
       <div>
 
-        <form onSubmit={this.editCover}>
+        <form onSubmit={this.editData}>
           <div className="row">
             <div className="input col s12">
               <label htmlFor="title">
