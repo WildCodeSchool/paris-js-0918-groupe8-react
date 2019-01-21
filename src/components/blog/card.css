@@ -5,3 +5,19 @@
 .titreblog1{
   padding-bottom: 5%;
 }
+
+.card-size {
+  height: 500px;
+}
+
+@media screen and (max-width: 600px) {
+  .card-size {
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 992px) {
+  .card-size {
+    height: 550px;
+  }
+}
