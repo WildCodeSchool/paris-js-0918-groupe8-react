@@ -1,4 +1,4 @@
-import React, { Component} from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
 
 import './newsletter.css';
@@ -28,46 +28,32 @@ class Newsletter extends Component {
       <div className="newsletterglobal">
 
         <div className="container">
-          <h3 className="center-align titreblog1">{newsletterTable.title}</h3>
+          <h3 className="center-align">{newsletterTable.title}</h3>
 
           <div className="row newsletterblock grey lighten-5">
-            <div className="col s12 m6">
-              <p className="titledownloadlivretblanc">
+            <div className="col s12">
+              <p className="titledownloadlivretblanc center-align">
                 {newsletterTable.short_content}
               </p>
-              <hr />
-              <p className="left-align">
+              
+              <p className="center-align">
                 {newsletterTable.content}
               </p>
               <br />
             </div>
-
-            <form className="col s12 m4 offset-m2">
-              <div className="row">
-                <div className="input-field col s12">
-                  <input id="first_name2" type="text" className="validate" />
-                  <label className="active" htmlFor="first_name2">Prénom</label>
-                </div>
-              </div>
-              <div className="row">
-                <div className="input-field col s12">
-                  <input id="email" type="email" className="validate newsletter-input" />
-                  <label htmlFor="email">Email</label>
-                </div>
-              </div>
-              
+                    
               <div className="row">
                 <div className="input-field col s12 boutonenvoienewsletter">
-                  <button className="btn waves-effect waves-light blue darken-1" type="submit" name="action">
-                    Envoyer
+                <a href="http://eepurl.com/geH-AD" target="_blank" rel="noopener noreferrer" className="btn waves-effect waves-light red darken-1">
+                    Abonnement
                     <i className="material-icons right">
-                      send
+                    account_circle
                     </i>
-                  </button>
+                  </a>
                 </div>
               </div>
 
-            </form>
+           
           </div>
         </div>
       </div>
