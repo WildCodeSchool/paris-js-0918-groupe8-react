@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import renderHTML from 'react-render-html';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 
 import './chartepage.css';
@@ -7,15 +8,16 @@ import './chartepage.css';
 class Chartepage extends Component {
   state = {
     chartePageTable: [],
+    isLoading: true,
   }
 
   // APPEL DE LA REQUETE
   componentDidMount() {
-    this.getChartePageTable();
+    this.getChartePage();
   }
 
   // REQUETE DE L'ARTICLE 3 - CHARTE LONGUE
-  getChartePageTable = async () => {
+  getChartePage = async () => {
     const res = await axios.get('/api/articles/charte-long');
     this.setState({ chartePageTable: res.data[0] });
   }
@@ -41,7 +43,7 @@ class Chartepage extends Component {
 
           <div className="blog-article">
             <p>
-              { chartePageTable.content }
+              {renderHTML(`${chartePageTable.content}`) }
             </p>
           </div>
 
