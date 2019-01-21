@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 import './article.css';
-
+import renderHTML from 'react-render-html';
 
 class Article extends Component {
   state = {
@@ -58,7 +58,9 @@ class Article extends Component {
           <div className="titre-article">{title}</div>
           <div className="infos-article">{`De ${firstname} ${lastname} - Rédigé le ${createDate} à ${createHour} - Modifié le ${updateDate} à ${updateHour}`}</div>
 
-          <p className="blog-article">{content}</p>
+          <p className="blog-article">
+            {renderHTML(`${content}`) }
+          </p>
           <div className="bouttondevischarte">
             <NavLink exact smooth to="/blog" className="waves-effect waves-light btn blue darken-1">Retour au blog</NavLink>
           </div>
