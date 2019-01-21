@@ -24,7 +24,6 @@ class BoCoverEdit extends Component {
       title: response.data[0].title,
       content: response.data[0].content,
     });
-      // .then(('#textarea').trigger('autoresize'));
   }
 
   handleChange = (e) => {
@@ -32,7 +31,7 @@ class BoCoverEdit extends Component {
   };
 
   // REQUETE DE L'ARTICLE 1 = ACCROCHE
-  editCover = async (event) => {
+  editData = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
     const title = formData.get('title');
@@ -49,6 +48,7 @@ class BoCoverEdit extends Component {
           alert('Un problème est survenu lors de la modification')
         }
       })
+      .then(window.location.reload());
   };
 
   render() {
@@ -58,7 +58,7 @@ class BoCoverEdit extends Component {
     return (
       <div>
       
-        <form onSubmit={this.editCover}>
+        <form onSubmit={this.editData}>
 
           <div className="row">
             <div className="input col s12">
