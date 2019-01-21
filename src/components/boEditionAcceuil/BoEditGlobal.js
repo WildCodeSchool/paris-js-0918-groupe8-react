@@ -17,6 +17,8 @@ import BoAboutAnaisEdit from './BoAboutAnaisEdit';
 import BoAboutMathiasEdit from './BoAboutMathiasEdit';
 import BoAboutConteurDigitalEdit from './BoAboutConteurDigitalEdit';
 
+import './boEditionAccueil.css';
+
 const BoEditGlobal = () => (
   <div>
     <div className="divider" />

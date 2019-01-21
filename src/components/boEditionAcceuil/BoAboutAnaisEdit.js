@@ -160,7 +160,7 @@ class BoAboutAnaisEdit extends Component {
           </div>
 
           <div className="row">
-            <div className="input-field col s12">
+            <div className="input col s12">
               <label htmlFor="bio_content_short">
                 Description
                 <textarea
@@ -170,17 +170,12 @@ class BoAboutAnaisEdit extends Component {
                   value={bio_content_short}
                   onChange={this.handleChange}
                   className="materialize-textarea"
-                  placeholder=""
                   style={{ height: '150rem !important' }}
                 />
               </label>
             </div>
           </div>
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
+          
           <div className="row">
             <div className="input col s12">
               <label htmlFor="mail">
