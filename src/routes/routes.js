@@ -57,7 +57,7 @@ const routes = [
   },
   {
     path: '/admin',
-    name: 'Accueil',
+    name: 'Dashboard',
     component: BOaccueil,
   },
   {
