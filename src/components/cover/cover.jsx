@@ -26,21 +26,40 @@ class Coverimage extends Component {
 
     return (
       <div className="global" id="home">
-        <div className="container">
-          <p className="titrecovertest center-align">
+
+        <div className="container ">
+          {/* Desktop */}
+          <p className="titrecovertest center-align hide-on-med-and-down">
+            {coverTable.title}
+          </p>
+            <p className="enonce hide-on-med-and-down">
+              {coverTable.content}
+            </p>
+        
+          <div className="row">
+            <div className="coverbuttonname hide-on-med-and-down">
+              <NavLink exact to="/mathiassavary" className="waves-effect waves-light btn indigo darken-2">Mathias Savary</NavLink>
+
+              <NavLink exact to="/anaisjaunay" className="waves-effect waves-light btn red darken-1">Anais Jaunay</NavLink>
+            </div>
+          </div>
+          {/* Pour les mobiles */}
+          <p className="titrecovertest2 center-align show-on-medium-and-down hide-on-large-only">
             {coverTable.title}
           </p>
 
-          <div className="row">
-            <p className="enonce">
+          <div className="row show-on-medium-and-down hide-on-large-only">
+            <p className="enonce2 show-on-medium-and-down">
               {coverTable.content}
             </p>
           </div>
           <div className="row">
-            <div className="coverbuttonname">
-              <NavLink exact to="/mathiassavary" className="waves-effect waves-light btn indigo darken-2">Mathias Savary</NavLink>
+            <div className="coverbuttonname show-on-medium-and-down hide-on-large-only">
+              <NavLink exact to="/mathiassavary" className="waves-effect waves-light btn indigo darken-2 bouttonmobilemathias">Mathias Savary</NavLink>
 
-              <NavLink exact to="/anaisjaunay" className="waves-effect waves-light btn red darken-1">Anais Jaunay</NavLink>
+
+              <NavLink exact to="/anaisjaunay" className="waves-effect waves-light btn red darken-1 bouttonmobileanais">Anais Jaunay</NavLink>
+
             </div>
           </div>
         </div>
