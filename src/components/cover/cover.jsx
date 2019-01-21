@@ -38,8 +38,9 @@ class Coverimage extends Component {
           </div>
           <div className="row">
             <div className="coverbuttonname">
-              <NavLink exact to="/anaisjaunay" className="waves-effect waves-light btn red darken-1">Anais Jaunay</NavLink>
               <NavLink exact to="/mathiassavary" className="waves-effect waves-light btn indigo darken-2">Mathias Savary</NavLink>
+
+              <NavLink exact to="/anaisjaunay" className="waves-effect waves-light btn red darken-1">Anais Jaunay</NavLink>
             </div>
           </div>
         </div>

@@ -198,7 +198,7 @@ class BoAboutAnaisEdit extends Component {
           <div className="row">
             <div className="input col s12">
               <label htmlFor="instagram">
-                Instagram
+                Site internet
                 <input
                   name="instagram"
                   id="instagram"

@@ -1,5 +1,5 @@
 .global{
-    background-image: url("../../assets/img/accroche.jpg");
+    background-image: url("../../assets/img/story-1.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -13,16 +13,18 @@
 }
 
 .titrecovertest{
-    font-size: 4em;
+    font-size: 4.5em;
     color: white;
     margin-top: 0%;
-    padding-block-start: 18%;
+    padding-block-start: 28%;
 }
 
 .enonce{
     color: white;
     font-style: italic;
     text-align: center;
+    font-size: 1.2em;
+    padding-block-end: 5%;
 
 }
 
