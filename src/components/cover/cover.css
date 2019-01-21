@@ -1,10 +1,11 @@
 .global{
     background-image: url("../../assets/img/story-1.jpg");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 50% -18% ;
     background-attachment: fixed;
     background-size: cover;
     height: 95vh;
+    /* margin-top: 2%; */
     
 
     -webkit-background-size: cover;
@@ -13,17 +14,19 @@
 }
 
 .titrecovertest{
-    font-size: 4.5em;
+    font-size: 6em;
     color: white;
     margin-top: 0%;
-    padding-block-start: 28%;
+    padding-block-start: 30%;
+    font-family: 'Oswald', sans-serif;
 }
 
 .enonce{
     color: white;
+    font-family: 'Oswald', sans-serif;
     font-style: italic;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.5em;
     padding-block-end: 5%;
 
 }
@@ -35,5 +38,32 @@
 
 }
 
+/* Mobile */
 
+.titrecovertest2{
+    font-size: 4em;
+    color: white;
+    
+}
 
+.enonce2{
+    color: white;
+    font-style: bold;
+    text-align: center;
+    font-size: 1em;
+    
+}
+
+/* .coverbuttonname2{
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    justify-content:space-evenly;
+    
+} */
+
+.bouttonmobilemathias{
+    float: left;
+} 
+.bouttonmobileanais{
+    float: right;
+} 
