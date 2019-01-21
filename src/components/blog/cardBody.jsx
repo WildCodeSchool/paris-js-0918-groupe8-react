@@ -22,13 +22,13 @@ const CardBody = ({
       >
         <div className="card hoverable card-size">
           <div className="card-image">
-            <img className="materialboxed" src={main_picture} alt="Article" />
+            <img className="fitimage-card" src={main_picture} alt="Article" />
           </div>
           <div className="card-content black-text">
             <p className="left-align"><b>{title}</b></p>
             <hr />
             <p className="left-align"
-            dangerouslySetInnerHTML={{__html : `${content.slice(0, 150)}...`}}
+              dangerouslySetInnerHTML={{__html: `${content.slice(0, 150)}...`}}
             />
             <br />
             <div className="card-action">
@@ -43,7 +43,7 @@ const CardBody = ({
                     ${lastname}`}
                     </b>
                     <br />
-                    <i>
+                    <i className="card-createDate">
                       {`Publié le ${createDate}`}
                     </i>
                   </span>
