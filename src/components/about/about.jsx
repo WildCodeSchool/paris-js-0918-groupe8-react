@@ -49,7 +49,9 @@ class About extends Component {
             <div className="col s12 m6">
               <div className="cardtitlebio">
 
-                <img src={aboutTable[0].avatar} alt="Anaïs Jaunay" className="circle responsive-img" width="150" height="150" />
+                <div className="card-image">
+                  <img src={aboutTable[0].avatar} alt="Anaïs Jaunay" className="circle responsive-img" width="150" height="150" />
+                </div>
 
                 <h3>
                   {`${aboutTable[0].firstname} ${aboutTable[0].lastname}`}
@@ -85,8 +87,9 @@ class About extends Component {
 
             <div className="col s12 m6">
               <div className="cardtitlebio">
-
-                <img src={aboutTable[1].avatar} alt="Mathias Savary" className="circle responsive-img" width="150" height="150" />
+                <div className="card-image">
+                  <img src={aboutTable[1].avatar} alt="Mathias Savary" className="circle responsive-img" width="150" height="150" />
+                </div>
 
                 <h3>
                   {`${aboutTable[1].firstname} ${aboutTable[1].lastname}`}

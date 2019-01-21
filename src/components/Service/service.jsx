@@ -48,7 +48,7 @@ class Service extends Component {
                 <div className="card-content">
                   <h5 className="left-align"><b>{serviceTable[0].title}</b></h5>
                   <hr />
-                  <p className="left-align">{serviceTable[0].short_content}</p>
+                  <p className="left-align service-text">{serviceTable[0].short_content}</p>
                   <br />
                 </div>
 
@@ -67,7 +67,7 @@ class Service extends Component {
                 <div className="card-content">
                   <h5 className="left-align"><b>{serviceTable[1].title}</b></h5>
                   <hr />
-                  <p className="left-align">{serviceTable[1].short_content}</p>
+                  <p className="left-align service-text">{serviceTable[1].short_content}</p>
                   <br />
                 </div>
 
@@ -86,7 +86,7 @@ class Service extends Component {
                 <div className="card-content">
                   <h5 className="left-align"><b>{serviceTable[2].title}</b></h5>
                   <hr />
-                  <p className="left-align">{serviceTable[2].short_content}</p>
+                  <p className="left-align service-text">{serviceTable[2].short_content}</p>
                   <br />
                 </div>
 
