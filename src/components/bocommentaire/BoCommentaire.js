@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 
-class BoCommentaire extends Component {
-	render() {
-		return (
-			<div>
-		page commentaire
-			</div>
-		);
-	}
-}
+const BoCommentaire = () => (
+
+  <div className="row">
+    <div className="col s3" />
+    <p className="red lighten-1" style={{ fontSize: '50px' }}>
+      En construction
+    </p>
+  </div>
+);
+
 
 export default BoCommentaire;

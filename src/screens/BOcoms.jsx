@@ -2,6 +2,7 @@ import React from 'react';
 
 import GoToSite from '../components/buttons/GoToSite';
 import BoNavbar from '../components/boNavbar/BoNavbar';
+import BoCommentaire from '../components/bocommentaire/BoCommentaire';
 
 import './BOgrids.css';
 
@@ -14,7 +15,7 @@ const BOcoms = () => (
       <BoNavbar />
     </aside>
     <main className="grid-item">
-      <p style={{ fontSize: '50px' }}>Commentaires Back-Office</p>
+      <BoCommentaire />
     </main>
   </div>
 );

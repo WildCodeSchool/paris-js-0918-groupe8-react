@@ -3,7 +3,7 @@ import Charte from '../screens/Charte';
 import Bio from '../screens/Bio';
 import BlogList from '../screens/BlogList';
 import BlogArticle from '../screens/BlogArticle';
-import BOaccueil from '../screens/BOaccueil';
+// import BOaccueil from '../screens/BOaccueil';
 import BOarticles from '../screens/BOarticles';
 import BOSetArticle from '../screens/BOSetArticle';
 import BObio from '../screens/BObio';
@@ -55,13 +55,14 @@ const routes = [
     name: null,
     component: BlogArticle,
   },
+  // {
+  //   path: '/admin',
+  //   name: 'Accueil',
+  //   component: BOaccueil,
+  // },
   {
     path: '/admin',
-    name: 'Dashboard',
-    component: BOaccueil,
-  },
-  {
-    path: '/admin/articles',
+    // path: '/admin/articles',
     name: 'Articles',
     component: BOarticles,
   },
