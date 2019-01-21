@@ -5,7 +5,7 @@ const TinymceAdmin = props => (
   <div>
     {' '}
     <Editor
-      apiKey="hmhb0q3jflv1kbo7mw4bqbaem0hbltrpxpk1xmeo7f45i9mf"
+      apiKey={process.env.REACT_APP_TINYMCE_API_KEY}
       initialValue={(props.bio_content || '')}
       init={{
         selector: 'textarea',

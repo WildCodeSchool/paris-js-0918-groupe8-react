@@ -5,6 +5,7 @@
   "dependencies": {
     "@tinymce/tinymce-react": "^2.4.0",
     "axios": "^0.18.0",
+    "dotenv": "^6.2.0",
     "eslint-config-airbnb": "^17.1.0",
     "materialize-css": "^1.0.0-rc.2",
     "prop-types": "^15.6.2",
