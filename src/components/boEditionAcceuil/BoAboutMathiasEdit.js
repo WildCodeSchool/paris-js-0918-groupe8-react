@@ -5,6 +5,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import M from 'materialize-css/dist/js/materialize.min';
 
+import './boEditionAccueil.css';
+
 class BoAboutMathiasEdit extends Component {
   state = {
     firstname: '',
@@ -160,27 +162,23 @@ class BoAboutMathiasEdit extends Component {
           </div>
 
           <div className="row">
-            <div className="input-field col s12">
+            <div className="input col s12">
               <label htmlFor="bio_content_short">
                 Description
                 <textarea
-                  rows="10"
+                  // rows="10"
                   name="bio_content_short"
                   id="bio_content_short"
                   value={bio_content_short}
                   onChange={this.handleChange}
                   className="materialize-textarea"
-                  placeholder=""
+                  // placeholder=""
                   style={{ height: '150rem !important' }}
                 />
               </label>
             </div>
           </div>
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
+
           <div className="row">
             <div className="input col s12">
               <label htmlFor="mail">

@@ -76,33 +76,21 @@ class BoCoverEdit extends Component {
           </div>
 
           <div className="row">
-            <div className="input-field col s12">
+            <div className="input col s12">
               <label htmlFor="content">
                 Accroche
                 <textarea
-                  rows="10"
                   name="content"
                   id="content"
                   value={content}
                   onChange={this.handleChange}
                   className="materialize-textarea"
-                  placeholder=""
                   style={{ height: '150rem !important' }}
                 />
               </label>
             </div>
           </div>
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
+
           <button
             type="submit"
             className="btn-floating btn-meddium tooltipped waves-effect waves-light"

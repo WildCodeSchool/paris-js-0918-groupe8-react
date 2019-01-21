@@ -95,31 +95,20 @@ class BoService3Edit extends Component {
             </div>
           </div>
           <div className="row">
-            <div className="input-field col s12">
+            <div className="input col s12">
               <label htmlFor="short_content">
                 Description du service
                 <textarea
-                  rows="10"
                   name="short_content"
                   id="short_content"
                   value={short_content}
                   onChange={this.handleChange}
                   className="materialize-textarea"
-                  placeholder=""
                   style={{ height: '150rem !important' }}
                 />
               </label>
             </div>
           </div>
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
 
           <button
             type="submit"
