@@ -17,6 +17,7 @@ const Tinymce = props => (
         height: 300,
         width: 600,
         menubar: true,
+        block_formats: 'Header 1=h3;Header 2=h4;Header 3=h5;Header 4=h6;Paragraph=p;',
         plugins: [
           'advlist autolink lists link image charmap print preview anchor textcolor searchreplace visualblocks code fullscreen',
           'insertdatetime media table paste code help wordcount',

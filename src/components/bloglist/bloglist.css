@@ -2,6 +2,12 @@
   max-height: 320px;
 }
 
+.textcontent h3, h4, h5
+{
+  font-size:1em;
+}
+
 /* .bloglistbg{
   background-color: rgb(172, 110, 29);
 } */
+
