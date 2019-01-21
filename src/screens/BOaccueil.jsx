@@ -2,7 +2,7 @@ import React from 'react';
 
 import GoToSite from '../components/buttons/GoToSite';
 import BoNavbar from '../components/boNavbar/BoNavbar';
-import BoAdmin from '../components/boadmin/BoAdmin';
+import BoAccueil from '../components/boaccueil/BoAccueil';
 
 import './BOgrids.css';
 
@@ -15,7 +15,7 @@ const BOaccueil = () => (
       <BoNavbar />
     </aside>
     <main className="grid-item">
-      <BoAdmin />
+      <BoAccueil />
     </main>
   </div>
 );
