@@ -70,7 +70,7 @@ class SetArticle extends Component {
   }
 
   handleChange = (e) => {
-    this.setState({ article: { ...this.state.article, [e.target.name]: e.target.value } });
+    this.setState({article: { ...this.state.article, [e.target.name]: e.target.value } });
   }
 
   postArticle = (event) => {

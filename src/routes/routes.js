@@ -8,6 +8,7 @@ import BOarticles from '../screens/BOarticles';
 import BOSetArticle from '../screens/BOSetArticle';
 import BObio from '../screens/BObio';
 import BOEditionAccueil from '../screens/BOEditionAccueil';
+import BOCharte from '../screens/BOCharte';
 import BOcoms from '../screens/BOcoms';
 import BOadmin from '../screens/BOadmin';
 import Biomathias from '../components/biomathias/biomathias';
@@ -93,6 +94,11 @@ const routes = [
     path: '/admin/editionaccueil',
     name: 'Edition Accueil',
     component: BOEditionAccueil,
+  },
+  {
+    path: '/admin/charte',
+    name: 'Charte longue',
+    component: BOCharte,
   },
   {
     path: '/admin/commentaries',
