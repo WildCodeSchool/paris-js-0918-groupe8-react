@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { NavHashLink as NavLink } from 'react-router-hash-link';
 
 import Navbar from '../navbar/navbar';
 import Footer from '../footer/footer';
@@ -41,16 +40,12 @@ class Biomathias extends Component {
         <div className="chartepageglobal">
           <div className="container">
 
-            <div className="testsitecoverimg">
-              <div className="transbox">
-                <p className="black">
+                  <img src={bioMathiasTable[1].bio_picture} alt="Mathias Savary" className="biomathiasimg z-depth-4" />
+               
+            
+                <p className="TitleMathias">
                   {`${bioMathiasTable[1].firstname} ${bioMathiasTable[1].lastname}`}
                 </p>
-              </div>
-            </div>
-
-            <br />
-            <br />
 
             <p className="soustitrebio">
               { bioMathiasTable[1].bio_content_short }

@@ -4,37 +4,28 @@ font-size: 1.3em;
 text-align: justify;
 }
 
-
-.testsitecoverimg{
-  background-image: url("../../assets/img/bioMathias.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.biomathiasimg {
+   
   height: 60vh;
   margin-top: 5%;
-  position: relative;
-  background-position: 50% 20% ;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 
 }
 
-.transbox {
-  opacity: 0.9;
-  position: absolute;
-  width: 100%;
-  top: 80%;
-  transform: translateY(-50%);
-}
-
-.transbox p {
-  color: #ffffff;
+.TitleMathias{
   font-size: 2em;
-  text-indent:2em;
   font-family: 'Oswald', sans-serif;
+  background-color: black;
+  color: #ffffff;
+  text-indent:2em;
 }
 
 .bouttondevischarte{
   display: flex;
   justify-content: center;
-  margin-top: 10%;
-  margin-bottom: 10%;
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
