@@ -41,7 +41,7 @@ class Biomathias extends Component {
         <div className="chartepageglobal">
           <div className="container">
 
-            <div className="coverimg">
+            <div className="testsitecoverimg">
               <div className="transbox">
                 <p className="black">
                   {`${bioMathiasTable[1].firstname} ${bioMathiasTable[1].lastname}`}
