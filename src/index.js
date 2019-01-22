@@ -8,6 +8,8 @@ import routes from './routes/routes';
 import * as serviceWorker from './serviceWorker';
 import ScrollToTop from './ScrollToTop';
 
+require('dotenv').config();
+
 ReactDOM.render(
   <BrowserRouter>
     <ScrollToTop>
