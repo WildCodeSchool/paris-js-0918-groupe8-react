@@ -14,9 +14,7 @@ const BOcoms = () => (
     <aside className="grid-item BoNavbar">
       <BoNavbar />
     </aside>
-    <main className="grid-item">
-      <BoCommentaire />
-    </main>
+    <BoCommentaire />
   </div>
 );
 
