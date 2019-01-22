@@ -51,36 +51,25 @@ class Bioanais extends Component {
                 </p>
               </div>
             </div>
-
             <br />
             <br />
-
             <p className="soustitrebio">
               { bioAnaisTable[0].bio_content_short }
             </p>
-
             <p>
               {bioAnaisTable[0].bio_content}
             </p>
-
             <br />
             <br />
-
             <center>
               <img src={Imganais} alt="" width="200" height="200" />
             </center>
-
             <div className="bouttondevischarte">
-              <NavLink exact smooth to="/#contact" className="waves-effect waves-light btn blue darken-1">
-                Demander devis
-              </NavLink>
+              <a href="/#contact" className="waves-effect waves-light btn blue darken-1">Demande devis</a>
             </div>
-
           </div>
         </div>
-
         <Footer />
-
       </div>
 
     );
