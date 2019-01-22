@@ -59,19 +59,13 @@ class Biomathias extends Component {
             <p>
               {bioMathiasTable[1].bio_content}
             </p>
-
             <br />
             <br />
-
             <div className="bouttondevischarte">
-              <NavLink exact smooth to="/#contact" className="waves-effect waves-light btn blue darken-1">
-                Demander devis
-              </NavLink>
+              <a href="/#contact" className="waves-effect waves-light btn blue darken-1">Demande devis</a>
             </div>
-
           </div>
         </div>
-
         <Footer />
 
       </div>

@@ -48,7 +48,7 @@ class Chartepage extends Component {
           </div>
 
           <div className="bouttondevischarte">
-            <NavLink exact smooth to="/#contact" className="waves-effect waves-light btn blue darken-1">Demander devis</NavLink>
+            <a href="/#contact" className="waves-effect waves-light btn blue darken-1">Demande devis</a>
           </div>
 
         </div>
