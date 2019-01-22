@@ -6,13 +6,14 @@ text-align: justify;
 
 
 .testsitecoverimg{
-  background-image: url("../../assets/img/biomathiascover.jpg");
+  background-image: url("../../assets/img/bioMathias.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   height: 60vh;
   margin-top: 5%;
   position: relative;
+  background-position: 50% 20% ;
 
 }
 

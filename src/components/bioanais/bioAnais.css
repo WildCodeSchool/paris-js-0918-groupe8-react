@@ -6,9 +6,9 @@
 }
 
 .coverimg{
-  background-image: url("../../assets/img/bioanaiscover.jpg");
+  background-image: url("../../assets/img/bioAnaisTheiere.jpg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 50% 10% ;
   background-size: cover;
   height: 60vh;
   margin-top: 5%;
