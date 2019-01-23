@@ -13,6 +13,7 @@ import BOcoms from '../screens/BOcoms';
 import BOadmin from '../screens/BOadmin';
 import Biomathias from '../components/biomathias/biomathias';
 import Bioanais from '../components/bioanais/bioanais';
+import BOLogin from '../screens/BOLogin';
 
 const routes = [
   {
@@ -109,6 +110,11 @@ const routes = [
     path: '/admin/admin',
     name: 'Administrateurs',
     component: BOadmin,
+  },
+  {
+    path: '/admin/login',
+    name: null,
+    component: BOLogin,
   },
 ];
 export default routes;
