@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import renderHTML from 'react-render-html';
-import { NavHashLink as NavLink } from 'react-router-hash-link';
 
 import './chartepage.css';
 
