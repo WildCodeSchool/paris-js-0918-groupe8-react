@@ -65,7 +65,7 @@ class BoBio extends Component {
   }
 
   handleChange = (e) => {
-    this.setState({ admin: { ...this.state.admin, [e.target.name] : e.target.value } });
+    this.setState({ admin: { ...this.state.admin, [e.target.name]: e.target.value } });
   }
 
   render() {
@@ -85,20 +85,23 @@ class BoBio extends Component {
           lastname={admin.lastname}
           key={admin.id_user}
         />
+        <div>
+          <center>
+            <a
+              href="#1"
+              className="btn-floating btn-medium waves-effect waves-light blue-grey tooltipped"
+              onClick={this.setAdmin}
+              data-position="bottom"
+              data-tooltip="Publier"
+            >
 
-        <a
-          href="#1"
-          className="btn-floating btn-medium waves-effect waves-light blue-grey tooltipped"
-          onClick={this.setAdmin}
-          data-position="bottom"
-          data-tooltip="Publier"
-        >
-
-          <i className="material-icons">
+              <i className="material-icons">
               check
-          </i>
-        </a>
- 
+              </i>
+            </a>
+          </center>
+
+        </div>
       </div>
     );
   }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TinymceAdmin from '../tinymce/tinymceAdmin';
+import './bobio.css';
 
 class BobioBody extends Component {
   render() {
@@ -20,26 +21,28 @@ class BobioBody extends Component {
 
         <label htmlFor="title">
               Titre
-              <input
-                name="bio_title"
-                id="title"
-                value={bio_title}
-                onChange={handleChange}
-              />
-            </label>
+          <input
+            name="bio_title"
+            id="title"
+            value={bio_title}
+            onChange={handleChange}
+          />
+        </label>
 
-            <label htmlFor="image">
+        <label htmlFor="image">
               Image
-              <input
-                name="bio_picture"
-                id="image"
-                value={bio_picture}
-                onChange={handleChange}
-              />
-            </label>
-      
+          <input
+            name="bio_picture"
+            id="image"
+            value={bio_picture}
+            onChange={handleChange}
+          />
+        </label>
+
         <br />
-        <TinymceAdmin bio_content={bio_content} handleBioChange={handleBio} />
+        <div className="Editeurtinymceadmnistrateur">
+          <TinymceAdmin bio_content={bio_content} handleBioChange={handleBio} />
+        </div>
         <br />
       </div>
     );
