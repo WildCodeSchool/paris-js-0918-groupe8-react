@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import renderHTML from 'react-render-html';
-import { NavHashLink as NavLink } from 'react-router-hash-link';
 
 import './chartepage.css';
 
@@ -31,16 +30,16 @@ class Chartepage extends Component {
         <div className="container">
 
           {/* image */}
-          <div>
-            <img src={chartePageTable.main_picture} alt="Anais et Mathias" className="fitimage-article2" />
-          </div>
+          <img src={chartePageTable.main_picture} alt="Anais et Mathias" className="charteimageglobal z-depth-4" />
 
           {/* article */}
           <br />
+          <br />
+
           <div className="titre-article">
             { chartePageTable.title }
           </div>
-
+          <br />
           <div className="blog-article">
             <p>
               {renderHTML(`${chartePageTable.content}`) }
