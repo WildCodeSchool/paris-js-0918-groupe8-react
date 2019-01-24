@@ -113,7 +113,7 @@ const routes = [
     component: BOadmin,
   },
   {
-    path: '/admin/login',
+    path: '/admin-login',
     name: null,
     component: BOLogin,
   },
