@@ -1,11 +1,12 @@
+/* global localStorage document */
 import React, { Component } from 'react';
 import './LogOut.css';
 
 class LogOut extends Component {
   setLogout = () => {
-
+    localStorage.removeItem('token')
+    document.location.reload(true);
   }
-
 
   render() {
     return (
