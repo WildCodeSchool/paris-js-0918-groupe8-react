@@ -14,7 +14,7 @@ const Tinymce = props => (
       init={{
         selector: 'textarea',
         height: 300,
-        width: 600,
+        width: 900,
         menubar: true,
         block_formats: 'Header 1=h3;Header 2=h4;Header 3=h5;Header 4=h6;Paragraph=p;',
         plugins: [
