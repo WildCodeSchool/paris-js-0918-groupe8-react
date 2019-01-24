@@ -7,6 +7,12 @@ import Footer from '../footer/footer';
 
 import './bioMathias.css';
 
+
+import twitterlogo from '../../assets/svg/twitter1.svg';
+import maillogo from '../../assets/svg/close-envelope1.svg';
+import linkedinlogo from '../../assets/svg/linkedin-logo1.svg';
+
+
 class Biomathias extends Component {
   state = {
     bioMathiasTable: [],
@@ -45,6 +51,20 @@ class Biomathias extends Component {
             <p className="TitleMathias">
               {`${bioMathiasTable[1].firstname} ${bioMathiasTable[1].lastname}`}
             </p>
+
+            <div className="reseau">
+              <a href={`mailto:${bioMathiasTable[2].mail}`}>
+                <img src={maillogo} alt="" width="60" height="60" className="maillogoabout hide-on-med-and-down" />
+              </a>
+
+              <a href={bioMathiasTable[1].twitter} target="_blank" rel="noopener noreferrer">
+                <img src={twitterlogo} alt="" width="60" height="60" className="maillogoabout hide-on-med-and-down" />
+              </a>
+
+              <a href={bioMathiasTable[1].linkedin} target="_blank" rel="noopener noreferrer">
+                <img src={linkedinlogo} alt="" width="60" height="60" className="maillogoabout hide-on-med-and-down" />
+              </a>
+            </div>
 
             <p className="soustitrebio">
               {renderHTML(`${bioMathiasTable[1].bio_content_short}`) }
