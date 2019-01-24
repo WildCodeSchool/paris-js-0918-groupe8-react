@@ -66,58 +66,62 @@ class BOArticleNav extends Component {
     const { articles, status, nbAll, nbPublished, nbWritting_progress, nbArchived } = this.state;
     return (
       <div>
-        <nav className="nav-wrapper" style={{ background: '#003F5F', color: '#FFFFFF' }}>
-          <ul className="tab tabs-transparent">
-            <li className="tab waves-effect waves-light">
-              <Link
-                to="#publies"
-                onClick={this.setStatus}
-                id="#publies"
-                activeclassname="active"
-                activestyle={{ fontWeight: 'Bold' }}
-              >
-                Publiés
-                <span className="badge">{nbPublished}</span>
-              </Link>
-            </li>
-            <li className="tab waves-effect waves-light">
-              <Link
-                to="#brouillons"
-                onClick={this.setStatus}
-                id="#brouillons"
-                activeclassname="active"
-                activestyle={{ fontWeight: 'Bold' }}
-              >
-                Brouillons
-                <span className="badge">{nbWritting_progress}</span>
-              </Link>
-            </li>
-            <li className="tab waves-effect waves-light">
-              <Link
-                to="#supprimes"
-                onClick={this.setStatus}
-                id="#supprimes"
-                activeclassname="active"
-                activestyle={{ fontWeight: 'Bold' }}
-              >
-                Archivés
-                <span className="badge">{nbArchived}</span>
-              </Link>
-            </li>
-            <li className="tab waves-effect waves-light">
-              <Link
-                to="#tous"
-                onClick={this.setStatus}
-                id="#tous"
-                activeclassname="active"
-                activestyle={{ fontWeight: 'Bold' }}
-              >
-                Tous
-                <span className="badge">{nbAll}</span>
-              </Link>
-            </li>
-            <AddNewArticleButton articles={articles} />
-          </ul>
+        <nav className="nav-extended BOArticleNav">
+          <div className="nav-content" style={{ background: '#003F5F', color: '#FFFFFF' }}>
+            <ul id="nav-mobile" className="tabs tabs-transparent ">
+              <li className="tab">
+                <Link
+                  to="#publies"
+                  onClick={this.setStatus}
+                  id="#publies"
+                  activeclassname="active"
+                  activestyle={{ fontWeight: 'Bold' }}
+                >
+                  Publiés
+                  <span className="badge">{nbPublished}</span>
+                </Link>
+              </li>
+              <li className="tab">
+                <Link
+                  to="#brouillons"
+                  onClick={this.setStatus}
+                  id="#brouillons"
+                  activeclassname="active"
+                  activestyle={{ fontWeight: 'Bold' }}
+                >
+                  Brouillons
+                  <span className="badge">{nbWritting_progress}</span>
+                </Link>
+              </li>
+              <li className="tab">
+                <Link
+                  to="#supprimes"
+                  onClick={this.setStatus}
+                  id="#supprimes"
+                  activeclassname="active"
+                  activestyle={{ fontWeight: 'Bold' }}
+                >
+                  Archivés
+                  <span className="badge">{nbArchived}</span>
+                </Link>
+              </li>
+              <li className="tab">
+                <Link
+                  to="#tous"
+                  onClick={this.setStatus}
+                  id="#tous"
+                  activeclassname="active"
+                  activestyle={{ fontWeight: 'Bold' }}
+                >
+                  Tous
+                  <span className="badge">{nbAll}</span>
+                </Link>
+              </li>
+              <div className="valign-wrapper">
+                <AddNewArticleButton articles={articles} className="BOArticleNavButton" />
+              </div>
+            </ul>
+          </div>
         </nav>
         <BOFilterArticle articles={articles} status={status} loadData={this.loadData} />
       </div>
