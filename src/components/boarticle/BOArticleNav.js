@@ -64,6 +64,7 @@ class BOArticleNav extends Component {
 
   render() {
     const { articles, status, nbAll, nbPublished, nbWritting_progress, nbArchived } = this.state;
+
     return (
       <div>
         <nav className="nav-extended BOArticleNav">
