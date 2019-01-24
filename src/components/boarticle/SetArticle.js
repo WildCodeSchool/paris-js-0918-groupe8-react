@@ -21,6 +21,9 @@ class SetArticle extends Component {
     },
     blog_status: 'writting_progress',
     front_page_favorite: 0,
+    admin_id_user: 1,
+    isCheckedAnais: "checked",
+    isCheckedMathias: "",
   }
 
   componentDidMount() {
@@ -63,10 +66,12 @@ class SetArticle extends Component {
       });
   }
 
-  handleEditorChange = (e) => {
-    const article = { ...this.state.article };
-    article.content = e.target.getContent();
-    this.setState({ article });
+  handleAuthor = (e) => {
+    if (e.target.id === "Anais") {
+      this.setState({ admin_id_user: 1, isCheckedAnais: "checked", isCheckedMathias: "" })
+    } else {
+      this.setState({ admin_id_user: 2, isCheckedAnais: "", isCheckedMathias: "checked" })
+    }
   }
 
   handleChange = (e) => {
@@ -81,8 +86,7 @@ class SetArticle extends Component {
     const main_picture = article.main_picture;
     const blog_status = this.state.blog_status;
     const front_page_favorite = 0;
-    // intégrer l'admin user ici quand autentification effective.
-    const admin_id_user = 1;
+    const admin_id_user = this.state.admin_id_user;
     axios
       .post('/api/articles/', {
         title,
@@ -121,7 +125,7 @@ class SetArticle extends Component {
   }
 
   render() {
-    const { article, blog_status, front_page_favorite } = this.state;
+    const { article, blog_status, front_page_favorite, isCheckedAnais, isCheckedMathias } = this.state;
     const { id_article, url } = this.props;
 
     return (
@@ -148,6 +152,37 @@ class SetArticle extends Component {
               />
             </label>
 
+            { (url === '/admin/articles/add')
+              ? (
+                <div>
+                  <p>Article rédigé par : </p>
+                  <p>
+                    <label htmlFor="Anais">
+                      <input
+                        onClick={this.handleAuthor}
+                        type="checkbox"
+                        id="Anais"
+                        checked={isCheckedAnais}
+                      />
+                      <span>Anaïs</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label htmlFor="Mathias">
+                      <input
+                        onClick={this.handleAuthor}
+                        type="checkbox"
+                        id="Mathias"
+                        checked={isCheckedMathias}
+                      />
+                      <span>Mathias</span>
+                    </label>
+                  </p>
+                </div>
+              )
+              : ''
+            }
+
             <div className="Editeurtinymceadmnistrateur">
               <Tinymce
                 article_content={article}
@@ -167,8 +202,9 @@ class SetArticle extends Component {
             </button>
 
           </form>
-          
+
           <StarButton idArticle={id_article} loadData={this.setEdit} blog_status={blog_status} front_page_favorite={front_page_favorite} />
+
           { (url !== '/admin/articles/add')
             ? <TrashButton idArticle={id_article} blog_status={blog_status} loadData={this.setEdit} />
             : ''
