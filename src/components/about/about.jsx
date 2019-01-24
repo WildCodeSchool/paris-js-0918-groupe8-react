@@ -78,7 +78,7 @@ class About extends Component {
                 </a>
 
                 <NavLink exact to="/anaisjaunay" className="contactbouttonanais">
-                  Bio
+                  En savoir plus sur Anaïs
                 </NavLink>
 
               </div>
@@ -116,7 +116,7 @@ class About extends Component {
                 </a>
 
                 <NavLink exact to="/mathiassavary" className="contactbouttonanais">
-                  Bio
+                  En savoir plus sur Mathias
                 </NavLink>
               </div>
             </div>

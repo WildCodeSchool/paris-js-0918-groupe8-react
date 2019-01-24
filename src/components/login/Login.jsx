@@ -28,7 +28,7 @@ class Login extends Component {
         email,
         password,
       });
-      console.log(response);
+      // console.log(response);
       localStorage.setItem('token', response.headers['x-access-token']);
       this.setState({ flash: response.data.flash });
     } catch (error) {
@@ -36,29 +36,13 @@ class Login extends Component {
     }
   }
 
-  protectedRoute = () => {
-    const token = localStorage.getItem('token');
-    axios({
-      method: 'POST',
-      url: '/api/login/protected',
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    })
-      .then(
-        res => this.setState({ flash: res.data.flash }),
-      )
-      .catch(
-        err => this.setState({ flash: err.response.data.flash }),
-      );
-  }
-
   render() {
     const { email, password, flash } = this.state;
     if (flash === 'Vous êtes connecté') { return (<Redirect to="/admin" />); }
     return (
-      <div className="container">
-        <form className="" method="POST" onSubmit={this.handleSubmit}>
+      <div className="container center row">
+        <h2 className="col s8 offset-s2">Conteur Digital</h2>
+        <form className="col s8 offset-s2" method="POST" onSubmit={this.handleSubmit}>
 
           <div className="input-field">
             <input
@@ -95,14 +79,7 @@ class Login extends Component {
           </button>
 
         </form>
-        <button
-          className="waves-effect waves-light red btn-large"
-          type="button"
-          onClick={() => this.protectedRoute()}
-        >
-          protectedRoute
-        </button>
-        <h1>{flash}</h1>
+        <h3 className="col s12">{flash}</h3>
       </div>
     );
   }
