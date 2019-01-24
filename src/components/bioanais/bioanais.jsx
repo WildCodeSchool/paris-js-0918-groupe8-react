@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { NavHashLink as NavLink } from 'react-router-hash-link';
 
 import Navbar from '../navbar/navbar';
 import Footer from '../footer/footer';
@@ -31,7 +30,7 @@ class Bioanais extends Component {
   render() {
     // déconstruction du state et alias du this.state
     const { bioAnaisTable, isLoading } = this.state;
-    console.log(bioAnaisTable);
+    
 
     if (isLoading) {
       return <div>Loading...</div>;
@@ -44,17 +43,16 @@ class Bioanais extends Component {
         <div className="chartepageglobal">
           <div className="container">
 
-            <div className="coverimg">
-              <div className="transbox">
-                <p className="black">
-                  {`${bioAnaisTable[0].firstname} ${bioAnaisTable[0].lastname}`}
-                </p>
-              </div>
-            </div>
-            <br />
-            <br />
+
+            <img src={bioAnaisTable[0].bio_picture} alt="Anais Jaunay" className="biomathiasimg z-depth-4" />
+
+            <p className="TitleMathias">
+              {`${bioAnaisTable[0].firstname} ${bioAnaisTable[0].lastname}`}
+            </p>
+
+
             <p className="soustitrebio">
-              { bioAnaisTable[0].bio_content_short }
+              {bioAnaisTable[0].bio_content_short}
             </p>
             <p>
               {bioAnaisTable[0].bio_content}
