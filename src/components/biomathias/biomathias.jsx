@@ -27,7 +27,7 @@ class Biomathias extends Component {
   render() {
     // déconstruction du state et alias du this.state
     const { bioMathiasTable, isLoading } = this.state;
-    console.log(bioMathiasTable);
+    
 
     if (isLoading) {
       return <div>Loading...</div>;
@@ -37,7 +37,7 @@ class Biomathias extends Component {
 
         <Navbar />
 
-        <div className="chartepageglobal">
+        <div className="biopageglobal">
           <div className="container">
 
                   <img src={bioMathiasTable[1].bio_picture} alt="Mathias Savary" className="biomathiasimg z-depth-4" />
