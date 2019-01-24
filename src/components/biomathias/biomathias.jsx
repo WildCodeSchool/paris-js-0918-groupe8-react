@@ -28,7 +28,6 @@ class Biomathias extends Component {
   render() {
     // déconstruction du state et alias du this.state
     const { bioMathiasTable, isLoading } = this.state;
-    
 
     if (isLoading) {
       return <div>Loading...</div>;
@@ -41,20 +40,19 @@ class Biomathias extends Component {
         <div className="biopageglobal">
           <div className="container">
 
-                  <img src={bioMathiasTable[1].bio_picture} alt="Mathias Savary" className="biomathiasimg z-depth-4" />
-               
-            
-                <p className="TitleMathias">
-                  {`${bioMathiasTable[1].firstname} ${bioMathiasTable[1].lastname}`}
-                </p>
+            <img src={bioMathiasTable[1].bio_picture} alt="Mathias Savary" className="biomathiasimg z-depth-4" />
+
+            <p className="TitleMathias">
+              {`${bioMathiasTable[1].firstname} ${bioMathiasTable[1].lastname}`}
+            </p>
 
             <p className="soustitrebio">
               {renderHTML(`${bioMathiasTable[1].bio_content_short}`) }
             </p>
 
             <p>
-            {renderHTML(`${bioMathiasTable[1].bio_content}`) }
-             
+              {renderHTML(`${bioMathiasTable[1].bio_content}`) }
+
             </p>
             <br />
             <br />
