@@ -8,6 +8,9 @@ import Footer from '../footer/footer';
 import './bioAnais.css';
 
 import Imganais from '../../assets/img/logoanais.png';
+import maillogo from '../../assets/svg/close-envelope1.svg';
+import linkedinlogo from '../../assets/svg/linkedin-logo1.svg';
+import Sitelogo from '../../assets/img/global1.svg';
 
 
 class Bioanais extends Component {
@@ -50,6 +53,19 @@ class Bioanais extends Component {
               {`${bioAnaisTable[0].firstname} ${bioAnaisTable[0].lastname}`}
             </p>
 
+            <div className="reseau">
+              <a href={`mailto:${bioAnaisTable[2].mail}`}>
+                <img src={maillogo} alt="" width="60" height="60" className="maillogoabout hide-on-med-and-down" />
+              </a>
+
+              <a href={bioAnaisTable[0].instagram} target="_blank" rel="noopener noreferrer">
+                <img src={Sitelogo} alt="" width="60" height="60" className="maillogoabout hide-on-med-and-down" />
+              </a>
+
+              <a href={bioAnaisTable[0].linkedin} target="_blank" rel="noopener noreferrer">
+                <img src={linkedinlogo} alt="" width="60" height="60" className="maillogoabout hide-on-med-and-down" />
+              </a>
+            </div>
 
             <p className="soustitrebio">
               {renderHTML(`${bioAnaisTable[0].bio_content_short}`) }

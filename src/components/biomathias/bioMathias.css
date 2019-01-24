@@ -20,7 +20,7 @@ text-align: justify;
   font-family: 'Oswald', sans-serif;
   background-color: black;
   color: #ffffff;
-  text-indent:2em;
+  text-indent:1em;
 }
 
 .bouttondevischarte{
@@ -28,4 +28,8 @@ text-align: justify;
   justify-content: center;
   margin-top: 1%;
   margin-bottom: 1%;
+}
+
+.reseau{
+  text-align : right;
 }
