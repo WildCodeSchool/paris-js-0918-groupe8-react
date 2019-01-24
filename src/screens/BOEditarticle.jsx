@@ -5,7 +5,7 @@ import AuthVerif from '../containers/AuthVerif';
 
 
 class BOeditarticle extends Component {
-  componentDidMount() {
+  componentWillMount() {
     AuthVerif.protectedRoute(this.props);
   }
 

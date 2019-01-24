@@ -20,8 +20,12 @@ class Article extends Component {
     const regex = /\d+$/g;
     // récupération de l'id article dans à la fin de l'url grâce à la regex
     const id = (this.props.match.params.article).match(regex);
+    // si l'ID est null ==> retour à la home
+    if (id === null) { return this.props.history.replace('/'); }
     // fetch de l'article par l'id
     const response = await axios.get(`/api/articles/blog/${id[0]}`);
+    // si la réponse est undefined ==> retour à la home
+    if (response.data[0] === undefined) { return this.props.history.replace('/'); }
     this.setState({ article: response.data[0] });
     this.setState({ isLoading: false });
   }

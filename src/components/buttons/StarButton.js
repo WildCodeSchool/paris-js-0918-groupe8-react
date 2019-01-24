@@ -9,9 +9,11 @@ import Axios from 'axios';
 class StarButton extends Component {
   setFavorite = () => {
     const { idArticle, active, loadData } = this.props;
+    const token = localStorage.getItem('token');
     Axios.put(
       `/api/articles/blog/favoris/${idArticle}`,
       { front_page_favorite: !active },
+      { headers: { Authorization: `Bearer ${token}` } },
     )
       .then((res) => {
         if (res.data.flash !== undefined) {

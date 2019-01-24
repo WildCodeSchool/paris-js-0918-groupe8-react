@@ -7,7 +7,7 @@ import AuthVerif from '../containers/AuthVerif';
 import './BOgrids.css';
 
 class BOadmin extends Component {
-  componentDidMount() {
+  componentWillMount() {
     AuthVerif.protectedRoute(this.props);
   }
 

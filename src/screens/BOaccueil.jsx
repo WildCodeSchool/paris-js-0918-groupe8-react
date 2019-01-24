@@ -8,7 +8,7 @@ import LogOut from '../components/buttons/Logout';
 import './BOgrids.css';
 
 class BOaccueil extends Component {
-  componentDidMount() {
+  componentWillMount() {
     AuthVerif.protectedRoute(this.props);
   }
 

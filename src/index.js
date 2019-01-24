@@ -17,6 +17,7 @@ ReactDOM.render(
         {routes.map(({ path, component: C }) => (
           <Route exact path={path} key={path} render={props => <C {...props} />} />
         ))}
+        <Route exact path="/*" render={() => <div>404</div>} />
       </Switch>
     </ScrollToTop>
   </BrowserRouter>,
