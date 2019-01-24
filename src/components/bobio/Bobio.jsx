@@ -12,7 +12,7 @@ import BobioBody from './BobioBody';
 class BoBio extends Component {
   state = {
     admin: {
-      id_user: '', firstname: '', lastname: '', bio_title: '', bio_content: '',
+      id_user: '', firstname: '', lastname: '', bio_title: '', bio_content: '', bio_picture: '',
     },
   }
 ;
@@ -46,6 +46,7 @@ class BoBio extends Component {
       {
         bio_title: admin.bio_title,
         bio_content: admin.bio_content,
+        bio_picture: admin.bio_picture,
       },
     )
       .then((response) => {
@@ -63,6 +64,10 @@ class BoBio extends Component {
     this.setState({ admin });
   }
 
+  handleChange = (e) => {
+    this.setState({ admin: { ...this.state.admin, [e.target.name] : e.target.value } });
+  }
+
   render() {
     const { admin } = this.state;
     return (
@@ -73,8 +78,10 @@ class BoBio extends Component {
           id_user={admin.id_user}
           bio_content={admin.bio_content}
           bio_title={admin.bio_title}
+          bio_picture={admin.bio_picture}
           firstname={admin.firstname}
           handleBio={this.handleBioChange}
+          handleChange={this.handleChange}
           lastname={admin.lastname}
           key={admin.id_user}
         />
