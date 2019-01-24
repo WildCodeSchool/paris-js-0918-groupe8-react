@@ -31,7 +31,6 @@ class Bioanais extends Component {
   render() {
     // déconstruction du state et alias du this.state
     const { bioAnaisTable, isLoading } = this.state;
-    
 
     if (isLoading) {
       return <div>Loading...</div>;
@@ -52,11 +51,11 @@ class Bioanais extends Component {
             </p>
 
 
-            <p className="soustitrebio">         
+            <p className="soustitrebio">
               {renderHTML(`${bioAnaisTable[0].bio_content_short}`) }
             </p>
             <p>
-            {renderHTML(`${bioAnaisTable[0].bio_content}`) }
+              {renderHTML(`${bioAnaisTable[0].bio_content}`) }
             </p>
             <br />
             <br />
