@@ -3,6 +3,7 @@ import GoToSite from '../components/buttons/GoToSite';
 import BoNavbar from '../components/boNavbar/BoNavbar';
 import BoAccueil from '../components/boaccueil/BoAccueil';
 import AuthVerif from '../containers/AuthVerif';
+import LogOut from '../components/buttons/Logout';
 
 import './BOgrids.css';
 
@@ -16,6 +17,7 @@ class BOaccueil extends Component {
       <div className="grid-container">
         <header className="grid-item">
           <GoToSite />
+          <LogOut />
         </header>
         <aside className="grid-item BoNavbar">
           <BoNavbar />
