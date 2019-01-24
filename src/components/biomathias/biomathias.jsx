@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import renderHTML from 'react-render-html';
 
 import Navbar from '../navbar/navbar';
 import Footer from '../footer/footer';
@@ -48,11 +49,12 @@ class Biomathias extends Component {
                 </p>
 
             <p className="soustitrebio">
-              { bioMathiasTable[1].bio_content_short }
+              {renderHTML(`${bioMathiasTable[1].bio_content_short}`) }
             </p>
 
             <p>
-              {bioMathiasTable[1].bio_content}
+            {renderHTML(`${bioMathiasTable[1].bio_content}`) }
+             
             </p>
             <br />
             <br />
