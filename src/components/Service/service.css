@@ -1,8 +1,10 @@
 .cardglobal{
   font-family: 'Oswald', sans-serif;
-
 }
 
+.updatetextcard{
+  min-height: 200px;
+}
 .service-text{
   height: 8vh;
 }
@@ -10,3 +12,4 @@
 .card-image{
   padding-top: 3vh;
 }
+
