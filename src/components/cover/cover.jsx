@@ -48,13 +48,13 @@ class Coverimage extends Component {
             {coverTable.title}
           </p>
 
-          <div className="row show-on-medium-and-down hide-on-large-only">
-            <p className="enonce2 show-on-medium-and-down">
+          {/* <div className="row show-on-medium-and-down "> */}
+            <p className="enonce2 show-on-medium-and-down hide-on-large-only">
               {coverTable.content}
             </p>
-          </div>
+          {/* </div> */}
           <div className="row">
-            <div className="coverbuttonname show-on-medium-and-down hide-on-large-only">
+            <div className="coverbuttonname2 show-on-medium-and-down hide-on-large-only">
               <NavLink exact to="/mathiassavary" className="waves-effect waves-light btn indigo darken-2 bouttonmobilemathias">Mathias Savary</NavLink>
 
 
