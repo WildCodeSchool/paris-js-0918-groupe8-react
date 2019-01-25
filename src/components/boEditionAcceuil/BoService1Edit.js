@@ -38,12 +38,14 @@ class BoService1Edit extends Component {
     const title = formData.get('title');
     const short_content = formData.get('short_content');
     const main_picture = formData.get('main_picture');
+    const token = localStorage.getItem('token');
     await axios
       .put('/api/articles/service1', {
         title,
         short_content,
         main_picture,
-      })
+      },
+      { headers: { Authorization: `Bearer ${token}` } })
       .then((response) => {
         if (response.status === 200) {
           alert('La modification est bien enregistré')

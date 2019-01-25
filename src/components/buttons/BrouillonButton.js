@@ -12,20 +12,24 @@ class BrouillonButton extends Component {
 
   setWrittingProgress = () => {
     const { idArticle, loadData } = this.props;
+    const token = localStorage.getItem('token');
     Axios
       .put(
         `/api/articles/blog/${idArticle}`,
         { blog_status: 'writting_progress' },
+        { headers: { Authorization: `Bearer ${token}` } },
       )
       .then(loadData);
   }
 
   setPublished = () => {
     const { idArticle, loadData } = this.props;
+    const token = localStorage.getItem('token');
     Axios
       .put(
         `/api/articles/blog/${idArticle}`,
         { blog_status: 'published' },
+        { headers: { Authorization: `Bearer ${token}` } },
       )
       .then(loadData);
   }

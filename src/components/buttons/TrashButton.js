@@ -12,20 +12,24 @@ class TrashButton extends Component {
 
   setUnpublished = () => {
     const { idArticle, loadData } = this.props;
+    const token = localStorage.getItem('token');
     Axios
       .put(
         `/api/articles/blog/${idArticle}`,
         { blog_status: 'archived' },
+        { headers: { Authorization: `Bearer ${token}` } },
       )
       .then(loadData);
   }
 
   setPublished = () => {
     const { idArticle, loadData } = this.props;
+    const token = localStorage.getItem('token');
     Axios
       .put(
         `/api/articles/blog/${idArticle}`,
         { blog_status: 'published' },
+        { headers: { Authorization: `Bearer ${token}` } },
       )
       .then(loadData);
   }

@@ -56,6 +56,7 @@ class BoAboutAnaisEdit extends Component {
     const avatar = formData.get('avatar');
     const bio_title = formData.get('bio_title');
     const bio_content_short = formData.get('bio_content_short');
+    const token = localStorage.getItem('token');
     await axios
       .put('/api/admin/bio/1', {
         firstname,
@@ -67,7 +68,8 @@ class BoAboutAnaisEdit extends Component {
         avatar,
         bio_title,
         bio_content_short,
-      })
+      },
+      { headers: { Authorization: `Bearer ${token}` } })
       .then((response) => {
         if (response.status === 200) {
           alert('La modification est bien enregistré')

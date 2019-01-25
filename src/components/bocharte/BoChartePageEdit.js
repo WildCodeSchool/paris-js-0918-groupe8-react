@@ -34,11 +34,13 @@ class SetChartePage extends Component {
   updateCharte = async (e) => {
     e.preventDefault();
     const { chartePage } = this.state;
+    const token = localStorage.getItem('token');
     await axios.put('/api/articles/charte-long', {
       title: chartePage.title,
       main_picture: chartePage.main_picture,
       content: chartePage.content,
-    })
+    },
+    { headers: { Authorization: `Bearer ${token}` } })
       .then((response) => {
         if (response.status === 200) {
           alert('Modification prise en compte');

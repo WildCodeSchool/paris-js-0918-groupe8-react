@@ -47,12 +47,14 @@ class SetArticle extends Component {
     e.preventDefault();
     const { id_article } = this.props;
     const { article } = this.state;
+    const token = localStorage.getItem('token');
     await axios.put(
       `/api/articles/blog/${id_article}`, {
         content: article.content,
         title: article.title,
         main_picture: article.main_picture,
       },
+      { headers: { Authorization: `Bearer ${token}` } },
     )
       .then((response) => {
         if (response.status === 200) {
@@ -83,6 +85,7 @@ class SetArticle extends Component {
     const front_page_favorite = 0;
     // intégrer l'admin user ici quand autentification effective.
     const admin_id_user = 1;
+    const token = localStorage.getItem('token');
     axios
       .post('/api/articles/', {
         title,
@@ -91,7 +94,8 @@ class SetArticle extends Component {
         blog_status,
         front_page_favorite,
         admin_id_user,
-      })
+      },
+      { headers: { Authorization: `Bearer ${token}` } })
       .then((response) => {
         if (response.status === 200) {
           alert('L\'article est bien enregistré')
@@ -103,10 +107,12 @@ class SetArticle extends Component {
 
   setWrittingProgress = () => {
     const { idArticle} = this.props;
+    const token = localStorage.getItem('token');
     axios
       .put(
         `/api/articles/blog/${idArticle}`,
         { blog_status: 'writting_progress' },
+        { headers: { Authorization: `Bearer ${token}` } },
       )
       .then(this.setEdit);
   }
