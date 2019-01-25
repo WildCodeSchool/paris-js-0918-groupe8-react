@@ -40,12 +40,10 @@ class Bioanais extends Component {
     }
     return (
       <div>
-
         <Navbar />
 
         <div className="chartepageglobal">
           <div className="container">
-
 
             <img src={bioAnaisTable[0].bio_picture} alt="Anais Jaunay" className="biomathiasimg z-depth-4" />
 
@@ -66,7 +64,6 @@ class Bioanais extends Component {
                 <img src={linkedinlogo} alt="" width="60" height="60" className="maillogoabout hide-on-med-and-down" />
               </a>
             </div>
-
             <p className="soustitrebio">
               {renderHTML(`${bioAnaisTable[0].bio_content_short}`) }
             </p>
