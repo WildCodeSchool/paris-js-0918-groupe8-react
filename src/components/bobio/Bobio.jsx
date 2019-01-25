@@ -41,6 +41,7 @@ class BoBio extends Component {
   setAdmin = async (e) => {
     e.preventDefault();
     const { admin } = this.state;
+    const token = localStorage.getItem('token');
     await axios.put(
       `/api/admin/bio/${this.props.match.params.id}`,
       {
@@ -48,6 +49,7 @@ class BoBio extends Component {
         bio_content: admin.bio_content,
         bio_picture: admin.bio_picture,
       },
+      { headers: { Authorization: `Bearer ${token}` } },
     )
       .then((response) => {
         if (response.status === 200) {

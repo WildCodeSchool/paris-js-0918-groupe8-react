@@ -7,7 +7,7 @@ import AuthVerif from '../containers/AuthVerif';
 import './BOgrids.css';
 
 class BObio extends Component {
-  componentDidMount() {
+  componentWillMount() {
     AuthVerif.protectedRoute(this.props);
   }
 

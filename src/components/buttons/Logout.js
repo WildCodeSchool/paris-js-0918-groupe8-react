@@ -4,7 +4,7 @@ import './LogOut.css';
 
 class LogOut extends Component {
   setLogout = () => {
-    localStorage.removeItem('token')
+    localStorage.removeItem('token');
     document.location.reload(true);
   }
 

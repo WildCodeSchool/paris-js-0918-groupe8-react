@@ -39,12 +39,14 @@ class BoNewsletterEdit extends Component {
     const title = formData.get('title');
     const short_content = formData.get('short_content');
     const content = formData.get('content');
+    const token = localStorage.getItem('token');
     await axios
       .put('/api/articles/newsletter', {
         title,
         short_content,
         content,
-      })
+      },
+      { headers: { Authorization: `Bearer ${token}` } })
       .then((response) => {
         if (response.status === 200) {
           alert('La modification est bien enregistré')

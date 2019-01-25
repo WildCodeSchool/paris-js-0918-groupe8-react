@@ -35,11 +35,13 @@ class BoAboutConteurDigitalEdit extends Component {
     const formData = new FormData(event.target);
     const mail = formData.get('mail');
     const instagram = formData.get('instagram');
+    const token = localStorage.getItem('token');
     await axios
       .put('/api/admin/bio/3', {
         mail,
         instagram,
-      })
+      },
+      { headers: { Authorization: `Bearer ${token}` } })
       .then((response) => {
         if (response.status === 200) {
           alert('La modification est bien enregistré')

@@ -5,7 +5,7 @@ import SetArticle from '../components/boarticle/SetArticle';
 import AuthVerif from '../containers/AuthVerif';
 
 class BOSetArticle extends Component {
-  componentDidMount() {
+  componentWillMount() {
     AuthVerif.protectedRoute(this.props);
   }
 
