@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom';
 import M from 'materialize-css/dist/js/materialize.min';
 
 import routes from '../../routes/routes';
+import LogOut from '../buttons/Logout';
 
 class BoNavbar extends Component {
   componentDidMount() {
@@ -20,7 +21,9 @@ class BoNavbar extends Component {
 
       <div>
         <div>
+         
           <ul id="slide-out" className="sidenav sidenav-fixed">
+          <LogOut />
             {routes.filter(elem => elem.path.includes('/admin') && elem.name != null).map(prop => (
               <li key={prop.path}>
                 <NavLink

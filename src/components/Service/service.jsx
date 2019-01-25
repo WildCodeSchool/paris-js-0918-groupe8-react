@@ -45,7 +45,7 @@ class Service extends Component {
                   <img src={serviceTable[0].main_picture} alt="" width="100" height="100" />
                 </div>
 
-                <div className="card-content">
+                <div className="card-content updatetextcard">
                   <h5 className="left-align"><b>{serviceTable[0].title}</b></h5>
                   <hr />
                   <p className="left-align service-text">{serviceTable[0].short_content}</p>
@@ -83,7 +83,7 @@ class Service extends Component {
                   <img src={serviceTable[2].main_picture} alt="" width="100" height="100" />
                 </div>
 
-                <div className="card-content">
+                <div className="card-content ">
                   <h5 className="left-align"><b>{serviceTable[2].title}</b></h5>
                   <hr />
                   <p className="left-align service-text">{serviceTable[2].short_content}</p>

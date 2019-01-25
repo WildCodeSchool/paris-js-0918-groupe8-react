@@ -88,7 +88,7 @@ class Affichagebloglist extends Component {
                         </i>
                       </button>
                     </li>
-                    
+
                     {nbPages.map((nbPage, index) => (
                       <li
                         index={index}
@@ -103,7 +103,7 @@ class Affichagebloglist extends Component {
                         </button>
                       </li>
                     ))}
-        
+
                     <li className="disabled">
                       <button type="button" onClick={this.handleButtonNext} className="btn-flat">
                         <i className="material-icons">
