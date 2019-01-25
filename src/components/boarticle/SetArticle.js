@@ -22,8 +22,8 @@ class SetArticle extends Component {
     blog_status: 'writting_progress',
     front_page_favorite: 0,
     admin_id_user: 1,
-    isCheckedAnais: "checked",
-    isCheckedMathias: "",
+    isCheckedAnais: 'checked',
+    isCheckedMathias: '',
   }
 
   componentDidMount() {
@@ -68,6 +68,12 @@ class SetArticle extends Component {
       });
   }
 
+  handleEditorChange = (e) => {
+    const article = { ...this.state.article };
+    article.content = e.target.getContent();
+    this.setState({ article });
+  }
+
   handleAuthor = (e) => {
     if (e.target.id === "Anais") {
       this.setState({ admin_id_user: 1, isCheckedAnais: "checked", isCheckedMathias: "" })
@@ -77,7 +83,7 @@ class SetArticle extends Component {
   }
 
   handleChange = (e) => {
-    this.setState({article: { ...this.state.article, [e.target.name]: e.target.value } });
+    this.setState({ article: { ...this.state.article, [e.target.name]: e.target.value } });
   }
 
   postArticle = (event) => {
