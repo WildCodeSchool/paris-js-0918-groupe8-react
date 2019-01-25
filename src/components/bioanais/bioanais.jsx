@@ -67,9 +67,9 @@ class Bioanais extends Component {
               </a>
             </div>
 
-            <p className="soustitrebio">
+            {/* <p className="soustitrebio">
               {renderHTML(`${bioAnaisTable[0].bio_content_short}`) }
-            </p>
+            </p> */}
             <p>
               {renderHTML(`${bioAnaisTable[0].bio_content}`) }
             </p>

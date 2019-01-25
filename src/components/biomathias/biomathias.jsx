@@ -66,9 +66,9 @@ class Biomathias extends Component {
               </a>
             </div>
 
-            <p className="soustitrebio">
+            {/* <p className="soustitrebio">
               {renderHTML(`${bioMathiasTable[1].bio_content_short}`) }
-            </p>
+            </p> */}
 
             <p>
               {renderHTML(`${bioMathiasTable[1].bio_content}`) }
