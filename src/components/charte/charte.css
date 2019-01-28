@@ -1,0 +1,40 @@
+.cardglobal{
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.testimage{
+  background-image: url('../../assets/img/chartebgopacity.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5em;
+  
+}
+
+.titrecharte1{
+  padding-top: 5%;
+}
+
+.phrasenumber1 {
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  
+}
+
+.phrasenumber2 {
+  font-size: 1em;
+  padding-bottom: 2%;
+
+}
+
+.bouttonensavoirplus{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5%;
+}
+

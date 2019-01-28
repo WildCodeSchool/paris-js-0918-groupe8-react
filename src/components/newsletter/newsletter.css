@@ -1,0 +1,23 @@
+.newsletterglobal{
+  font-family: 'Oswald', sans-serif;
+}
+
+.titledownloadlivretblanc{
+  font-size: 2em;
+  font-family: 'Oswald', sans-serif;
+}
+
+.boutonenvoienewsletter{
+  display: flex;
+  justify-content: center;
+}
+
+.newsletterblock{
+  margin-bottom: 5%;
+
+}
+
+.newsletter-input{
+  color: black;
+}
+

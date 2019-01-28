@@ -1,0 +1,3 @@
+--composants avec store, fetch, ...
+--rangement par sous-dossiers
+--CSS avec son composant et même nom

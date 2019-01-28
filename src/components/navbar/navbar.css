@@ -1,0 +1,15 @@
+.Navbarconteurdigital{
+    background-color: #003f5f;
+    font-family: 'Oswald', sans-serif;
+    min-height: 5vh;
+}
+
+nav ul a{
+    font-size: 1.5em;
+}
+
+.logoconteurdigital {
+  top: 50%;
+  transform: translateY(30%);
+  margin-left: 20px;
+}

@@ -1,0 +1,17 @@
+.fitimage-article {
+  height: 60vh;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  margin-top: 2%;
+}
+
+.blog-article {
+  text-align: justify;
+  font-size: 0.8em;
+}
+
+.infos-article {
+  color: grey;
+  font-size: calc(5px + 1vh);
+}

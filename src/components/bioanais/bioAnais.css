@@ -1,0 +1,24 @@
+.chartepageglobal{
+  /* font-family: 'Oswald', sans-serif; */
+  color: black;
+  font-size: 1.3em;
+  text-align: justify;
+}
+
+.bouttondevischarte{
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.soustitrebio{
+  font-style: italic;
+  font-weight: bold;
+}
+
+.reseau{
+  margin-top : -8%;
+  text-align : right;
+}
+

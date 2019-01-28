@@ -1,0 +1,32 @@
+
+.biopageglobal {
+color: black;
+font-size: 1.3em;
+text-align: justify;
+}
+
+.biomathiasimg {
+  height: 60vh;
+  margin-top: 5%;
+  /* max-width: 500px; */
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+
+}
+
+.TitleMathias{
+  font-size: 2em;
+  font-family: 'Oswald', sans-serif;
+  background-color: black;
+  color: #ffffff;
+  text-indent:1em;
+}
+
+.bouttondevischarte{
+  display: flex;
+  justify-content: center;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+

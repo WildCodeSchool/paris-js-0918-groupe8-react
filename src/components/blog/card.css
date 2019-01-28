@@ -1,0 +1,46 @@
+/* .imageblog{
+  opacity: 0.5;
+} */
+
+.titreblog1{
+  padding-bottom: 5%;
+}
+
+.card-size {
+  height: auto;
+}
+
+.card-createDate {
+  font-size: calc(3px + 1vh);
+}
+
+@media screen and (min-width: 993px) {
+  .card-size {
+    height: 650px;
+  }
+
+  .fitimage-card {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 992px) {
+  .card-size {
+    height: 600px;
+  }
+
+  .fitimage-card {
+    height: 270px;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+}
+
+.textcontent h3, h4, h5
+{
+  font-size:1em;
+}

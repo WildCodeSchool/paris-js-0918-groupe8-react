@@ -1,0 +1,16 @@
+.contactglobal{
+  font-family: 'Oswald', sans-serif;
+  color: black;
+  text-align: center;
+}
+
+.contact-input{
+  color: black;
+}
+
+.decoform{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
