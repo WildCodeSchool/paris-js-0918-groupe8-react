@@ -51,12 +51,12 @@ class Footer extends Component {
             Copyright © 2019 Conteur digital
           </p>
           <p className="white-text">
-            Site réalisé par 
-            <a href='https://github.com/GuillaumeFerry'> Guillaume Ferry, </a>
-            <a href='https://github.com/af1ne'>Delphine Brunet, </a>
-            <a href='https://github.com/matmat92'>Mathieu Thiry, </a>
-            <a href='https://github.com/julieLM77'>Julie Ly Minh </a>
-            <a href='https://github.com/par38'>et Monica Tarabusi</a>
+            Site réalisé par
+            <a href="https://github.com/GuillaumeFerry" target="_blank" rel="noreferrer noopener"> Guillaume Ferry, </a>
+            <a href="https://github.com/af1ne" target="_blank" rel="noreferrer noopener">Delphine Brunet, </a>
+            <a href="https://github.com/matmat92" target="_blank" rel="noreferrer noopener">Mathieu Thiry, </a>
+            <a href="https://github.com/julieLM77" target="_blank" rel="noreferrer noopener">Julie Ly Minh </a>
+            <a href="https://github.com/par38" target="_blank" rel="noreferrer noopener">et Monica Tarabusi</a>
           </p>
           {/* <p>
             <a href="#test">Mentions Légales</a>
