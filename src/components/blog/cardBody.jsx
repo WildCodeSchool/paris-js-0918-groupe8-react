@@ -6,6 +6,15 @@ import renderHTML from 'react-render-html';
 
 const regex = /[\\.,:?!\-_€$]/gi;
 
+// regex2 :
+// () first and second group of analyse,
+// ^ start of string,
+// <> literally characters,
+// []+ many characters,
+// i case insensitive,
+// g global
+const regex2 = /(<([^>]+)>)/ig;
+
 const CardBody = ({
   id_article, create_date, update_date, title, content, main_picture, firstname, lastname, avatar,
 }) => {
@@ -30,7 +39,7 @@ const CardBody = ({
             <hr />
             <p className="left-align textcontent">
               {' '}
-              {renderHTML(`${content.slice(0, 150)}`)}
+              {renderHTML(`${content.replace(regex2, '').slice(0, 150)}`)}
               {' '}
             </p>
             <br />
