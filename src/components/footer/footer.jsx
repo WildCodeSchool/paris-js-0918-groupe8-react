@@ -49,8 +49,18 @@ class Footer extends Component {
         <div className="black center-align footerbackcopyright">
           <p className="white-text">
             Copyright © 2019 Conteur digital
-            <a href="#test"> Mentions Légales</a>
           </p>
+          <p className="white-text">
+            Site réalisé par
+            <a href="https://github.com/GuillaumeFerry" target="_blank" rel="noreferrer noopener"> Guillaume Ferry, </a>
+            <a href="https://github.com/af1ne" target="_blank" rel="noreferrer noopener">Delphine Brunet, </a>
+            <a href="https://github.com/matmat92" target="_blank" rel="noreferrer noopener">Mathieu Thiry, </a>
+            <a href="https://github.com/julieLM77" target="_blank" rel="noreferrer noopener">Julie Ly Minh </a>
+            <a href="https://github.com/par38" target="_blank" rel="noreferrer noopener">et Monica Tarabusi</a>
+          </p>
+          {/* <p>
+            <a href="#test">Mentions Légales</a>
+          </p> */}
         </div>
       </div>
     );
